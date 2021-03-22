@@ -1,0 +1,6 @@
+  
+User-agent: *
+Allow: /
+
+Sitemap: https://seniortesting.club/sitemap.xml
+Sitemap: https://seniortesting.club/baidusitemap.xml
