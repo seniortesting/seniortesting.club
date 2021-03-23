@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy gh-pages blog
 # 脚本参考配置: https://github.com/sma11black/hexo-action
 on:
   push:
