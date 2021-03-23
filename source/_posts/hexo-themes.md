@@ -1,5 +1,5 @@
 ---
-title: Hexo主题推荐
+title: 博客主题推荐
 date: 2021-03-22 22:31:46
 tags:
   - Hexo
@@ -12,10 +12,11 @@ abbrlink: 21cfbf15
 sticky: 100
 ---
 
-推荐几款正在开发修改的主题来源:
+
+推荐几款不错的修改主题来源:
 
 - [butterfly](https://butterfly.js.org/)
 - [hexo-theme-fluid](https://github.com/fluid-dev/hexo-theme-fluid)
--[hexo-theme-indigo](https://github.com/yscoder/hexo-theme-indigo)
+- [hexo-theme-indigo](https://github.com/yscoder/hexo-theme-indigo)
 - [hexo-theme-matery](https://github.com/blinkfox/hexo-theme-matery)
 - [hexo-theme-melody](https://github.com/Molunerfinn/hexo-theme-melody)

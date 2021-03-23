@@ -622,6 +622,14 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+hexo-abbrlink@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.npm.taobao.org/hexo-abbrlink/download/hexo-abbrlink-2.2.1.tgz#03a3bbf73816ed19279e97452ce617c6caf98b5a"
+  integrity sha1-A6O79zgW7RknnpdFLOYXxsr5i1o=
+  dependencies:
+    hexo-front-matter "^1.0.0"
+    hexo-fs "^3.1.0"
+
 hexo-cli@^4.0.0:
   version "4.2.0"
   resolved "https://registry.npm.taobao.org/hexo-cli/download/hexo-cli-4.2.0.tgz#74647bc72a90b9cebf04af5bc70839ab281a305d"
@@ -649,6 +657,13 @@ hexo-deployer-git@3.0.0:
     hexo-util "^2.1.0"
     moment "^2.18.0"
     nunjucks "^3.2.1"
+
+hexo-front-matter@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/hexo-front-matter/download/hexo-front-matter-1.0.0.tgz#0b48b1c1ed143e8cb25b3b223a9037385d910655"
+  integrity sha1-C0ixwe0UPoyyWzsiOpA3OF2RBlU=
+  dependencies:
+    js-yaml "^3.13.1"
 
 hexo-front-matter@^2.0.0:
   version "2.0.0"
@@ -681,6 +696,14 @@ hexo-generator-category@^1.0.0:
   dependencies:
     hexo-pagination "1.0.0"
 
+hexo-generator-feed@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npm.taobao.org/hexo-generator-feed/download/hexo-generator-feed-3.0.0.tgz#4126ef5e308264c42599fb0efdaf88ed11fa599e"
+  integrity sha1-QSbvXjCCZMQlmfsO/a+I7RH6WZ4=
+  dependencies:
+    hexo-util "^2.1.0"
+    nunjucks "^3.0.0"
+
 hexo-generator-index@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/hexo-generator-index/download/hexo-generator-index-2.0.0.tgz#15e71f4d28ee9d2172e2d77e8d1dba04882edc8f"
@@ -688,6 +711,23 @@ hexo-generator-index@^2.0.0:
   dependencies:
     hexo-pagination "1.0.0"
     timsort "^0.3.0"
+
+hexo-generator-search@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.npm.taobao.org/hexo-generator-search/download/hexo-generator-search-2.4.1.tgz#623d078f4a94fe282f76ea7284f38a58183565a7"
+  integrity sha1-Yj0Hj0qU/igvdupyhPOKWBg1Zac=
+  dependencies:
+    nunjucks "^3.0.1"
+    utils-merge "^1.0.0"
+
+hexo-generator-sitemap@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npm.taobao.org/hexo-generator-sitemap/download/hexo-generator-sitemap-2.1.0.tgz#efd938049ddbf9a961a077fcc5947918ba5b213a"
+  integrity sha1-79k4BJ3b+alhoHf8xZR5GLpbITo=
+  dependencies:
+    hexo-util "^2.1.0"
+    micromatch "^4.0.2"
+    nunjucks "^3.1.6"
 
 hexo-generator-tag@^1.0.0:
   version "1.0.0"
@@ -737,7 +777,7 @@ hexo-renderer-pug@1.0.0:
   dependencies:
     pug "^2.0.1"
 
-hexo-renderer-stylus@^2.0.0:
+hexo-renderer-stylus@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/hexo-renderer-stylus/download/hexo-renderer-stylus-2.0.1.tgz#c65566e97e9058a52e46c82b0c45cf561f4b94cb"
   integrity sha1-xlVm6X6QWKUuRsgrDEXPVh9LlMs=
@@ -773,6 +813,11 @@ hexo-util@^2.0.0, hexo-util@^2.1.0, hexo-util@^2.4.0:
     prismjs "^1.17.1"
     strip-indent "^3.0.0"
     striptags "^3.1.1"
+
+hexo-wordcount@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.npm.taobao.org/hexo-wordcount/download/hexo-wordcount-6.0.1.tgz#5a60efc9d3c8e421956f2fd6683ca94a8a795264"
+  integrity sha1-WmDvydPI5CGVby/WaDypSop5UmQ=
 
 hexo@^5.0.0:
   version "5.4.0"
@@ -1109,7 +1154,7 @@ normalize-path@^3.0.0, normalize-path@~3.0.0:
   resolved "https://registry.npm.taobao.org/normalize-path/download/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
   integrity sha1-Dc1p/yOhybEf0JeDFmRKA4ghamU=
 
-nunjucks@^3.2.1:
+nunjucks@^3.0.0, nunjucks@^3.0.1, nunjucks@^3.1.6, nunjucks@^3.2.1:
   version "3.2.3"
   resolved "https://registry.npm.taobao.org/nunjucks/download/nunjucks-3.2.3.tgz#1b33615247290e94e28263b5d855ece765648a31"
   integrity sha1-GzNhUkcpDpTigmO12FXs52VkijE=
@@ -1617,7 +1662,7 @@ urix@^0.1.0:
   resolved "https://registry.npm.taobao.org/urix/download/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
 
-utils-merge@1.0.1:
+utils-merge@1.0.1, utils-merge@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npm.taobao.org/utils-merge/download/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
