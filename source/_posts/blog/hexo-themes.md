@@ -8,7 +8,7 @@ tags:
 categories: 博客
 keywords: 'hexo,butterfly,主题,doc,教程,文档管理'
 description: Hexo主题收集
-abbrlink: 21cfbf15
+abbrlink: hexo-themes
 sticky: 100
 ---
 
