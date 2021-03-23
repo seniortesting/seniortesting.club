@@ -125,7 +125,7 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/seniortesting/gitbook-docs
+  repo: git@github.com:seniortesting/seniortesting.club.site.git
   branch: gh-pages
 
 search:
