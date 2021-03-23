@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>SeniorTesting Club</title>
+  
+  <subtitle>Testing, Making Life Easy</subtitle>
+  <link href="https://seniortesting.club/atom.xml" rel="self"/>
+  
+  <link href="https://seniortesting.club/"/>
+  <updated>2021-03-22T13:32:46.832Z</updated>
+  <id>https://seniortesting.club/</id>
+  
+  <author>
+    <name>Walter Hu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo主题推荐</title>
+    <link href="https://seniortesting.club/posts/21cfbf15/"/>
+    <id>https://seniortesting.club/posts/21cfbf15/</id>
+    <published>2021-03-22T14:31:46.000Z</published>
+    <updated>2021-03-22T13:32:46.832Z</updated>
+    
+    <content type="html"><![CDATA[<p>推荐几款正在开发修改的主题来源:</p><ul><li><a href="https://butterfly.js.org/">butterfly</a></li><li><a href="https://github.com/fluid-dev/hexo-theme-fluid">hexo-theme-fluid</a></li><li><a href="https://github.com/yscoder/hexo-theme-indigo">hexo-theme-indigo</a></li><li><a href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a></li><li><a href="https://github.com/Molunerfinn/hexo-theme-melody">hexo-theme-melody</a></li></ul>]]></content>
+    
+    
+    <summary type="html">Hexo主题收集</summary>
+    
+    
+    
+    <category term="博客" scheme="https://seniortesting.club/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="Hexo" scheme="https://seniortesting.club/tags/Hexo/"/>
+    
+    <category term="主題" scheme="https://seniortesting.club/tags/%E4%B8%BB%E9%A1%8C/"/>
+    
+    <category term="butterfly" scheme="https://seniortesting.club/tags/butterfly/"/>
+    
+  </entry>
+  
+</feed>
