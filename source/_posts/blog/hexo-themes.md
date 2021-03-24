@@ -21,3 +21,30 @@ sticky: 100
 - [hexo-theme-indigo](https://github.com/yscoder/hexo-theme-indigo)
 - [hexo-theme-matery](https://github.com/blinkfox/hexo-theme-matery)
 - [hexo-theme-melody](https://github.com/Molunerfinn/hexo-theme-melody)
+
+
+## hexo常用命令
+
+hexo n "我的博客" == hexo new "我的博客" #新建文章
+hexo p == hexo publish 草稿
+hexo g == hexo generate#生成
+hexo s == hexo server #启动服务预览
+hexo d == hexo deploy#部署
+
+## How to set multiple tags for one post in Hexo?
+
+```yaml
+tags: [git,Atom,GitHub,Eclipse,Win10]
+```
+
+或者
+
+```yaml
+tags:
+- git
+- Atom
+- GitHub
+- Eclipse
+- Win10
+```
+
