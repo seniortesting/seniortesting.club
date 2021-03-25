@@ -1,11 +1,8 @@
 ---
 title: git常见问题和错误
 date: 2021-03-22 22:31:46
-tags:
-  - git
-  - github
-  - ssh key
-keywords: 'git,github,ssh key, git clone'
+tags: [git, github, github ssh]
+keywords: 'git,github,github ssh, git clone'
 description: git常见错误整理
 abbrlink: c4fe53x8b
 ---

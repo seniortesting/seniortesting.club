@@ -1,17 +1,15 @@
 ---
-title: {{ title }}
-tags: []
+title: mysql基础问题整理
+tags: [mysql,数据库]
 categories: []
+date: 2021-03-25 19:24:34
 keywords: ''
 description:
-abbrlink: 7670b080
-date: {{ date }}
 top_img:
-cover: 
+cover:
 ---
 
 {% note blue 'fas fa-bullhorn' %}
-
 
 
 {% endnote %}

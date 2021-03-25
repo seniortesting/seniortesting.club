@@ -1,11 +1,11 @@
 ---
-title: picgo
-tags: []
+title: picgo图床配置
+tags: [图床,picgo]
 categories: []
 comments: true
 abbrlink: c4fe5b8b
 date: 2021-03-25 09:58:15
-keywords: 
+keywords: '图床,picgo'
 description:
 ---
 
@@ -13,11 +13,14 @@ description:
 
 参考配置文档： https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A
 
+```xml
 1. 仓库名： **alterhu2020/StorageHub**
 2. token名称： **32bf780d196739f8923d210a227135462eb2ceb2**
 3. 仓库分支： **master**
 4. Github Path: **img/**
 5. Custom Url:  **https://cdn.jsdelivr.net/gh/alterhu2020/CDN@master**
+
+```
 
 ## 快捷键
 
