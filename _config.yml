@@ -104,9 +104,10 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: git@github.com:seniortesting/seniortesting.club.site.git
-  branch: gh-pages
+  - type: git
+    repo: git@github.com:seniortesting/seniortesting.club.site.git
+    branch: gh-pages
+  - type: GooglePush # 谷歌提交
 # -------------------------------------------------------------------------------------------------------------------------
 # -----------------------------------------------个人配置插件---------------------------------------------------------------
 # markdown语法配置,来自插件: hexo-renderer-marked
@@ -162,9 +163,9 @@ sitemap:
 hexo_seo_autopush:
   baidu:
     enable: true
-    count: 100
+    count: 10
   bing:
-    enable: true
+    enable: false
     count: 10
   google:
     enable: false

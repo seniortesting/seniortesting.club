@@ -7,12 +7,13 @@
   "scripts": {
     "server": "hexo clean && hexo g && hexo s",
     "update": "git init && git add . && git commit -m 'backup' && git push origin main",
-    "deploy": "hexo clean && hexo g && gulp && hexo deploy"
+    "deploy": "hexo clean && hexo generate && gulp && hexo deploy"
   },
   "hexo": {
     "version": "5.4.0"
   },
   "dependencies": {
+    "googleapis": "^68.0.0",
     "gulp-html-minifier-terser": "^6.0.1",
     "gulp-htmlclean": "^2.7.22",
     "gulp-imagemin": "^7.1.0",
@@ -35,7 +36,8 @@
     "hexo-renderer-stylus": "^2.0.1",
     "hexo-seo-autopush": "^2.0.4",
     "hexo-server": "^2.0.0",
-    "hexo-wordcount": "^6.0.1"
+    "hexo-wordcount": "^6.0.1",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
