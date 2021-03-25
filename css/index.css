@@ -1366,7 +1366,7 @@ h6 {
   position: relative;
   margin: 1rem 0 0.7rem;
   color: var(--text-highlight-color);
-  font-weight: 700;
+  font-weight: bold;
 }
 h1 code,
 h2 code,

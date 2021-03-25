@@ -6,7 +6,7 @@
   <link href="https://seniortesting.club/atom.xml" rel="self"/>
   
   <link href="https://seniortesting.club/"/>
-  <updated>2021-03-25T11:39:30.596Z</updated>
+  <updated>2021-03-25T11:44:52.499Z</updated>
   <id>https://seniortesting.club/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>mysql基础问题整理</title>
-    <link href="https://seniortesting.club/posts/07KB4H/"/>
-    <id>https://seniortesting.club/posts/07KB4H/</id>
-    <published>2021-03-25T11:24:34.000Z</published>
-    <updated>2021-03-25T11:39:30.596Z</updated>
-    
-    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
-      
-    
-    
-    
-    <category term="数据库" scheme="https://seniortesting.club/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-    <category term="mysql" scheme="https://seniortesting.club/tags/mysql/"/>
-    
-    <category term="数据库" scheme="https://seniortesting.club/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
   
   <entry>
     <title>scrapy爬虫技术</title>
@@ -67,6 +41,32 @@
     <category term="爬虫" scheme="https://seniortesting.club/tags/%E7%88%AC%E8%99%AB/"/>
     
     <category term="scrapy" scheme="https://seniortesting.club/tags/scrapy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql基础问题整理</title>
+    <link href="https://seniortesting.club/posts/07KB4H/"/>
+    <id>https://seniortesting.club/posts/07KB4H/</id>
+    <published>2021-03-25T11:24:34.000Z</published>
+    <updated>2021-03-25T11:39:30.596Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="数据库" scheme="https://seniortesting.club/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="mysql" scheme="https://seniortesting.club/tags/mysql/"/>
+    
+    <category term="数据库" scheme="https://seniortesting.club/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
@@ -128,11 +128,11 @@
   </entry>
   
   <entry>
-    <title>picgo</title>
+    <title>picgo图床配置</title>
     <link href="https://seniortesting.club/posts/c4fe5b8b/"/>
     <id>https://seniortesting.club/posts/c4fe5b8b/</id>
     <published>2021-03-25T01:58:15.000Z</published>
-    <updated>2021-03-25T12:41:36.409Z</updated>
+    <updated>2021-03-25T13:51:29.010Z</updated>
     
     <content type="html"><![CDATA[<h2 id="设置PicGo对应的GitHub仓库"><a href="#设置PicGo对应的GitHub仓库" class="headerlink" title="设置PicGo对应的GitHub仓库"></a>设置PicGo对应的GitHub仓库</h2><p>参考配置文档： <a href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A" target="_blank" rel="noopener">https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A</a></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 仓库名： **alterhu2020/StorageHub**</span><br><span class="line">2. token名称： **32bf780d196739f8923d210a227135462eb2ceb2**</span><br><span class="line">3. 仓库分支： **master**</span><br><span class="line">4. Github Path: **img/**</span><br><span class="line">5. Custom Url:  **https://cdn.jsdelivr.net/gh/alterhu2020/CDN@master**</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table><thead><tr><th>OS</th><th>从剪切板上传图片</th><th>从资源管理器中上传图片</th><th>从弹出框中上传图片</th></tr></thead><tbody><tr><td>Windows/Unix</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>U</kbd></td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>E</kbd></td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>O</kbd></td></tr><tr><td>OsX</td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>U</kbd></td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>E</kbd></td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>O</kbd></td></tr></tbody></table><ClientOnly>  <in-article-adsense    ins-style="display:block; text-align:center;"    data-ad-slot="7727965566"  /></ClientOnly>]]></content>
     
