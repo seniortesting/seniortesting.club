@@ -4,27 +4,50 @@
   
     
     <entry>
-      <title>博客主题推荐</title>
-      <link href="posts/21cfbf15/"/>
-      <url>posts/21cfbf15/</url>
+      <title>picgo</title>
+      <link href="posts/c4fe5b8b/"/>
+      <url>posts/c4fe5b8b/</url>
       
-        <content type="html"><![CDATA[<p>推荐几款不错的修改主题来源:</p><ul><li><a href="https://butterfly.js.org/">butterfly</a></li><li><a href="https://github.com/fluid-dev/hexo-theme-fluid">hexo-theme-fluid</a></li><li><a href="https://github.com/yscoder/hexo-theme-indigo">hexo-theme-indigo</a></li><li><a href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a></li><li><a href="https://github.com/Molunerfinn/hexo-theme-melody">hexo-theme-melody</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="设置PicGo对应的GitHub仓库"><a href="#设置PicGo对应的GitHub仓库" class="headerlink" title="设置PicGo对应的GitHub仓库"></a>设置PicGo对应的GitHub仓库</h2><p>参考配置文档： <a href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A" target="_blank" rel="noopener">https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A</a></p><ol><li>仓库名： <strong>alterhu2020/StorageHub</strong></li><li>token名称： <strong>32bf780d196739f8923d210a227135462eb2ceb2</strong></li><li>仓库分支： <strong>master</strong></li><li>Github Path: <strong>img/</strong></li><li>Custom Url:  <strong><a href="https://cdn.jsdelivr.net/gh/alterhu2020/CDN@master" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/alterhu2020/CDN@master</a></strong></li></ol><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table><thead><tr><th>OS</th><th>从剪切板上传图片</th><th>从资源管理器中上传图片</th><th>从弹出框中上传图片</th></tr></thead><tbody><tr><td>Windows/Unix</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>U</kbd></td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>E</kbd></td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>O</kbd></td></tr><tr><td>OsX</td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>U</kbd></td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>E</kbd></td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>O</kbd></td></tr></tbody></table><ClientOnly>  <in-article-adsense    ins-style="display:block; text-align:center;"    data-ad-slot="7727965566"  /></ClientOnly>]]></content>
       
       
       <categories>
           
-          <category> 博客 </category>
+          <category> 开发工具 </category>
+          
+          <category> 图床工具 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git常见问题和错误</title>
+      <link href="posts/c4fe53x8b/"/>
+      <url>posts/c4fe53x8b/</url>
+      
+        <content type="html"><![CDATA[<h2 id="git错误整理"><a href="#git错误整理" class="headerlink" title="git错误整理"></a>git错误整理</h2><h3 id="1-Key-is-invalid-You-must-supply-a-key-in-OpenSSH-public-key-format"><a href="#1-Key-is-invalid-You-must-supply-a-key-in-OpenSSH-public-key-format" class="headerlink" title="1. Key is invalid. You must supply a key in OpenSSH public key format"></a>1. Key is invalid. You must supply a key in OpenSSH public key format</h3><p>Github添加公开秘钥的时候，如果直接粘贴复制往往会收到这样一个报错：</p><p><code>Key is invalid. You must supply a key in OpenSSH public key format</code></p><p>这个原因是因为：</p><p>直接粘贴复制会破坏.ssh文件的格式<br>解决办法是：使用cat命令将 <code>~/.ssh/id_rsa.pub</code> 内容输出到终端，再拷贝。<br><code>cat ~/.ssh/id_rsa.pub</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发工具 </category>
+          
+          <category> git </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Hexo </tag>
+            <tag> git </tag>
             
-            <tag> 主題 </tag>
+            <tag> github </tag>
             
-            <tag> butterfly </tag>
+            <tag> ssh key </tag>
             
         </tags>
       
