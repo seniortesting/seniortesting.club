@@ -6,7 +6,7 @@
   <link href="https://seniortesting.club/atom.xml" rel="self"/>
   
   <link href="https://seniortesting.club/"/>
-  <updated>2021-03-25T11:39:30.596Z</updated>
+  <updated>2021-03-25T15:26:13.739Z</updated>
   <id>https://seniortesting.club/</id>
   
   <author>
@@ -15,6 +15,845 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法-图论-最小生成树</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:26:06.000Z</published>
+    <updated>2021-03-25T15:26:13.739Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="算法" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="图论" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法-图论-最短路径</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:26:00.000Z</published>
+    <updated>2021-03-25T15:26:12.068Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="算法" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="图论" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法-图论-网络流建模</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:25:52.000Z</published>
+    <updated>2021-03-25T15:26:09.274Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="算法" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="图论" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法-搜索-剪枝</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:24:45.000Z</published>
+    <updated>2021-03-25T15:25:07.842Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="算法" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="搜索" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法-搜索-回溯</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:24:20.000Z</published>
+    <updated>2021-03-25T15:25:05.923Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="算法" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="搜索" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法-搜索-递归</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:24:14.000Z</published>
+    <updated>2021-03-25T15:25:03.523Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="算法" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="搜索" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法-排序-快排</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:24:00.000Z</published>
+    <updated>2021-03-25T15:25:00.467Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="算法" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="排序算法" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法-排序-计数</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:23:52.000Z</published>
+    <updated>2021-03-25T15:24:58.274Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="算法" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="排序算法" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法-排序-归并</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:23:45.000Z</published>
+    <updated>2021-03-25T15:24:54.439Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="算法" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="排序算法" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>redis相关知识整理</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:22:40.000Z</published>
+    <updated>2021-03-25T15:22:44.625Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="中间件" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+    <category term="redis" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何有效管理一个测试团队</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:21:59.000Z</published>
+    <updated>2021-03-25T15:22:02.323Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="项目管理" scheme="https://seniortesting.club/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法-最长子序列解析和思考</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:21:06.000Z</published>
+    <updated>2021-03-25T15:21:09.707Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="算法" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="动态规划" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法-背包问题分析和思考</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:19:32.000Z</published>
+    <updated>2021-03-25T15:21:14.559Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="算法" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="动态规划" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>scrapy入门搭建</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:17:41.000Z</published>
+    <updated>2021-03-25T15:20:04.122Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="程序语言" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Python" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/"/>
+    
+    <category term="Scrapy" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/Scrapy/"/>
+    
+    
+    <category term="scrapy" scheme="https://seniortesting.club/tags/scrapy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scrapy问题整理和技巧</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:17:41.000Z</published>
+    <updated>2021-03-25T15:20:19.116Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="程序语言" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Python" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/"/>
+    
+    <category term="Scrapy" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/Scrapy/"/>
+    
+    
+    <category term="scrapy" scheme="https://seniortesting.club/tags/scrapy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>flask技巧和问题整理</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:17:41.000Z</published>
+    <updated>2021-03-25T15:18:25.565Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="程序语言" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Python" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/"/>
+    
+    <category term="Flask" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/Flask/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>fastapi入门介绍</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:17:20.000Z</published>
+    <updated>2021-03-25T15:18:22.406Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="程序语言" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Python" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/"/>
+    
+    <category term="Fastapi" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/Fastapi/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>uniapp开发技巧和问题整理</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:16:52.000Z</published>
+    <updated>2021-03-25T15:16:58.986Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="程序语言" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="JavaScript" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/JavaScript/"/>
+    
+    <category term="Vuejs" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/JavaScript/Vuejs/"/>
+    
+    <category term="Uniapp" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/JavaScript/Vuejs/Uniapp/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>nuxt技巧和问题整理</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:16:38.000Z</published>
+    <updated>2021-03-25T15:16:57.001Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="程序语言" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="JavaScript" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/JavaScript/"/>
+    
+    <category term="Vuejs" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/JavaScript/Vuejs/"/>
+    
+    <category term="Nuxtjs" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/JavaScript/Vuejs/Nuxtjs/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>cypress入门介绍</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:16:11.000Z</published>
+    <updated>2021-03-25T15:16:14.896Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="程序语言" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="JavaScript" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/JavaScript/"/>
+    
+    <category term="Cypress" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/JavaScript/Cypress/"/>
+    
+    
+    <category term="cypress" scheme="https://seniortesting.club/tags/cypress/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java IO流</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:14:50.000Z</published>
+    <updated>2021-03-25T15:15:45.549Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="程序语言" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Java" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Java/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>java基础</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:14:50.000Z</published>
+    <updated>2021-03-25T15:15:14.773Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件开发" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="程序语言" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Java" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Java/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mocha测试技巧和问题整理</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:13:01.000Z</published>
+    <updated>2021-03-25T15:13:09.289Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="自动化测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="测试技巧" scheme="https://seniortesting.club/tags/%E6%B5%8B%E8%AF%95%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Junit5测试技巧和问题整理</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:12:53.000Z</published>
+    <updated>2021-03-25T15:13:06.203Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="自动化测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="测试技巧" scheme="https://seniortesting.club/tags/%E6%B5%8B%E8%AF%95%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pytest测试技巧和问题整理</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:12:02.000Z</published>
+    <updated>2021-03-25T15:12:36.879Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="自动化测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="测试技巧" scheme="https://seniortesting.club/tags/%E6%B5%8B%E8%AF%95%E6%8A%80%E5%B7%A7/"/>
+    
+    <category term="pytest" scheme="https://seniortesting.club/tags/pytest/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cypress测试入门</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:11:30.000Z</published>
+    <updated>2021-03-25T15:12:21.704Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="自动化测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="UI自动化" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/UI%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    
+    <category term="cypress" scheme="https://seniortesting.club/tags/cypress/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jmeter测试工具二次开发</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:11:10.000Z</published>
+    <updated>2021-03-25T15:12:15.741Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="自动化测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="性能自动化" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/%E6%80%A7%E8%83%BD%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    
+    <category term="jmeter" scheme="https://seniortesting.club/tags/jmeter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>性能测试工具</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:10:49.000Z</published>
+    <updated>2021-03-25T15:12:18.714Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="自动化测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="性能自动化" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/%E6%80%A7%E8%83%BD%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    
+    <category term="性能测试" scheme="https://seniortesting.club/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RPC接口测试问题整理</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:10:29.000Z</published>
+    <updated>2021-03-25T15:12:13.017Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="自动化测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="接口自动化" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>API接口测试问题整理</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:10:17.000Z</published>
+    <updated>2021-03-25T15:12:08.296Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="自动化测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="接口自动化" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>测试基础理论知识</title>
+    <link href="https://seniortesting.club/posts/7670b080/"/>
+    <id>https://seniortesting.club/posts/7670b080/</id>
+    <published>2021-03-25T15:08:10.000Z</published>
+    <updated>2021-03-25T15:09:50.388Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i><p>本文主要介绍一些基础的软件测试入门的理论知识.</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;p&gt;本文主要介绍一些基础的软件测试入门的理论知识.&lt;/p&gt;
+&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="软件测试" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="测试理论" scheme="https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95%E7%90%86%E8%AE%BA/"/>
+    
+    
+    <category term="测试" scheme="https://seniortesting.club/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="测试理论" scheme="https://seniortesting.club/tags/%E6%B5%8B%E8%AF%95%E7%90%86%E8%AE%BA/"/>
+    
+    <category term="软件测试" scheme="https://seniortesting.club/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>mysql基础问题整理</title>
