@@ -4,11 +4,125 @@
   
     
     <entry>
+      <title>mysql基础问题整理</title>
+      <link href="posts/07KB4H/"/>
+      <url>posts/07KB4H/</url>
+      
+        <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>scrapy爬虫技术</title>
+      <link href="posts/13A3A80/"/>
+      <url>posts/13A3A80/</url>
+      
+        <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 爬虫 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> 爬虫 </tag>
+            
+            <tag> scrapy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>计算机网络-HTTP/TCP</title>
+      <link href="posts/3PJN1DF/"/>
+      <url>posts/3PJN1DF/</url>
+      
+        <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+            <tag> HTTP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode算法容易题型</title>
+      <link href="posts/32QXJNQ/"/>
+      <url>posts/32QXJNQ/</url>
+      
+        <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i><p>本文主要介绍的一些简单的leetcode算法题的解法和分析思路.</p></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 刷题 </tag>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>picgo</title>
       <link href="posts/c4fe5b8b/"/>
       <url>posts/c4fe5b8b/</url>
       
-        <content type="html"><![CDATA[<h2 id="设置PicGo对应的GitHub仓库"><a href="#设置PicGo对应的GitHub仓库" class="headerlink" title="设置PicGo对应的GitHub仓库"></a>设置PicGo对应的GitHub仓库</h2><p>参考配置文档： <a href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A" target="_blank" rel="noopener">https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A</a></p><ol><li>仓库名： <strong>alterhu2020/StorageHub</strong></li><li>token名称： <strong>32bf780d196739f8923d210a227135462eb2ceb2</strong></li><li>仓库分支： <strong>master</strong></li><li>Github Path: <strong>img/</strong></li><li>Custom Url:  <strong><a href="https://cdn.jsdelivr.net/gh/alterhu2020/CDN@master" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/alterhu2020/CDN@master</a></strong></li></ol><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table><thead><tr><th>OS</th><th>从剪切板上传图片</th><th>从资源管理器中上传图片</th><th>从弹出框中上传图片</th></tr></thead><tbody><tr><td>Windows/Unix</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>U</kbd></td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>E</kbd></td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>O</kbd></td></tr><tr><td>OsX</td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>U</kbd></td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>E</kbd></td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>O</kbd></td></tr></tbody></table><ClientOnly>  <in-article-adsense    ins-style="display:block; text-align:center;"    data-ad-slot="7727965566"  /></ClientOnly>]]></content>
+        <content type="html"><![CDATA[<h2 id="设置PicGo对应的GitHub仓库"><a href="#设置PicGo对应的GitHub仓库" class="headerlink" title="设置PicGo对应的GitHub仓库"></a>设置PicGo对应的GitHub仓库</h2><p>参考配置文档： <a href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A" target="_blank" rel="noopener">https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A</a></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 仓库名： **alterhu2020/StorageHub**</span><br><span class="line">2. token名称： **32bf780d196739f8923d210a227135462eb2ceb2**</span><br><span class="line">3. 仓库分支： **master**</span><br><span class="line">4. Github Path: **img/**</span><br><span class="line">5. Custom Url:  **https://cdn.jsdelivr.net/gh/alterhu2020/CDN@master**</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table><thead><tr><th>OS</th><th>从剪切板上传图片</th><th>从资源管理器中上传图片</th><th>从弹出框中上传图片</th></tr></thead><tbody><tr><td>Windows/Unix</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>U</kbd></td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>E</kbd></td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>O</kbd></td></tr><tr><td>OsX</td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>U</kbd></td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>E</kbd></td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>O</kbd></td></tr></tbody></table><ClientOnly>  <in-article-adsense    ins-style="display:block; text-align:center;"    data-ad-slot="7727965566"  /></ClientOnly>]]></content>
       
       
       <categories>
@@ -19,6 +133,14 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 图床 </tag>
+            
+            <tag> picgo </tag>
+            
+        </tags>
       
     </entry>
     
@@ -47,7 +169,7 @@
             
             <tag> github </tag>
             
-            <tag> ssh key </tag>
+            <tag> github ssh </tag>
             
         </tags>
       

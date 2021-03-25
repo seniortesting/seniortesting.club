@@ -6,7 +6,7 @@
   <link href="https://seniortesting.club/atom.xml" rel="self"/>
   
   <link href="https://seniortesting.club/"/>
-  <updated>2021-03-25T02:05:11.994Z</updated>
+  <updated>2021-03-25T11:39:30.596Z</updated>
   <id>https://seniortesting.club/</id>
   
   <author>
@@ -17,13 +17,124 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>mysql基础问题整理</title>
+    <link href="https://seniortesting.club/posts/07KB4H/"/>
+    <id>https://seniortesting.club/posts/07KB4H/</id>
+    <published>2021-03-25T11:24:34.000Z</published>
+    <updated>2021-03-25T11:39:30.596Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="数据库" scheme="https://seniortesting.club/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="mysql" scheme="https://seniortesting.club/tags/mysql/"/>
+    
+    <category term="数据库" scheme="https://seniortesting.club/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scrapy爬虫技术</title>
+    <link href="https://seniortesting.club/posts/13A3A80/"/>
+    <id>https://seniortesting.club/posts/13A3A80/</id>
+    <published>2021-03-25T11:24:34.000Z</published>
+    <updated>2021-03-25T11:44:52.499Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="爬虫" scheme="https://seniortesting.club/categories/%E7%88%AC%E8%99%AB/"/>
+    
+    
+    <category term="python" scheme="https://seniortesting.club/tags/python/"/>
+    
+    <category term="爬虫" scheme="https://seniortesting.club/tags/%E7%88%AC%E8%99%AB/"/>
+    
+    <category term="scrapy" scheme="https://seniortesting.club/tags/scrapy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络-HTTP/TCP</title>
+    <link href="https://seniortesting.club/posts/3PJN1DF/"/>
+    <id>https://seniortesting.club/posts/3PJN1DF/</id>
+    <published>2021-03-25T11:24:34.000Z</published>
+    <updated>2021-03-25T11:47:33.040Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="计算机技术" scheme="https://seniortesting.club/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="计算机网络" scheme="https://seniortesting.club/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="HTTP" scheme="https://seniortesting.club/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode算法容易题型</title>
+    <link href="https://seniortesting.club/posts/32QXJNQ/"/>
+    <id>https://seniortesting.club/posts/32QXJNQ/</id>
+    <published>2021-03-25T11:24:34.000Z</published>
+    <updated>2021-03-25T11:48:50.926Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i><p>本文主要介绍的一些简单的leetcode算法题的解法和分析思路.</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-bullhorn&quot;&gt;&lt;/i&gt;&lt;p&gt;本文主要介绍的一些简单的leetcode算法题的解法和分析思路.&lt;/p&gt;
+&lt;/div&gt;</summary>
+      
+    
+    
+    
+    <category term="面试" scheme="https://seniortesting.club/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="leetcode" scheme="https://seniortesting.club/categories/%E9%9D%A2%E8%AF%95/leetcode/"/>
+    
+    
+    <category term="leetcode" scheme="https://seniortesting.club/tags/leetcode/"/>
+    
+    <category term="刷题" scheme="https://seniortesting.club/tags/%E5%88%B7%E9%A2%98/"/>
+    
+    <category term="算法" scheme="https://seniortesting.club/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>picgo</title>
     <link href="https://seniortesting.club/posts/c4fe5b8b/"/>
     <id>https://seniortesting.club/posts/c4fe5b8b/</id>
     <published>2021-03-25T01:58:15.000Z</published>
-    <updated>2021-03-25T02:05:11.994Z</updated>
+    <updated>2021-03-25T12:41:36.409Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="设置PicGo对应的GitHub仓库"><a href="#设置PicGo对应的GitHub仓库" class="headerlink" title="设置PicGo对应的GitHub仓库"></a>设置PicGo对应的GitHub仓库</h2><p>参考配置文档： <a href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A" target="_blank" rel="noopener">https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A</a></p><ol><li>仓库名： <strong>alterhu2020/StorageHub</strong></li><li>token名称： <strong>32bf780d196739f8923d210a227135462eb2ceb2</strong></li><li>仓库分支： <strong>master</strong></li><li>Github Path: <strong>img/</strong></li><li>Custom Url:  <strong><a href="https://cdn.jsdelivr.net/gh/alterhu2020/CDN@master" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/alterhu2020/CDN@master</a></strong></li></ol><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table><thead><tr><th>OS</th><th>从剪切板上传图片</th><th>从资源管理器中上传图片</th><th>从弹出框中上传图片</th></tr></thead><tbody><tr><td>Windows/Unix</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>U</kbd></td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>E</kbd></td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>O</kbd></td></tr><tr><td>OsX</td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>U</kbd></td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>E</kbd></td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>O</kbd></td></tr></tbody></table><ClientOnly>  <in-article-adsense    ins-style="display:block; text-align:center;"    data-ad-slot="7727965566"  /></ClientOnly>]]></content>
+    <content type="html"><![CDATA[<h2 id="设置PicGo对应的GitHub仓库"><a href="#设置PicGo对应的GitHub仓库" class="headerlink" title="设置PicGo对应的GitHub仓库"></a>设置PicGo对应的GitHub仓库</h2><p>参考配置文档： <a href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A" target="_blank" rel="noopener">https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A</a></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 仓库名： **alterhu2020/StorageHub**</span><br><span class="line">2. token名称： **32bf780d196739f8923d210a227135462eb2ceb2**</span><br><span class="line">3. 仓库分支： **master**</span><br><span class="line">4. Github Path: **img/**</span><br><span class="line">5. Custom Url:  **https://cdn.jsdelivr.net/gh/alterhu2020/CDN@master**</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table><thead><tr><th>OS</th><th>从剪切板上传图片</th><th>从资源管理器中上传图片</th><th>从弹出框中上传图片</th></tr></thead><tbody><tr><td>Windows/Unix</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>U</kbd></td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>E</kbd></td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>O</kbd></td></tr><tr><td>OsX</td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>U</kbd></td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>E</kbd></td><td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>O</kbd></td></tr></tbody></table><ClientOnly>  <in-article-adsense    ins-style="display:block; text-align:center;"    data-ad-slot="7727965566"  /></ClientOnly>]]></content>
     
     
       
@@ -38,6 +149,10 @@
     <category term="图床工具" scheme="https://seniortesting.club/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%9B%BE%E5%BA%8A%E5%B7%A5%E5%85%B7/"/>
     
     
+    <category term="图床" scheme="https://seniortesting.club/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+    <category term="picgo" scheme="https://seniortesting.club/tags/picgo/"/>
+    
   </entry>
   
   <entry>
@@ -45,7 +160,7 @@
     <link href="https://seniortesting.club/posts/c4fe53x8b/"/>
     <id>https://seniortesting.club/posts/c4fe53x8b/</id>
     <published>2021-03-22T14:31:46.000Z</published>
-    <updated>2021-03-25T08:55:39.585Z</updated>
+    <updated>2021-03-25T11:43:01.353Z</updated>
     
     <content type="html"><![CDATA[<h2 id="git错误整理"><a href="#git错误整理" class="headerlink" title="git错误整理"></a>git错误整理</h2><h3 id="1-Key-is-invalid-You-must-supply-a-key-in-OpenSSH-public-key-format"><a href="#1-Key-is-invalid-You-must-supply-a-key-in-OpenSSH-public-key-format" class="headerlink" title="1. Key is invalid. You must supply a key in OpenSSH public key format"></a>1. Key is invalid. You must supply a key in OpenSSH public key format</h3><p>Github添加公开秘钥的时候，如果直接粘贴复制往往会收到这样一个报错：</p><p><code>Key is invalid. You must supply a key in OpenSSH public key format</code></p><p>这个原因是因为：</p><p>直接粘贴复制会破坏.ssh文件的格式<br>解决办法是：使用cat命令将 <code>~/.ssh/id_rsa.pub</code> 内容输出到终端，再拷贝。<br><code>cat ~/.ssh/id_rsa.pub</code></p>]]></content>
     
@@ -63,7 +178,7 @@
     
     <category term="github" scheme="https://seniortesting.club/tags/github/"/>
     
-    <category term="ssh key" scheme="https://seniortesting.club/tags/ssh-key/"/>
+    <category term="github ssh" scheme="https://seniortesting.club/tags/github-ssh/"/>
     
   </entry>
   
