@@ -3,9 +3,8 @@ title: {{ title }}
 date: {{ date }}
 tags: []
 categories: []
-keywords: 
+keywords:
 description:
-comments: true
 top_img:
-cover:
+cover: 
 ---

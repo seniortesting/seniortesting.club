@@ -5,11 +5,9 @@ tags:
   - git
   - github
   - ssh key
-categories: git
 keywords: 'git,github,ssh key, git clone'
 description: git常见错误整理
-abbrlink: git-error
-sticky: 100
+abbrlink: c4fe53x8b
 ---
 
 ## git错误整理

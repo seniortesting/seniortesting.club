@@ -3,36 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: SeniorTesting Club
-subtitle: 'Testing, Making Life Easy'
-description: 测试让开发更美好
-keywords: 博客,测试开发,pytest,karate,cypress,selenium, test automation, test develop
-author: Walter Hu
-language: zh-cn
+title: 高级软件测试开发网
+subtitle: ''
+description: 专注前沿计算机测试开发技巧技能,提升职业路线
+keywords: 软件测试,软件开发,测试开发,高级测试开发,测试技巧,pytest,cypress,selenium,jmeter,karate,自动化测试,性能测试
+author: 测小妹
+language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://seniortesting.club
-root: /
-# permalink: :year/:month/:day/:title/
 permalink: posts/:abbrlink/
-
-# abbrlink config
-abbrlink:
-  alg: crc32 #support crc16(default) and crc32
-  rep: hex #support dec(default) and hex
-  drafts: false #(true)Process draft,(false)Do not process draft. false(default)
-  # Generate categories from directory-tree
-  # depth: the max_depth of directory-tree you want to generate, should > 0
-  auto_category:
-    enable: false #true(default)
-    depth: #3(default)
-    over_write: false
-  auto_title: false #enable auto title, it can auto fill the title by path
-  auto_date: false #enable auto date, it can auto fill the date by time today
-  force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink.
-
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -73,10 +55,6 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''
-# 当前文件夹的静态图片
-marked:
-  prependRoot: true
-  postAsset: true
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -127,7 +105,32 @@ deploy:
   type: git
   repo: git@github.com:seniortesting/seniortesting.club.site.git
   branch: gh-pages
-
+# -------------------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------个人配置插件---------------------------------------------------------------
+# markdown语法配置,来自插件: hexo-renderer-marked
+marked:
+  gfm: true
+  pedantic: false
+  breaks: true
+  smartLists: true
+  smartypants: true
+  quotes: '“”‘’'
+  modifyAnchors: 0
+  anchorAlias: false
+  autolink: true
+  mangle: true
+  sanitizeUrl: false
+  headerIds: true
+  lazyload: false
+  prependRoot: false
+  postAsset: false
+  external_link:
+    enable: true
+    exclude: []
+    nofollow: false
+  disableNunjucks: false
+  descriptionLists: true
+# search config
 search:
   path: search.xml
   field: post
@@ -144,10 +147,7 @@ nofollow:
   exclude:
 
 sitemap:
-  path: sitemap.xml
+  path: sitemap_index.xml
   rel: false
   tags: true
   categories: true
-
-
-

@@ -15,13 +15,15 @@ script.
     }
 
     const findTrueUrl = (array) => {
+      let url = ''
       Promise.all(array.map(item =>
         fetch(item.url).then(resp => resp.json()).then(data => {
-          const urlArray = data.body.match(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/ig)
           if (data.user.login === 'utterances-bot') {
-            return urlArray.pop()
+            url = data.body.match(/https?\:\/\/[^\" ]+/ig).slice(-1)
+            return url[0]
           } else {
-            return urlArray.shift()
+            url = data.body.match(/https?\:\/\/[^\" ]+/i)
+            return url[0]
           }
         })
       )).then(res => {
