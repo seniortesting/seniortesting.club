@@ -10,11 +10,11 @@ cover:
 top_img:
 ---
 
-{% note blue 'fas fa-bullhorn' %}
+
 
 java相关问题错误解决方案
 
-{% endnote %}
+
 
 ## 生产环境java内存占用很高排查 （尚未解决）
 

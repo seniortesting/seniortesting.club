@@ -10,11 +10,11 @@ cover:
 top_img:
 ---
 
-{% note blue 'fas fa-bullhorn' %}
+
 
 hbuilderx开发工具学习
 
-{% endnote %}
+
 
 
 ## 不错的移动端滚动组件`mescroll`

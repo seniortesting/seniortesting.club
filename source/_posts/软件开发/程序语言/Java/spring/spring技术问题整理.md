@@ -10,11 +10,11 @@ cover:
 top_img:
 ---
 
-{% note blue 'fas fa-bullhorn' %}
+
 
 整理一些常用的spring技术问题
 
-{% endnote %}
+
 
 ## 自定义自己的application.yml中的配置信息
 

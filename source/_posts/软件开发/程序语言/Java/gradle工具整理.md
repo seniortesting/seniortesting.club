@@ -10,11 +10,11 @@ cover:
 top_img:
 ---
 
-{% note blue 'fas fa-bullhorn' %}
+
 
 gradle包管理工具
 
-{% endnote %}
+
 
 
 ## gradle 离线下载

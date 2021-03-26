@@ -9,11 +9,11 @@ top_img:
 cover:
 ---
 
-{% note blue 'fas fa-bullhorn' %}
+
 
 整理一些常见的高频mysql相关的问题
 
-{% endnote %}
+
 
 
 ## 定位查询可以是任意查询SQL 

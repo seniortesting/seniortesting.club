@@ -10,11 +10,11 @@ cover:
 top_img:
 ---
 
-{% note blue 'fas fa-bullhorn' %}
+
 
 整理常用的quart技术问题
 
-{% endnote %}
+
 
 
 ## `extends QuartzJobBean` 和 `implements Job `  difference

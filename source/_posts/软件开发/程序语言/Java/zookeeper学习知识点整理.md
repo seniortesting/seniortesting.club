@@ -10,11 +10,11 @@ cover:
 top_img:
 ---
 
-{% note blue 'fas fa-bullhorn' %}
+
 
 zookeeper配置中心
 
-{% endnote %}
+
 
 
 ### zookeeper 单机安装配置

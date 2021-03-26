@@ -10,11 +10,11 @@ cover:
 top_img:
 ---
 
-{% note blue 'fas fa-bullhorn' %}
+
 
 整理相关mybatis的问题
 
-{% endnote %}
+
 
 
 ## 通用MYSQL建表字段模板

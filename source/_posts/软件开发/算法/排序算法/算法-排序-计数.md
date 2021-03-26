@@ -10,8 +10,7 @@ cover:
 top_img:
 ---
 
-{% note blue 'fas fa-bullhorn' %}
 
 
 
-{% endnote %}
+
