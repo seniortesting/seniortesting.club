@@ -31,11 +31,12 @@ jobs:
     # Deploy hexo blog website.
     - name: Deploy
       id: deploy
-      uses: sma11black/hexo-action@v1.0.3
+      uses: alterhu2020/hexo-gulp-action@v1.0.5
       with:
         deploy_key: ${{ secrets.DEPLOY_KEY }}
         # user_name:  alterhu2020 # (or delete this input setting to use bot account)
         # user_email: alterhu2020@gmail.com # (or delete this input setting to use bot account)
+        gulp: 'true' # use `gulp` command before deploy
         commit_msg: ${{ github.event.head_commit.message }}  # (or delete this input setting to use hexo default settings)
     # Use the output from the `deploy` step(use for test action)
     - name: Get the output
