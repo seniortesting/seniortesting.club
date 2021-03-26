@@ -5,9 +5,8 @@
   "description": "高级测试开发网",
   "homepage": "https://seniortesting.club",
   "scripts": {
-    "server": "hexo clean && hexo g && hexo s",
-    "update": "git init && git add . && git commit -m 'backup' && git push origin main",
-    "deploy": "hexo clean && hexo generate && gulp && hexo deploy"
+    "s": "hexo clean && hexo g && hexo s",
+    "d": "hexo clean && hexo generate && gulp && hexo deploy"
   },
   "hexo": {
     "version": "5.4.0"
