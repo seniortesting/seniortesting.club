@@ -4,8 +4,6 @@ title: 翻墙工具环境配置
 
 
 
-
-
 ## Github 翻墙速度提升
 
 <https://code.seniortesting.club/blog/2020/How-To-Speed-Github.html>
@@ -22,8 +20,6 @@ title: 翻墙工具环境配置
 $ sudo -s
 $ source <(curl -sL https://multi.netlify.com/v2ray.sh) --zh
 ```
-
-
 
 
 ## 客户端配置
