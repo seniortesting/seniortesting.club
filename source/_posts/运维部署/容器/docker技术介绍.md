@@ -1,0 +1,411 @@
+---
+title: Docker容器化技术
+---
+
+
+
+
+
+## Docker安装配置
+
+从现在开始所有的部署相关的都docker化，不再使用以前的人工部署方式。
+
+那么如何安装docker呢？
+
+### Docker安装方法一（推荐）
+
+参考链接： <https://www.digitalocean.com/community/tutorials/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04>
+
+只需要执行一个命令即可：
+
+```shell
+# 1. docker安装
+$ sudo curl -sSL https://get.docker.com/ | sh
+$ sudo systemctl status docker
+$ docker info
+
+# 修改docker的镜像源为阿里云
+$ sudo nano /etc/docker/daemon.json
+
+  {
+    "registry-mirrors": ["https://jbj2tyqj.mirror.aliyuncs.com"]
+  }
+
+### 修改docker的tcp连接 
+
+docker默认只提供本地unix，sock文件的连接方式，让docker能够监听tcp端口还需要进行一些配置。
+1.1 首先编辑docker的宿主机文件: `nano /lib/systemd/system/docker.service`
+
+#;#ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+ExecStart=/usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375
+
+保存配置。
+
+1.2 重新加载系统服务配置文件（包含刚刚修改的文件）
+
+systemctl daemon-reload
+systemctl restart docker
+
+1.3 aliyp安全组防火墙添加开放2375端口
+
+1.4 在Windows系统上测试端口是否可以使用:
+
+```shell
+curl http://localhost:2375/version
+```
+
+# 2. docker compose 安装
+
+$ sudo curl -L --fail https://github.com/docker/compose/releases/download/1.28.5/run.sh -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+$ rm /usr/local/bin/docker-compose # 使用curl安装的
+
+
+# 3. docker swarm初始化
+
+参考文档：<https://www.lidong.xin/devops/S4-Swarm-Aliyun.html>
+
+在集群manager上执行命令：
+
+```shell
+# 初始化swarm集群
+$ docker swarm init
+在输出的命令上复制执行命令在对应的node上执行加入对应的swarm
+```
+注意上面的输出加入命令中机器需要打开对应的端口
+` docker swarm join --token SWMTKN-1-1xxz8cw5pyolpvy91edt7ranyjsnu2qjbyn3sjsp65fcx-0vkpilpqppe41ncnoapd319l0 172.19.82.347:2377`
+
+所以上面的命令需要在manager机器上打开2377端口。
+
+```shell
+#docker swarm：集群管理
+init          #初始化集群
+join          #将节点加入集群
+join-token    #管理加入令牌
+leave         #从集群中删除某个节点，强制删除加参数--force 
+update        #更新集群
+unlock        #解锁集群
+
+docker node：节点管理，
+demote      #将集群中一个或多个节点降级
+inspect     #显示一个或多个节点的详细信息
+ls          #列出集群中的节点
+promote     #将一个或多个节点提升为管理节点
+rm          #从集群中删除停止的节点，--force强制删除参数
+ps          #列出一个或多个节点上运行的任务
+update      #更新节点
+
+docker service：服务管理，
+create      #创建一个新的服务
+inspect     #列出一个或多个服务的详细信息
+ps          #列出一个或多个服务中的任务信息
+ls          #列出服务
+rm          #删除一个或多个服务
+scale       #扩展一个或多个服务
+update      #更新服务
+
+```
+
+
+# 4. docker轻量容器集群管理工具portainer
+
+$ docker pull portainer/portainer-ce
+$ docker run -d -p 9000:9000 -v /opt/portainer:/data -v /var/run/docker.sock:/var/run/docker.sock --name portainer portainer/portainer-ce
+
+
+### Docker安装方法二
+
+~~服务器端采用的是debian系统，安装如下步骤：~~
+<https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-debian-10>
+
+```shell
+$ sudo apt update
+$ sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+$ sudo apt update
+$ apt-cache policy docker-ce
+$ sudo apt install docker-ce
+$ sudo systemctl status docker
+$ docker info
+```
+
+通过上面的`docker info`发现对应的`Registry Mirrors`是官方的镜像，所以我们在使用`docker pull`命令下载到本地的时候会比较缓慢，所以我们需要修改对应的镜像。修改命令如下：
+
+```shell
+$ nano /etc/docker/daemon.json
+```
+
+修改为如下：
+
+
+-----------------------------------------**分割线**---------------------------------------------------
+
+### docker相关集群工具
+
+- 三剑客， compose， machine， swarm
+
+`compose` 使用 YAML 文件来定义多容器之间的关系。一个 `docker-compose up` 就可以把完整的应用跑起来。 本质上， compose 把 YAML 文件解析成 docker 命令的参数，然后调用相应的 docker 命令行接口，从而将应用以容器化的方式管理起来。它通过解析容器间的依赖关系顺序地启动容器。而容器间的依赖关系由 YAML 文件中的 `links` 标记指定。
+
+在 docker-compose.yml 文件中，服务的名称由用户自定义，每个定义的服务都至少包含 build或image 其中之一，其他 "links" 标记对应 docker run 的 "--links"选项。
+
+`Docker Machine` 是一个简化Docker 安装的命令行工具。通过一个简单的命令行即可在相应的平台上安装 Docker，为用户提供了灵活的功能，使得用户可以在任一主机上运行 Docker 容器。简单说，一个 Docker Machine 就是一个 Docker host 主机和经过配置的 Docker client 的结合体。
+
+docker-swarm是解决多主机多个容器调度部署得问题。
+
+
+- 轻量级的Kubernetes，K3S : [k3s.io](https://k3s.io/)
+- 集群管理工具Rancher：
+
+```shell
+$ docker pull rancher/server
+$ sudo docker run -d --name rancher -v /etc/localtime:/etc/localtime -v /opt/rancher/mysql:/var/lib/mysql --restart=unless-stopped -p 8080:8080 rancher/server
+
+$ docker ps -a
+$ docker exec -it rancher /bin/bash
+$ ps -ef
+$ docker logs -f rancher
+```
+
+访问 http://10.245.231.119:8080
+
+
+### docker的alpine和slim镜像
+
+Alpine 是众多 Linux 发行版中的一员，和 CentOS、Ubuntu、Archlinux 之类一样，只是一个发行版的名字，号称小巧安全，有自己的包管理工具 apk。
+
+与 CentOS 和 Ubuntu 不同，Alpine 并没有像 Red Hat 或 Canonical 之类的大公司为其提供维护支持，软件包的数量也比这些发行版少很多（如果只看开箱即用的默认软件仓库，Alpine 只有 10000 个软件包，而 Ubuntu、Debian 和 Fedora 的软件包数量均大于 50000。）
+容器崛起之前，Alpine 还是个无名之辈，可能是因为大家并不是很关心操作系统本身的大小，毕竟大家只关心业务数据和文档，程序、库文件和系统本身的大小通常可以忽略不计。
+
+容器技术席卷整个软件产业之后，大家都注意到了一个问题，那就是容器的镜像太大了，浪费磁盘空间，拉取镜像的时间也很长。于是，人们开始寻求适用于容器的更小的镜像。对于那些耳熟能详的发行版（例如 Ubuntu、Debian、Fedora）来说，只能通过删除某些工具（例如 ifconfig 和 netstat）将镜像体积控制在 100M 以下。而对于 Alpine 而言，什么都不用删除，镜像大小也就只有 5M 而已。
+
+**Alpine 镜像的另一个优势是包管理工具的执行速度非常快**，安装软件体验非常顺滑。诚然，在传统的虚拟机上不需要太关心软件包的安装速度，同一个包只需要装一次即可，无需不停重复安装。容器就不一样了，你可能会定期构建新镜像，也可能会在运行的容器中临时安装某些调试工具，如果软件包的安装速度很慢，会很快消磨掉我们的耐心。
+
+上面说的这么多，但是alpine镜像还是有很多坑，所以推荐使用如下Debian基础镜像：
+
+```shell
+FROM debian:buster-slim
+```
+
+### docker相关语法命令
+
+- 1. 环境变量ENV 指令的格式如下：
+
+```shell
+ENV <key>=<value> ...
+```
+ENV 指令还允许另一种语法 ENV <key> <value>，省略了中间的等号。例如：
+
+```shell
+ENV MY_VAR my-value
+```
+**支持这种替代语法为了向后兼容，但由于上述原因不鼓励使用，可能会在将来的版本中删除**。 所以推荐使用带加号的。
+
+- 2. `ENTRYPOINT`和`CMD`区别
+
+ 为容器指定默认执行命令。 有两种格式的配置， 分别是：
+
+```bash
+ENTRYPOINT ["executable", "param1", "param2"] (exec 格式, 推荐)
+ENTRYPOINT command param1 param2 (shell 格式)
+```
+注意：Note: The exec form is parsed as a JSON array, which means that you must use double-quotes (“) around words not single-quotes (‘). **exec格式的会作为json格式解析，所以必需是双引号，而不是单引号。否则单引号会报错误：entrypoint file not found**
+
+CMD命令当后面加上一个命令，比如 docker run -it [image] /bin/bash，CMD 会被忽略掉，命令 bash 将被执行：
+
+ENTRYPOINT 看上去与 CMD 很像，它们都可以指定要执行的命令及其参数。不同的地方在于 **ENTRYPOINT 不会被忽略，一定会被执行，即使运行 docker run 时指定了其他命令**。docker run **传入的参数会附加到 ENTRYPOINT 之后， 前提是使用了 exec 格式** 。
+
+所以CMD可以作为容器的默认执行命令，而ENTRYPOINT不可以替换默认的执行命令。
+
+- 3. `ADD`和`COPY`的区别
+
+1. add 和 copy 都是复制文件 / 文件夹
+2. add 可以从网络 / 本地复制; copy 仅从本地复制, 语义更明确, 推荐使用 copy。
+
+COPY对于文件而言可以直接将文件复制到镜像中，代码如下：
+
+```shell
+COPY ${JAR_FILE} /usr/local/oas/
+```
+对于目录而言，该命令只复制目录中的内容而不包含目录自身，代码如下：
+
+```shell
+
+COPY nickdir .
+WORKDIR /usr/local/oas/
+```
+
+ADD命令相对于COPY命令，可以解压缩文件并把它们添加到镜像中的功能，如果我们有一个压缩文件包，并且需要把这个压缩包中的文件添加到镜像中。需不需要先解开压缩包然后执行 COPY 命令呢？当然不需要！我们可以通过 ADD 命令一次搞定：
+
+```shell
+ADD nickdir.tar.gz .
+WORKDIR /usr/local/oas/
+```
+同时ADD还可以从 url 拷贝文件到镜像中，但官方不推荐这样使用，官方建议我们当需要从远程复制文件时，最好使用 curl 或 wget 命令来代替 ADD 命令。原因是，当使用 ADD 命令时，会创建更多的镜像层，当然镜像的 size 也会更大，代码如下：
+
+```shell
+ADD http://example.com/big.tar.xz /usr/src/things/
+RUN tar -xJf /usr/src/things/big.tar.xz -C /usr/src/things
+
+```
+
+所以ADD命令官方推荐只有在解压缩文件并把它们添加到镜像中时才需要。
+
+其他情况推荐都使用COPY命令。
+
+
+
+## 1. nginx部署
+
+
+**注意：推荐nginx不用docker部署，直接采用宿主机器安装。以下的安装方式不推荐**
+
+参考安装步骤链接： <https://www.digitalocean.com/community/tutorials/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04>
+
+执行如下命令：
+
+```shell
+$ sudo docker pull nginx
+
+$ mkdir -p /opt/html
+$ cd /opt
+
+$ sudo docker run --name nginx -d -p 80:80 -v /etc/nginx:/etc/nginx -v $(pwd)/html:/usr/share/nginx/html nginx
+
+$ sudo docker run --name nginx -d -p 80:80 -v /etc/nginx:/etc/nginx -v $PWD/html:/usr/share/nginx/html nginx
+
+$ docker logs nginx
+```
+
+
+## 2. jenkins部署
+
+参考文档： <https://developpaper.com/docker-installs-the-latest-version-of-jenkins/>
+
+命令如下：
+
+```shell
+$ docker pull jenkins/jenkins:lts
+$ docker images   # 查看对应的下载的jenkins镜像的jenkins版本
+$ docker inspect <jenkins image id>
+```
+
+![20210305170845](https://raw.githubusercontent.com/alterhu2020/StorageHub/master/img/20210305170845.png)
+
+```shell
+#Create data mount directory
+$ mkdir /opt/jenkins_home
+#The data directory is authorized. Otherwise, an error is reported. There is no such file directory
+$ chmod 777 /opt/jenkins_home/
+```
+
+```shell
+$ sudo docker run -d -p 8888:8080 -p 50000:50000 --privileged=true  -v /opt/jenkins_home:/var/jenkins_home --name jenkins  jenkins/jenkins:lts
+```
+检查是否jenkins正常启动：
+
+```shell
+#View containers all containers
+docker ps -a
+​
+#View running containers
+docker ps
+
+```
+
+输入对应的ip地址和端口号即可访问对应的jenkins服务了，需要输入对应的初始化的管理员密码，密码是在容器里面的，使用下面的命令得到初始化的密码，或者直接在宿主机器加载的目录：`/opt/jenkins_home/`获取对应的信息：
+
+```shell
+#[image ID] the image ID of the container
+docker exec -it [IMAGE ID] bash
+​
+#Get the password by command
+cat /var/jenkins_home/secrets/initialAdminPassword
+```
+
+安装完毕。
+
+其他配置和插件安装参考：
+
+
+## 3. java应用程序部署
+
+此处推荐的几个基础jdk镜像：
+
+```shell
+# jdk11
+# docker pull adoptopenjdk/openjdk11:jdk-11.0.10_9-slim
+# docker pull adoptopenjdk/openjdk11:jdk-11.0.10_9-debianslim
+# docker pull adoptopenjdk/openjdk11:jdk-11.0.10_9-debianslim-slim
+
+# jdk15
+# docker pull adoptopenjdk/openjdk15:jdk-15.0.2_7-slim
+# docker pull adoptopenjdk/openjdk15:jdk-15.0.2_7-debianslim
+# docker pull adoptopenjdk/openjdk15:jdk-15.0.2_7-debianslim-slim
+
+```
+推荐一个博客介绍的几种docker镜像大小的对比，<https://technology.amis.nl/continuous-delivery/containers/the-size-of-docker-images-containing-openjdk-11-0-6/>
+如下图所示：
+
+![docker](https://raw.githubusercontent.com/alterhu2020/StorageHub/master/img/20210305092831.png)
+
+**如何退出jshell命令？答案：输入`/exit`命令**
+
+
+3.1 配置springboot的一个安装包的`Dockerfile`脚本：
+
+```shell
+FROM adoptopenjdk/openjdk11:jdk-11.0.10_9-slim
+WORKDIR /opt
+
+# entrypoint script
+COPY entrypoint.sh /opt/
+ENTRYPOINT ["/opt/entrypoint.sh"]
+```
+
+
+## 4. python应用程序部署
+
+此处推荐的基础镜像是：
+
+```shell
+# python 3.10
+$ docker pull python:3.10.0a6-slim
+```
+
+## 5. vue应用程序部署
+
+
+```shell
+FROM node:10
+
+# Create app directory
+WORKDIR /app
+ADD . /app/
+
+# global install & update
+RUN npm i -g npm && npm i -g yarn
+
+RUN rm yarn.lock
+RUN yarn
+RUN yarn build
+
+ENV HOST 0.0.0.0
+EXPOSE 3000
+
+# start command
+CMD [ "yarn", "start" ]
+
+```
+
+## 6. selenium测试环境部署
+
+
+## docker启动报错
+
+```shell
+journalctl -fu docker.service
+
+```
+
+

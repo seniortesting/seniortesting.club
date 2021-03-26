@@ -30,9 +30,3 @@ description:
 | OsX          | <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>U</kbd>  | <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>E</kbd>  | <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>O</kbd>  |
 
 
-<ClientOnly>
-  <in-article-adsense
-    ins-style="display:block; text-align:center;"
-    data-ad-slot="7727965566"
-  />
-</ClientOnly>
