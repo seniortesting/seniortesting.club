@@ -1,4 +1,3 @@
-
 ---
 title: Scrapy爬虫配置
 ---
@@ -6,12 +5,12 @@ title: Scrapy爬虫配置
 
 ## 1. 开发环境
 
-### 1.1 需要安装如下必需的开发包：`pipenv`,类库包如下：
+### 1.1 需要安装如下必需的开发包：`pipenv`,类库包如下
 
 ```
-$ pip install pipenv
-$ pip install scrapy scrapyd-client
-$ pip install requests pymysql beautifulsoup4 lxml js2py selenium  
+pip install pipenv
+pip install scrapy scrapyd-client
+pip install requests pymysql beautifulsoup4 lxml js2py selenium  
 ```
 
 * 数据库主机、数据库名称、用户名、密码等信息在`settings.py`文件中配置；
@@ -23,6 +22,7 @@ $ pip install requests pymysql beautifulsoup4 lxml js2py selenium
 1.创建项目
 
 在开始爬取之前，我们必须创建一个新的Scrapy项目，我这里命名为jianshu_article。打开Mac终端，cd到你打算存储代码的目录中，运行下列命令:
+
 ```sh
 // 安装scrapy
 pip install scrapy
@@ -30,7 +30,9 @@ scrapy --help
 //Mac终端运行如下命令：
 scrapy startproject spider_pingbook
 ```
+
 2.创建爬虫程序
+
 ```shell
 //cd到上面创建的文件目录
 cd spider_pingbook
@@ -45,12 +47,14 @@ scrapy genspider jianshu jianshu.com
   spiders      爬虫目录，如：创建文件，编写爬虫规则
 */
 ```
+
 为了方便编写程序，我们用Pycharm打开项目，执行完上面的命令程序会自动创建目录及文件，其中生成了一个jianshu.py的文件，后面我们主要逻辑都将写在此文件中。
 
 3.设置数据模型
 双击items.py文件。
-找到你想爬取的简书作者首页，如我自己的首页https://www.jianshu.com/u/6b14223f1b58，用谷歌浏览器打开，空白处鼠标右击，单击“检查”进入控制台开发者模式：
+找到你想爬取的简书作者首页，如我自己的首页<https://www.jianshu.com/u/6b14223f1b58>，用谷歌浏览器打开，空白处鼠标右击，单击“检查”进入控制台开发者模式：
 通过分析网页源码，我们大概需要这些内容：
+
 ```py
 # -*- coding: utf-8 -*-
 
@@ -75,15 +79,16 @@ class JianshuArticalItem(scrapy.Item):
     pass
 
 ```
+
 如此数据模型就创建好了，后面运行爬虫的时候，我得到的数据将存进模型对应的位置。
 
 4.分析网页源码，编写爬虫
 推荐一款chrome的xpath自动选择生成工具[ChroPath](https://www.crx4chrome.com/extensions/ljngjbnaijcbncmcnjfhigebomdlkcjo/)这里给出XPath表达式的例子及对应的含义:
 
-- `/html/head/title`: 选择HTML文档中 <head> 标签内的 <title> 元素
-- `/html/head/title/text()`: 选择上面提到的 <title> 元素的文字
-- `//td` `//li`: 选择所有的 <td> 元素
-- `//div[@class="mine"]`: 选择所有具有 class="mine" 属性的 div 元素
+* `/html/head/title`: 选择HTML文档中 <head> 标签内的 <title> 元素
+* `/html/head/title/text()`: 选择上面提到的 <title> 元素的文字
+* `//td` `//li`: 选择所有的 <td> 元素
+* `//div[@class="mine"]`: 选择所有具有 class="mine" 属性的 div 元素
 
 上边仅仅是几个简单的XPath例子，XPath实际上要比这远远强大的多。 如果您想了解的更多，我们推荐 这篇XPath教程 。
 通过上面的介绍，相信你可以做接下来的爬虫工作了，下面贴上jianshu.py的全部代码，以供参考：
@@ -164,16 +169,16 @@ scrapy crawl jianshu -o data.json
 程序执行完后，我们可以在文件目录看到新生成的data.json文件，双击可以看到我们要获取的全部数据：
 
 如果需要存放到数据库中，需要注释`settings.py`文件中`ITEM_PIPELINES`的如下代码：
+
 ```python
 ITEM_PIPELINES = {
    'spider_pingbook.pipelines.SpiderPingbookPipeline': 300,
 }
 ```
 
+### 1.2 配置对应的`scrapy.cfg`文件中的`scrapyd`服务器(如果使用下面的gerapy则不需要配置这个部分),该部分主要是为了`scrapyd-deploy`使用
 
-### 1.2 配置对应的`scrapy.cfg`文件中的`scrapyd`服务器(如果使用下面的gerapy则不需要配置这个部分),该部分主要是为了`scrapyd-deploy`使用：
-
-```
+```cfg
 [deploy:cvr_news]
 # url = http://localhost:6800/
 # project = spider_test
@@ -189,8 +194,8 @@ ITEM_PIPELINES = {
 
 ### 2.1 `gerapy`服务器环境配置
 
-- 安装`scrapy`部署服务,也是一个远程服务。是运行`scrapy`爬虫的服务端程序,它支持以`http`接口命令方式发布、删除、启动、停止爬虫程序。
-- 在电脑任意位置新建一个文件夹,打开cmd，进入到这个文件夹下，输入命令`gerapy init`.安装`Gerapy`. 
+* 安装`scrapy`部署服务,也是一个远程服务。是运行`scrapy`爬虫的服务端程序,它支持以`http`接口命令方式发布、删除、启动、停止爬虫程序。
+* 在电脑任意位置新建一个文件夹,打开cmd，进入到这个文件夹下，输入命令`gerapy init`.安装`Gerapy`.
 初始化完成后会生成一个文件夹`gerapy`，该文件夹下面会生成一个`projects`文件夹.进入到该创建的`gerapy`文件夹下，再输入`gerapy migrate`完成`gerapy`初始化工作. 将scrapy脚本项目放到`projects`目录下,利用`gerapy runserver`，启动`gerapy`. 刷新即可看到部署的脚本。
 
 ```
@@ -218,15 +223,16 @@ $ cd gerapy
 $ mkdir projects
 
 ```
+
 #### **安装问题**
 
-1. 无法安装`gevent`,直接下载编译好的安装包： https://www.lfd.uci.edu/~gohlke/pythonlib
+1. 无法安装`gevent`,直接下载编译好的安装包： <https://www.lfd.uci.edu/~gohlke/pythonlib>
 
 ### 2.2 `scrapyd`脚本执行机器环境配置
 
-* `scrapyd`不需要设置目录，可以同时管理多个爬虫,每个爬虫还可以有多个版本： 
+* `scrapyd`不需要设置目录，可以同时管理多个爬虫,每个爬虫还可以有多个版本：
 
-```
+```shell
 $ pip install scrapyd
 一般安装在类似目录： `/usr/local/lib/python3.9/site-packages/scrapyd`
 $ find / -name "default_scrapyd.conf"
@@ -237,7 +243,8 @@ $ nano default_scrapyd.conf
 ```
 
 上面提到配置，需要修改的配置文件内容如下：
-```
+
+```shell
 eggs_dir    = /www/spider/eggs
 logs_dir    = /www/spider/logs
 items_dir   = /www/spider/items
@@ -248,15 +255,18 @@ http_port   = 6800
 username = deployertester
 password = eaatestf%5dz
 ```
+
 * 上面的配置修改成功后执行以下脚本运行`scrapyd`后台启动服务：
-```
-$ nohup scrapyd > /dev/null 2>&1 &
-```
-* 脚本运行端需要安装对应的`scrapy`开发环境中提到的所有库，执行如下命令安装:
-```
-pip install scrapy requests pymysql beautifulsoup4 lxml js2py selenium   
+
+```shell
+nohup scrapyd > /dev/null 2>&1 &
 ```
 
+* 脚本运行端需要安装对应的`scrapy`开发环境中提到的所有库，执行如下命令安装:
+
+```shell
+pip install scrapy requests pymysql beautifulsoup4 lxml js2py selenium   
+```
 
 所有的安装包默认安装在目录: `/usr/local/lib/python3.8/site-packages`
 
@@ -282,71 +292,83 @@ $ pip install 'pymysql>=0.10.0' --force-reinstall
 
 查看对应的scrapyd的配置中的log文件目录是: `/www/spider/logs`,然后进入查看对应的日志
 
-### 在`gerapy`安装中安装的lxml会出现错误： make sure the development packages of libxml2 and libxslt are installed 
-```
+### 在`gerapy`安装中安装的lxml会出现错误： make sure the development packages of libxml2 and libxslt are installed
+
+```shell
 sudo apt-get install libxml2-dev libxslt-dev
 ```
 
-### 执行`gerapy init`命令出现错误：
+### 执行`gerapy init`命令出现错误
+
 ```
 # gerapy init
 :0: UserWarning: You do not have a working installation of the service_identity module: 'cannot import name 'opentype''.  Please install it from <https://pypi.python.org/pypi/service_identity> and make sure all of its dependencies are satisfied.  Without the service_identity module, Twisted can perform only rudimentary TLS client hostname verification.  Many valid certificate/hostname mappings may be rejected.
 Initialized workspace gerapy
 
 ```
+
 原因是：本机上的service_identity模块太老旧，而通过install安装的时候不会更新到最新版本
 解决方法：
 
-- 强制升级,执行命令:  `pip install service_identity --force --upgrade`
+* 强制升级,执行命令:  `pip install service_identity --force --upgrade`
 
-- 或者是找到最新版的安装包进行手动安装，最新包下载地址: `https://pypi.org/project/service_identity/#files`,下载对应的whl文件安装即可。
-
+* 或者是找到最新版的安装包进行手动安装，最新包下载地址: `https://pypi.org/project/service_identity/#files`,下载对应的whl文件安装即可。
 
 ### 执行`pipenv install`出现错误：ImportError: cannot import name 'Mapping' from 'collections'
 
 原因是执行的包错误，重新安装即可
 
 ### 在gerapy中添加机器报错: `the JSON object must be str, not 'bytes'`
+
 可能是对应的scrapyd服务没有启动
 
 ### 执行scrapyd命令出错: `Failed to load application: No module named '_sqlite3'`
 
 原因是python采用编译安装的，导致没有加载对应的sqlite模块，重新编译安装加载sqlite模块，命令如下:
-```
+
+```shell
 ./configure --enable-optimizations --enable-ipv6 --enable-loadable-sqlite-extensions
 ```
 
 ### 执行`pip -V`出错: `ModuleNotFoundError: No module named 'pip._internal.cli.main'`
 
-解决方法，修复pip，执行命令: `python -m pip install --upgrade pip`，或者如下命令: 
-```
+解决方法，修复pip，执行命令: `python -m pip install --upgrade pip`，或者如下命令:
+
+```shell
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3 get-pip.py --force-reinstall
 ```
 
-### 执行命令: `sudo add-apt-repository ppa:deadsnakes/ppa` ,报错：` add-apt-repository gpg: keyserver receive failed: No dirmngr`,执行如下命令安装：dirmngr:
-```
+### 执行命令: `sudo add-apt-repository ppa:deadsnakes/ppa` ,报错：`add-apt-repository gpg: keyserver receive failed: No dirmngr`,执行如下命令安装：dirmngr
+
+```shell
 sudo apt install dirmngr
 ```
-8.执行`apt update`命令报错:` Updating from such a repository can't be done securely, and is therefore disabled by default`,执行如下命令更新包：
-```
-$ sudo apt-get update --allow-unauthenticated
+
+8.执行`apt update`命令报错:`Updating from such a repository can't be done securely, and is therefore disabled by default`,执行如下命令更新包：
+
+```shell
+sudo apt-get update --allow-unauthenticated
 ```
 
 ### 安装scrapy中twisted安装报错
 
-解决方法，切换到目录： https://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted，直接下载对应的whl包
+解决方法，切换到目录： <https://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted，直接下载对应的whl>包
 执行命令: `pip install Twisted‑20.3.0‑cp38‑cp38‑win32.whl`
 
 ### 如何设置scrapy的默认的user-agent和proxy代理
+
 在脚本目录下方有一个配置文件: `settings.py`, 如下配置：
+
 ```python
 DOWNLOADER_MIDDLEWARES = {
   'spider_yanzhi.middlewares.UserAgentMiddleware': 401,
   'spider_yanzhi.middlewares.CookiesMiddleware': 402
 }
 ```
+
 第二个参数可以参考`DOWNLOADER_MIDDLEWARES_BASE`里面的默认数值：
+
 ```python
 {
     'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware': 100,
@@ -366,6 +388,3 @@ DOWNLOADER_MIDDLEWARES = {
 }
 
 ```
-
-
-

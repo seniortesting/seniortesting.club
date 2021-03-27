@@ -7,12 +7,13 @@ title: Vue CountUp组件使用及其配置
 
 
 ## 简介
+
 > Vue.js component wrap for CountUp.js
 
 ## 安装`countup.js`
 
 ```bash
-$ npm install --save countup.js 
+npm install --save countup.js 
 ```
 
 ## 封装的一个vue版本的countup.js组件(文件位置: `/components/vue-countup/index`)
@@ -198,6 +199,7 @@ export default {
 </style>
 
 ```
+
 ## `plugins/nuxt-countup`配置
 
 ```js
@@ -209,7 +211,7 @@ export default () => {
 }
 ```
 
-## `nuxt.config.js`中配置参数如下：
+## `nuxt.config.js`中配置参数如下
 
 ```js
  plugins: [{ src: '~/plugins/nuxt-countup', ssr: false }]

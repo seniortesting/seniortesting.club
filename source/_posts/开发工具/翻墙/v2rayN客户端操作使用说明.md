@@ -13,7 +13,6 @@ title: v2rayN操作使用说明
 vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIiIsDQogICJhZGQiOiAic3R1ZHkucGluZ2Jvb2sudG9wIiwNCiAgInBvcnQiOiAiNTY3ODkiLA0KICAiaWQiOiAiZGY1MDg2NzItN2ZkOS0xMWVhLThlOWMtNTYwMDAyYjAyMDU2IiwNCiAgImFpZCI6ICIxNiIsDQogICJuZXQiOiAid3MiLA0KICAidHlwZSI6ICJub25lIiwNCiAgImhvc3QiOiAic3R1ZHkucGluZ2Jvb2sudG9wIiwNCiAgInBhdGgiOiAiLzBwVUdZbnpoLyIsDQogICJ0bHMiOiAidGxzIg0KfQ==
 ```
 
-
 ## 注意事项
 
 1. 请不要在外网发布任何违法不当言论，虽然我们自己搭建的服务器数据传输是加密的。但是现在有很多小粉红和五毛党混迹与各大国外社交媒体，他可以根据你的个人社交媒体相关信息来调查你的个人信息。进而可能会锁定你。
@@ -27,7 +26,6 @@ vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIiIsDQogICJhZGQiOiAic3R1ZHkucGluZ2Jvb2su
 - Mac苹果电脑客户端: [V2rayU](https://github.com/yanue/V2rayU)
 - 安卓手机客户端: [V2rayNG](https://github.com/2dust/v2rayNG/releases)
 - 苹果手机客户端: 目前苹果App Store管理太严，以前的基本不能使用已经下架。如果真的特别需要使用,请电脑端搜索苹果手机客户端。
-
 
 ### 1.1 百度网盘下载
 
@@ -54,7 +52,9 @@ vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIiIsDQogICJhZGQiOiAic3R1ZHkucGluZ2Jvb2su
 vmess://eyJ2IjogIjIiLCAicHMiOiAiIiwgImFkZCI6ICI0NS43Ny41MS4yMjMiLCAicG9ydCI6IDQxMDA4LCAiYWlkIjogMTYsICJ0eXBlIjogImR0bHMiLCAibmV0IjogImtjcCIsICJwYXRoIjogIiIsICJob3N0IjogIiIsICJpZCI6ICJlZjAwZmFlYy03ZWUwLTExZWEtODY1Ny01NjAwMDJhZjY2NzMiLCAidGxzIjogIm5vbmUifQ==
 
 ```
+
 5. 点击工具栏的“服务器”图标，选择“从剪切板导入批量URL”,如下截图：
+
 ![选择界面](https://s1.ax1x.com/2020/04/15/JCJlpq.png)
 
 6.完成上面的操作后可以看到主界面的列表里面新增了该条服务器配置信息，分别点击工具栏中的“重启服务”，然后再点击“检查更新”，在下拉框中选择“PAC”,如下截图：
@@ -81,7 +81,6 @@ vmess://eyJ2IjogIjIiLCAicHMiOiAiIiwgImFkZCI6ICI0NS43Ny41MS4yMjMiLCAicG9ydCI6IDQx
 10. 在上面的小飞机功能列表上点击“服务器”，确认选择的服务是“Vmess-45***223:41008”类似这样的服务器，我们的服务器IP是：45.77.51.223 ,如下截图：
 ![vmess配置](https://s1.ax1x.com/2020/04/15/JCaLpd.png)
 
-
 ## 3. 额外配置
 
 1. 可以在“V2rayN"的主界面，点击工具栏的“参数设置”, 勾选“开启UDP”,"开启流量监测"，如下截图：
@@ -91,10 +90,9 @@ vmess://eyJ2IjogIjIiLCAicHMiOiAiIiwgImFkZCI6ICI0NS43Ny41MS4yMjMiLCAicG9ydCI6IDQx
 
 ![开机启动](https://s1.ax1x.com/2020/04/15/JC0VoT.png)
 
-
 ## 4. 其他问题
 
-### 基础连接已经关闭: 发送时发生错误。
+### 基础连接已经关闭: 发送时发生错误
 
 1. 因为core源在github上,所以更新是需要开启http代理，能够访问Github. 粘贴如下配置信息到Windows的`hosts`配置文件中(文件位于： "C:\Windows\System32\drivers\etc\hosts"),直接复制如下代码到文件末尾:
 
@@ -108,4 +106,3 @@ vmess://eyJ2IjogIjIiLCAicHMiOiAiIiwgImFkZCI6ICI0NS43Ny41MS4yMjMiLCAicG9ydCI6IDQx
 2. 可能端口已经被拦截
 
 需要更换服务器端的端口号，可能端口号已经被封。
-

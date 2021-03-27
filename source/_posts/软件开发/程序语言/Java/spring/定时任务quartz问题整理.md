@@ -14,14 +14,11 @@ top_img:
 
 整理常用的quart技术问题
 
-
-
-
-## `extends QuartzJobBean` 和 `implements Job `  difference
+## `extends QuartzJobBean` 和 `implements Job`  difference
 
 在spring-boot-quartz中使用提供的接口创建job的时候有两种方式：
 
-- 实现接口`Job` 
+- 实现接口`Job`
 
 如果采用的是implements job接口的形式创建job，name我们如何获取任务传递过来的外部参数呢？
 
@@ -36,6 +33,7 @@ top_img:
     }
 
 ```
+
 有没有一种更方便的形式进行访问获取`JobDataMap`中的参数和值呢？是的，这个就是`QuartzJobBean`类做得
 
 - 继承抽象类`QuartzJobBean`
@@ -64,8 +62,6 @@ public class MyJob extends QuartzJobBean {
 
 @DisallowConcurrentExecution
 @PersistJobDataAfterExecution
-
-
 
 ## 常用基本quartz cron表达式
 
@@ -117,7 +113,6 @@ see [org/quartz-scheduler/quartz/2.3.0/quartz-2.3.0-sources.jar!/org/quartz/impl
 
 ```
 
-
 ## quartz修改 `JobDetail`的相关属性
 
 在实际运用中可能需要修改`JobDetail`中的描述或者名称或者`JobDataMap`,查了好久发现了一个隐藏很深的方法，如下：
@@ -158,6 +153,6 @@ public class RuleCrawlerJob implements Job {
 
 ::: warning  JobDetail中的 durable requestRecovery屬性
 
->  如果一个任务durable=false，那么当没有Trigger关联它的时候，它就会被自动删除 ，默認是false
->  如果一个任务是"requestRecovery"，那么当任务运行过程非正常退出时（比如进程崩溃，机器断电，但不包括抛出异常这种情况），Quartz再次启动时，会重新运行一次这个任务实例。
+> 如果一个任务durable=false，那么当没有Trigger关联它的时候，它就会被自动删除 ，默認是false
+> 如果一个任务是"requestRecovery"，那么当任务运行过程非正常退出时（比如进程崩溃，机器断电，但不包括抛出异常这种情况），Quartz再次启动时，会重新运行一次这个任务实例。
 :::

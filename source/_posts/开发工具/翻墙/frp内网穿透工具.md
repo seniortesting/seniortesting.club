@@ -9,11 +9,15 @@ title: FRP内网穿透环境配置
 ## 服务端配置
 
 ## `frps.ini`配置文件
+
 1. 配置执行文件
+
 ```
-$  chmod +x frps
+chmod +x frps
 ```
-2. 直接修改`frps.ini`配置文件内容如下: 
+
+2. 直接修改`frps.ini`配置文件内容如下:
+
 ```
 [common]
 bind_port = 7000
@@ -40,12 +44,10 @@ dashboard_pwd = xxtestd231lx0)
 
 ```
 
-
-
-
 ### 配置全局404错误页面
 
 文件名为: `http404.html`,代码如下:
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -327,6 +329,7 @@ dashboard_pwd = xxtestd231lx0)
 ### 配置开机启动服务
 
 开机启动脚本文件是: `frps.service`,复制到目录: `/lib/systemd/system`,代码如下:
+
 ```
 [Unit]
 Description=Frp Server Service
@@ -347,11 +350,15 @@ WantedBy=multi-user.target
 ## 客户端配置
 
 ## `frpc.ini`配置文件
+
 1. 配置执行文件
+
 ```
-$  chmod +x frpc
+chmod +x frpc
 ```
-2. 直接修改`frpc.ini`配置文件内容如下: 
+
+2. 直接修改`frpc.ini`配置文件内容如下:
+
 ```
 [common]
 ## 对应的您的服务器的ip地址和端口号，端口号是上面的`frps.ini`中配置的`port`参数

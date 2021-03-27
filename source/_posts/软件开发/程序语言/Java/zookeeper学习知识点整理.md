@@ -11,19 +11,16 @@ top_img:
 ---
 
 
-
 zookeeper配置中心
-
-
-
 
 ### zookeeper 单机安装配置
 
-> 参考文章: https://blog.csdn.net/pucao_cug/article/details/71240246
+> 参考文章: <https://blog.csdn.net/pucao_cug/article/details/71240246>
 
 - 下载安装 `wget http://mirror.bit.edu.cn/apache/zookeeper/current/apache-zookeeper-3.5.5-bin.tar.gz`
 - 解压缩tar.gz到目录： `/opt/apache-zookeeper-3.5.5`
-- 创建用户，通用方式： 
+- 创建用户，通用方式：
+
 ```shell
 # 创建用户和创建组，用户systemctl启动用
 # sudo groupadd zookeeper
@@ -32,9 +29,11 @@ zookeeper配置中心
 # 列出所有的用户: sudo cat /etc/passwd
 # 对应目录赋予权限： chown -R zookeeper:zookeeper /opt/apache-zookeeper-3.5.5-bin
 ```
-- 进入`cnf`目录复制一份配置文件： ` sudo cp zoo_sample.cfg zoo.cfg`
+
+- 进入`cnf`目录复制一份配置文件： `sudo cp zoo_sample.cfg zoo.cfg`
 - 创建日志目录： `sudo mkdir /logs/zookeeper && chmod 777 -R /logs`
 - 修改`zoo.cfg`配置信息：
+
 ```python
 # The number of milliseconds of each tick
 # 它用来控制心跳和超时，默认情况下最小的会话超时时间为两倍的 tickTime ，就是minSessionTimeout=
@@ -74,8 +73,10 @@ maxClientCnxns=60
 #autopurge.purgeInterval=1
 
 ```
+
 -- 配置环境变量：`sudo nano /etc/profile`:
 > 配置环境变量的目的是为了直接只用zookeeper中bin目录下的命令，如果不配置zookeeper的home路径，并不影响zookeeper启动
+
 ```
 export ZOOKEEPER_HOME=/opt/apache-zookeeper-3.5.5-bin
 export PATH=$ZOOKEEPER_HOME/bin:$PATH
@@ -85,7 +86,7 @@ export PATH=$ZOOKEEPER_HOME/bin:$PATH
 -- 启动服务前台运行：`/opt/apache-zookeeper-3.5.5-bin/bin/zkServer.sh start-foreground`
 -- 查看服务是否启动: `/opt/apache-zookeeper-3.5.5-bin/bin/zkServer.sh status`
 
--- 制作启动开机自启动: `sudo nano /lib/systemd/system/zookeeper.service `
+-- 制作启动开机自启动: `sudo nano /lib/systemd/system/zookeeper.service`
 -- 设置开机启动: `sudo systemctl daemon-reload && systemctl enable zookeeper.service`
 
 ```
@@ -111,12 +112,13 @@ WantedBy=multi-user.target
 ### zookeeper启动问题
 
 1. 执行`/zkServer.sh start`，看到启动正常，但是执行`zkServer.sh status`确报：
+
 ```
 Error contacting service. It is probably not running
 ```
 
 这说明并没有启动成功.我们可以通过bin目录下面的`bin/zookeeper.out`来查看问题原因,但是没有找到这个文件,后来看到执行这个命令让命令在前台运行:
-` sudo ./zkServer.sh start-foreground` :
+`sudo ./zkServer.sh start-foreground` :
 
 ```
 /usr/bin/java
@@ -124,12 +126,13 @@ ZooKeeper JMX enabled by default
 Using config: /opt/apache-zookeeper-3.5.5/bin/../conf/zoo.cfg
 错误: 找不到或无法加载主类 org.apache.zookeeper.server.quorum.QuorumPeerMain
 ```
-发现原来是自己下载的zookeeper版本是源码版本，正确的版本应该是: [http://mirror.bit.edu.cn/apache/zookeeper/current/apache-zookeeper-3.5.5-bin.tar.gz](http://mirror.bit.edu.cn/apache/zookeeper/current/apache-zookeeper-3.5.5-bin.tar.gz)
 
+发现原来是自己下载的zookeeper版本是源码版本，正确的版本应该是: [http://mirror.bit.edu.cn/apache/zookeeper/current/apache-zookeeper-3.5.5-bin.tar.gz](http://mirror.bit.edu.cn/apache/zookeeper/current/apache-zookeeper-3.5.5-bin.tar.gz)
 
 2. 执行`systemctl start zookeeper`报错: `zkServer.sh[985]: Error: JAVA_HOME is not set and java could not be found in PATH.`
 
 > 尽管配置了JAVA_HOME在`/etc/profile`中，但是还是需要下面的命令执行：
+
 ```
 # update-alternatives --install /usr/bin/java java /opt/jdk1.8.0_211/bin/java 1
 # update-alternatives --install /usr/bin/javac javac /opt/jdk1.8.0_211/bin/javac 1

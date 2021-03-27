@@ -14,10 +14,6 @@ top_img:
 
 反序列化工具jackson使用
 
-
-
-
-
 ## jackson反序列化myql的datetime类型为LocalDateTime时间错误
 
 > 在jackson反序列化mysql中的datetime类型的数据的时候，发现时间总是不一致，发现是mysql的分区和当前运行程序的分区不一致导致的
@@ -29,6 +25,7 @@ top_img:
 show variables like "%time_zone%";
 
 ```
+
 +------------------+--------+
 | Variable_name  | Value |
 +------------------+--------+
@@ -37,7 +34,6 @@ show variables like "%time_zone%";
 +------------------+--------+
 2 rows in set (0.00 sec)
   #time_zone说明mysql使用system的时区，system_time_zone说明system使用CST时区
-
 
 - 修改mysql的时区：
 
@@ -52,8 +48,6 @@ default-time_zone = '+08:00'
 # /etc/init.d/mysqld restart ##重启mysql使新时区生效
 ```
 
-
-## jackson 反序列化报错 `InvalidDefinitionException: Cannot construct instance of `com.xxx`, problem: `java.lang.NullPointerException`
+## jackson 反序列化报错 `InvalidDefinitionException: Cannot construct instance of`com.xxx`, problem:`java.lang.NullPointerException`
 
 > jackson 反序列化的时候，对象需要有一个默认方法，否则无法构建对象
-

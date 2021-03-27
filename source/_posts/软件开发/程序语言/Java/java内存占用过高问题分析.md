@@ -14,8 +14,6 @@ top_img:
 
 java相关问题错误解决方案
 
-
-
 ## 生产环境java内存占用很高排查 （尚未解决）
 
 - 命令`top`查看对应的java进程的`pid`,记录下该数值（16066）
@@ -31,7 +29,7 @@ jps、jstack等工具读取/tmp/hsperfdata_$USER下的pid文件获取连接信�
 
 查看关键配置`/etc/cron.daily/tmpwatch`：
 
-```sh
+```shell
 flags=-umc /usr/sbin/tmpwatch "$flags" 
 -x /tmp/.X11-unix -x /tmp/.XIM-unix \ 
  -x /tmp/.font-unix -x /tmp/.ICE-unix 
@@ -39,6 +37,7 @@ flags=-umc /usr/sbin/tmpwatch "$flags"
 for d in /var/{cache/man,catman}/{cat?,X11R6/cat?,local/cat?}; 
 do if [ -d "$d" ]; then /usr/sbin/tmpwatch "$flags" -f 720 "$d" fi done
 ```
+
 系统每天会用tmpwatch命令检查并删除 /tmp 下超过240小时未访问过的文件和目录。
 
 ### 解决办法

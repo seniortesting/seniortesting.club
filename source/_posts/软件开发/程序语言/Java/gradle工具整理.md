@@ -14,17 +14,13 @@ top_img:
 
 gradle包管理工具
 
-
-
-
 ## gradle 离线下载
 
 gradle工程没有会找文件 gradle/wrapper/gradle-wrapper.properties 里面的相关配置，下载对应的gradle包从如下配置：
 `distributionUrl=https\://services.gradle.org/distributions/gradle-5.4.1-all.zip`, 所以每个gradle工程记得配置这个参数。
 一次下载后后面就不会再下载了。记得配置`GRADLE_USER_HOME`环境变量。
 
-
-###  com.android.builder.internal.aapt.v2.Aapt2Exception: Android resource linking failed
+### com.android.builder.internal.aapt.v2.Aapt2Exception: Android resource linking failed
 
 1. 在Android studio中打开toggle view进行查看详细的信息发现如下：
 
@@ -107,10 +103,11 @@ D:\GitRepository\yitieyilu.com\yanzhi-web\material-sharing\node_modules\@capacit
 
 ```
 
-
 问题原因，没有正确配置gradle机器对应的Android sdk版本。
 配置gradle环境变量：
-- GRADLE_HOME = 
+
+- GRADLE_HOME =
 
 > gradle会下载相关需要依赖的jar包，默认的本地存放地址是：C:/Users/(用户名)/.gradle/caches/modules-2/files-2.1
+
 - GRADEL_USER_HOME = E:\GradleRepository (但是对于IDEA来说木有用（当然上面的环境变量还是要添加的），在IDEA中使用gradle需要修改Gradle的路径: Service Directory Path)

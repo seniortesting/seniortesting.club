@@ -104,16 +104,17 @@ export default ({ $axios, error, store, router }) => {
 
 ```
 
-
 ## express环境搭建
 
 express与nuxt集成，添加如下类库：
+
 1. `consola`， 控制台颜色显示
 2. `morgan`，日志记录，日志格式，配置输出到文件日志
 3. `cors`， 跨域访问设置
 4. `body-parser`， 直接解析返回的数据结果通过`res.body`
 
-### `index.js`入口express总配置代码如下：
+### `index.js`入口express总配置代码如下
+
 ```
 const path = require('path')
 const fs = require('fs')
@@ -187,10 +188,11 @@ start()
 
 ## node-mysql库配置
 
-推荐类库: https://github.com/mysqljs/mysql#install
+推荐类库: <https://github.com/mysqljs/mysql#install>
 
-类库代码: 
-```
+类库代码:
+
+```js
 const mysql = require('mysql')
 const config = require('../config')
 // 雪花算法计算id
@@ -247,6 +249,7 @@ module.exports = { exec, nextId }
 ## snowflake雪花算法nodejs实现
 
 代码如下:
+
 ```
 /**
  * 网上搜到的方案基本是按照推特的方案（10位的数据机器位分成 5位机器ID + 5位数据ID ），目前代码按照这个方案来做的；
@@ -437,6 +440,3 @@ const Snowflake = (function () {
 module.exports = Snowflake
 
 ```
-
-
-

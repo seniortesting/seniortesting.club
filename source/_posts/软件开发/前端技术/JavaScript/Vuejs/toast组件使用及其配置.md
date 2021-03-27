@@ -7,21 +7,27 @@ title: Vue toast组件使用及其配置
 
 
 ## 插件推荐
+
 推荐一个特别好的插件： [vue-toasted](https://github.com/shakee93/vue-toasted)
+
 ## 使用方法
+
 #### Install using npm
+
 ```bash
 # install it via npm
 npm install vue-toasted --save
 ```
 
 #### Install using yarn
+
 ```bash
 # install it via yarn
 yarn add vue-toasted
 ```
 
 #### Direct usage with html
+
 ```html
 <!-- Insert the vue core before vue-toasted -->
 <script src="https://unpkg.com/vue-toasted"></script>
@@ -30,6 +36,7 @@ yarn add vue-toasted
     Vue.use(Toasted)
 </script>
 ```
+
 ## Usage
 
 It is simple. couple of lines all what you need.
@@ -55,8 +62,8 @@ Vue.toasted.show('hola billo');
 
 All Good Now you have this cool toast in your project..
 
+### Icons :fire
 
-### Icons :fire:
 [Material Icons](http://google.github.io/material-design-icons/), [Fontawesome](http://fontawesome.io/cheatsheet/) and [Material Design Icons](https://materialdesignicons.com/) are supported. you will have to import the icon packs into your project. <a href="/examples/using-icons.js"> example using icons </a>
 
 ```javascript
@@ -72,12 +79,13 @@ All Good Now you have this cool toast in your project..
 }
 ```
 
-### Actions  :fire:
+### Actions  :fire
+
 <p align="center">
     <a href="https://github.com/shakee93/vue-toasted" target="_blank">
     <img width="300" src="https://shakee93.github.io/vue-toasted/assets/images/action-preview.jpg">
     </a>
-</p> 
+</p>
 <p>You can have single or multiple actions in the toast. take a look at the example below</p>
 <p>Check below Vue Router section for router integration</p>
 
@@ -92,6 +100,7 @@ push|Object |`null`|  Vue Router push parameters
 onClick|Function(e,toastObject) |`null`|  onClick Function of action
 
 ##### Examples
+
 ```javascript
 {
     // you can pass a single action as below
@@ -114,15 +123,14 @@ onClick|Function(e,toastObject) |`null`|  onClick Function of action
             text : 'Undo',
             // router navigation
             push : { 
-            	name : 'somewhere',
-            	// this will prevent toast from closing
-            	dontClose : true
+             name : 'somewhere',
+             // this will prevent toast from closing
+             dontClose : true
              }
         }
     ]
 }
 ```
-
 
 ## API
 
@@ -163,10 +171,11 @@ show|message, options| show a toast with default style
 success|message, options| show a toast with success style
 info|message, options| show a toast with info style
 error|message, options | show a toast with error style
-register | name, message, options | register your own toast with options [explained here](#custom-toast-registration) 
+register | name, message, options | register your own toast with options [explained here](#custom-toast-registration)
 clear | - | clear all toasts
 
 ### Toast Object
+
 Each Toast Returns a Toast Object where you can manipulate the toast.
 
 ```javascript
@@ -192,6 +201,7 @@ myToast.text("Changing the text !!!").goAway(1500);
 ## 问题
 
 1. 如何配置右侧一个关闭图标？
+
 ```js
  action: [
     {
@@ -203,7 +213,9 @@ myToast.text("Changing the text !!!").goAway(1500);
           }
 ]
 ```
+
 2. 如何配置一个全局可直接重复调用的toast？
+
 ```js
  register: [
         {

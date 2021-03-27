@@ -7,7 +7,7 @@ title: Python Uwsgi Linux安装及其环境配置
 
 [How to install uwsgi](https://uwsgi-docs.readthedocs.io/en/latest/Install.html#installing-from-source)
 
-```shell script
+```shell
 $ sudo apt-get install build-essential python3-dev
 # Install the latest stable release:
 $ pip install uwsgi
@@ -22,9 +22,9 @@ $ pip install uwsgitop
 
 ```
 
-# 安装uwsgi服务
+## 安装uwsgi服务
 
-```
+```shell
 $ sudo nano /lib/systemd/system/uwsgi.service
 
 
@@ -46,9 +46,6 @@ WantedBy=multi-user.target
 
 ```
 
-
-
-
 ## uwsgi参数
 
 * chdir=/xxx/xxx # 指定项目目录
@@ -67,9 +64,8 @@ WantedBy=multi-user.target
 * gid=xxx # uWSGI服务器运行时的用户组id
 * procname-prefix-spaced=xxx # 指定工作进程名称的前缀
 
-
 ## 异常安装问题
 
--  Unknown distribution option: 'descriptions'
+* Unknown distribution option: 'descriptions'
 
 > 解决方法: apt-get install build-essential python3-dev

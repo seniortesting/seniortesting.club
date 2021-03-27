@@ -14,9 +14,6 @@ top_img:
 
 整理相关mybatis的问题
 
-
-
-
 ## 通用MYSQL建表字段模板
 
 ```
@@ -54,7 +51,7 @@ CREATE TABLE 新表名称 (
 
 ## `PageHelper` return `PageInfo` total =-1
 
-> Found that the `PageInfo` always return the `total` field as -1, and the select count(*) sql not run 
+> Found that the `PageInfo` always return the `total` field as -1, and the select count(*) sql not run
 
 * The reason is as below:
 
@@ -63,26 +60,26 @@ pagehelper:
   default-count: false
 ```
 
-* The sql used here is: 
+* The sql used here is:
+
 ```java
     Page<Object> page = PageHelper.startPage(pageNum, pageSize);
     List<PermissionActionResponse> permissionActions = authMapper.getPermissionActions();
     PageInfo<PermissionActionResponse> pageInfo = new PageInfo<>(permissionActions);
 ```
 
-
 ## mybatis-plus 重要坑记录
 
-- 数据库表的字段为数据库关键字，采用如下声明：
+* 数据库表的字段为数据库关键字，采用如下声明：
 
 ```
 1. 关键字数据表： @TableName("[user]")
 2. 关键字数据表字段：  @TableField("`desc`")
 ```
 
-- 配置 MapperScan 注解
+* 配置 MapperScan 注解
 
->  提到需要写上`@MapperScan("com.baomidou.mybatisplus.samples.quickstart.mapper")`,可以在mapper类上采用注解`@Mapper`达到同样的效果
+> 提到需要写上`@MapperScan("com.baomidou.mybatisplus.samples.quickstart.mapper")`,可以在mapper类上采用注解`@Mapper`达到同样的效果
 
 参考代码： [github 代码段](https://github.com/baomidou/mybatis-plus-samples/blob/master/mybatis-plus-sample-auto-fill-metainfo/src/main/java/com/baomidou/samples/metainfo/mapper/UserMapper.java)
 
@@ -93,8 +90,7 @@ pagehelper:
 3. `@TableField`
 4. `@Version`
 
-
-- 分页
+* 分页
 
 ```
   // 不进行 count sql 优化，解决 MP 无法自动优化 SQL 问题，这时候你需要自己查询 count 部分
@@ -102,16 +98,13 @@ pagehelper:
     // 当 total 为非 0 时(默认为 0),分页插件不会进行 count 查询
     // 要点!! 分页返回的对象与传入的对象是同一个
 
-``` 
+```
 
-- 常见问题整理
+* 常见问题整理
 
 [FAQ](https://mybatis.plus/guide/faq.html)
 
-
-
-
-- mybatis plus 详细配置产生实体类及其相关代码
+* mybatis plus 详细配置产生实体类及其相关代码
 
 ```
 
@@ -263,7 +256,9 @@ public class MybatisCodeGenerator {
 ## 踩坑记录
 
 * 问题描述：
->  单元执行正常，正常service层调用报错，代码很简单：
+
+> 单元执行正常，正常service层调用报错，代码很简单：
+
  1. `sysUserMapper.selectOne(Wrappers.<SysUser>lambdaQuery().eq(SysUser::getUsername,username));`
  2. 报错信息如下：
 
@@ -272,11 +267,10 @@ public class MybatisCodeGenerator {
 2019-05-15 20:31:58.893 [http-nio-8085-exec-3] ERROR com.yanzhi.core.vrpanoapp.exception.GlobalExceptionHandler.handleExceptionHandler:223 - 未捕获的系统异常：nested exception is org.apache.ibatis.builder.BuilderException: Error evaluating expression 'ew.sqlSegment != null and ew.sqlSegment != '' and ew.nonEmptyOfWhere'. Cause: org.apache.ibatis.ognl.OgnlException: sqlSegment [com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Your property named "username" cannot find the corresponding database column name!]
 org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.builder.BuilderException: Error evaluating expression 'ew.sqlSegment != null and ew.sqlSegment != '' and ew.nonEmptyOfWhere'. Cause: org.apache.ibatis.ognl.OgnlException: sqlSegment [com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Your property named "username" cannot find the corresponding database column name!]
 ```
+
 * 解决方法：
 
 > 移除 `dev-tools`,参见 [https://github.com/baomidou/mybatis-plus/issues/1137](https://github.com/baomidou/mybatis-plus/issues/1137)
-
-
 
 ## mybatis中的mapper传参/foreach用法
 
@@ -294,12 +288,10 @@ public List<DTO> listResult(@Param(Constants.WRAPPER) Wrapper wrapper)
 ```xml
 
 <select id="getAll" resultType="MysqlData">
-	SELECT * FROM mysql_data ${ew.customSqlSegment}
+ SELECT * FROM mysql_data ${ew.customSqlSegment}
 </select>
 
 ```
-
-
 
 ## mybatis plus自定义分页出错
 
@@ -313,7 +305,7 @@ Caused by: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: cannot
 
 那么该如何优雅的使用mybatis提供的QueryWrapper构造子查询条件呢？避免在xml中写大量的`<if test>`进行判断子查询，生成动态的查询条件，如下是操作步骤：
 
-   1.  首先确定配置了拦截器如下：
+   1. 首先确定配置了拦截器如下：
 
  ```java
  /**
@@ -364,14 +356,11 @@ Caused by: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: cannot
 
 关于 `${ew.sqlSegment}` 使用了 `$` 不要误以为就会被 sql 注入，请放心使用 mp 内部对`wrapper` 进行了字符转义处理！
 
-
 ## mybatis `Blob`字段类型转换
 
 ::: warning MYSQL的BLOB /CBLOB 字段
 > 经确认mybatis对应的Blob数据库类型不是`java.sql.Blob`类型，否则获取的结果是null，应该对应的是`byte[]`,而`clob`对应的则是 `String`
-::: 
-
-
+:::
 
 ## mybatis-plus枚举类型
 
@@ -380,12 +369,13 @@ Caused by: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: cannot
 1. 通常的方法进行序列化和反序列化
 
 使用的是`jackson`进行序列化和反序列化
-- 将枚举序列化需要的是注解 : `@JsonValue`
-- 将枚举反序列化需要的注解 ： `@JsonCreator`
+
+* 将枚举序列化需要的是注解 : `@JsonValue`
+* 将枚举反序列化需要的注解 ： `@JsonCreator`
 
 2. 采用mybatis-plus进行枚举的序列化和反序列：
 
-- 设置mybatis-plus进行枚举的转换:
+* 设置mybatis-plus进行枚举的转换:
 
 ```yaml
 # mybatis相关配置
@@ -407,7 +397,7 @@ mybatis-plus:
 
 ```
 
-- 枚举类举例如下:
+* 枚举类举例如下:
 
 ```java
 @Getter

@@ -14,12 +14,9 @@ top_img:
 
 整理一些常用的spring技术问题
 
-
-
 ## 自定义自己的application.yml中的配置信息
 
-
-```
+```java
          <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
@@ -28,11 +25,10 @@ top_img:
 
 ```
 
-
-## spring security securedEnabled /jsr250Enabled  / prePostEnabled 
-
+## spring security securedEnabled /jsr250Enabled  / prePostEnabled
 
 ## resttemplate获取的json对象是泛型的会自动转换为map对象，如何转为正确的实体类？
+
 ```
 // 泛型的数据返回值
         ParameterizedTypeReference<WebResponse<WeixinUserInfoResponse>> webResponseParameterizedTypeReference =
@@ -43,7 +39,6 @@ top_img:
         // 获取正确了token值
         WebResponse<WeixinUserInfoResponse> webResponse = responseEntity.getBody();
 ```
-
 
 ## spring quartz任务调度超时
 
@@ -65,7 +60,6 @@ top_img:
 
 ```
 
-
 ## springboot 配置全局404详细步骤及说明
 
 - `application.xml`中配置如下
@@ -79,54 +73,55 @@ server:
     include-stacktrace: on_trace_param
 
 ```
+
 说明：`server.error.whitelabel.enabled`,是为了去掉springboot的自动配置，它的自动配置代码如下：
 
 ```java
 org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration
 
-	@Configuration
-	@ConditionalOnProperty(prefix = "server.error.whitelabel", name = "enabled", matchIfMissing = true)
-	@Conditional(ErrorTemplateMissingCondition.class)
-	protected static class WhitelabelErrorViewConfiguration {
+ @Configuration
+ @ConditionalOnProperty(prefix = "server.error.whitelabel", name = "enabled", matchIfMissing = true)
+ @Conditional(ErrorTemplateMissingCondition.class)
+ protected static class WhitelabelErrorViewConfiguration {
 
-		private final StaticView defaultErrorView = new StaticView();
+  private final StaticView defaultErrorView = new StaticView();
 
-		@Bean(name = "error")
-		@ConditionalOnMissingBean(name = "error")
-		public View defaultErrorView() {
-			return this.defaultErrorView;
-		}
+  @Bean(name = "error")
+  @ConditionalOnMissingBean(name = "error")
+  public View defaultErrorView() {
+   return this.defaultErrorView;
+  }
 
-		// If the user adds @EnableWebMvc then the bean name view resolver from
-		// WebMvcAutoConfiguration disappears, so add it back in to avoid disappointment.
-		@Bean
-		@ConditionalOnMissingBean
-		public BeanNameViewResolver beanNameViewResolver() {
-			BeanNameViewResolver resolver = new BeanNameViewResolver();
-			resolver.setOrder(Ordered.LOWEST_PRECEDENCE - 10);
-			return resolver;
-		}
+  // If the user adds @EnableWebMvc then the bean name view resolver from
+  // WebMvcAutoConfiguration disappears, so add it back in to avoid disappointment.
+  @Bean
+  @ConditionalOnMissingBean
+  public BeanNameViewResolver beanNameViewResolver() {
+   BeanNameViewResolver resolver = new BeanNameViewResolver();
+   resolver.setOrder(Ordered.LOWEST_PRECEDENCE - 10);
+   return resolver;
+  }
 
-	}
+ }
 
 ```
 
 `server.error.include-exception` 用于实例化一个bean可以获取对应的404发生的时候获取对应的错误信息:
 
 ```java
-	@Bean
-	@ConditionalOnMissingBean(value = ErrorAttributes.class, search = SearchStrategy.CURRENT)
-	public DefaultErrorAttributes errorAttributes() {
-		return new DefaultErrorAttributes(
-				this.serverProperties.getError().isIncludeException());
-	}
+ @Bean
+ @ConditionalOnMissingBean(value = ErrorAttributes.class, search = SearchStrategy.CURRENT)
+ public DefaultErrorAttributes errorAttributes() {
+  return new DefaultErrorAttributes(
+    this.serverProperties.getError().isIncludeException());
+ }
 
-	@Bean
-	@ConditionalOnMissingBean(value = ErrorController.class, search = SearchStrategy.CURRENT)
-	public BasicErrorController basicErrorController(ErrorAttributes errorAttributes) {
-		return new BasicErrorController(errorAttributes, this.serverProperties.getError(),
-				this.errorViewResolvers);
-	}
+ @Bean
+ @ConditionalOnMissingBean(value = ErrorController.class, search = SearchStrategy.CURRENT)
+ public BasicErrorController basicErrorController(ErrorAttributes errorAttributes) {
+  return new BasicErrorController(errorAttributes, this.serverProperties.getError(),
+    this.errorViewResolvers);
+ }
 
 ```
 
@@ -145,11 +140,11 @@ spring:
 
 ```java
 @Bean
-	@ConditionalOnMissingBean(value = ErrorController.class, search = SearchStrategy.CURRENT)
-	public BasicErrorController basicErrorController(ErrorAttributes errorAttributes) {
-		return new BasicErrorController(errorAttributes, this.serverProperties.getError(),
-				this.errorViewResolvers);
-	}
+ @ConditionalOnMissingBean(value = ErrorController.class, search = SearchStrategy.CURRENT)
+ public BasicErrorController basicErrorController(ErrorAttributes errorAttributes) {
+  return new BasicErrorController(errorAttributes, this.serverProperties.getError(),
+    this.errorViewResolvers);
+ }
 
 ```
 
@@ -198,18 +193,18 @@ public class GlobalNotFoundErrorController implements ErrorController {
 
 ```
 
-
 ## springboot 异步/多线程处理 async
 
 ### 多线程的几个概念
 
-- coreSize 核心线程 ，这里设置为 **8** 
-- queueCapacity 当核心线程都在跑任务，还有多余的任务会存到此处，这里设置为 **20** 
+- coreSize 核心线程 ，这里设置为 **8**
+- queueCapacity 当核心线程都在跑任务，还有多余的任务会存到此处，这里设置为 **20**
 - maxSize 如果queueCapacity存满了，还有任务就会启动更多的线程，直到线程数达到maxPoolSize。如果还有任务，则根据拒绝策略进行处理。
 ，这里设置为 **15** ，超过将会按照**拒绝策略**进行处理
 - keepAlive 线程存活时间
 
 > 所以以上的设置，保证了最大只有15个线程在跑任务
+
 1. 当线程数量<8的时候，如果有新的线程需要执行，则以前的线程不会销毁重复利用，直到启动的线程达到8个的时候，才会重复利用核心线程
 2. 也就是说如果启动的线程是<=28个，总运行这28的线程的一直是线程池中的8个核心线程交替执行这些线程。
 1. 当启动的线程>28个，此时启动新的线程,直到总线程数量达到maxSize
@@ -227,11 +222,9 @@ public class GlobalNotFoundErrorController implements ErrorController {
 
 ![async task](./img/async-task.png)
 
-
 ::: warning 空闲的coreSize线程
 空闲的线程不占用内存，参考文档：[stackoverflow](https://stackoverflow.com/questions/43795545/is-idle-thread-taking-cpu-execute-time-in-java-executors)
 :::
-
 
 ### ThreadPoolTaskExecutor 等待所有的线程执行完成 `future.get()`
 
@@ -268,20 +261,15 @@ public class AsyncService {
 
 ```
 
-
 ## Unit测试中`ThreadPoolTaskExecutor`中任务退出
 
 > 因为@Test中的主线程已经退出，所以其他的异步线程池不能继续进行。
-
-
 
 ## springboot jar vs tomcat war
 
 Hence the famous:
 
 > 'Make JAR, not WAR.' — Josh Long
-
-
 
 ## 配置`RestTemplate`支持更多的数据类型转换
 
@@ -311,10 +299,9 @@ Hence the famous:
 
 ```
 
-
 ## springboot application.yml配置integer变量
 
-参考： https://blog.csdn.net/blueheart20/article/details/81480864
+参考： <https://blog.csdn.net/blueheart20/article/details/81480864>
 
 ```
 
@@ -326,8 +313,10 @@ Failed to bind properties under 'dubbo.protocol.port' to java.lang.Integer:
     Reason: failed to convert java.lang.String to java.lang.Integer
 
 ```
+
 这些变量字符在进行maven的`clean install`的时候回替换成对应的变量，可以通过执行maven的`clean install`命令后采用解压缩包打开对应的war查看
 对应的`application.yml`中的配置，会发现里面的变量已经被替换。 在`pom.xml`中进行如下配置：
+
 ```
  <resources>
         <resource>
@@ -345,45 +334,45 @@ Failed to bind properties under 'dubbo.protocol.port' to java.lang.Integer:
 
 - org.springframework.cache.interceptor.CacheAspectSupport#execute(org.springframework.cache.interceptor.CacheOperationInvoker, java.lang.reflect.Method, org.springframework.cache.interceptor.CacheAspectSupport.CacheOperationContexts)
 
-
 核心代码
+
 ```java
         if (contexts.isSynchronized()) {
-			CacheOperationContext context = contexts.get(CacheableOperation.class).iterator().next();
-			if (isConditionPassing(context, CacheOperationExpressionEvaluator.NO_RESULT)) {
-				Object key = generateKey(context, CacheOperationExpressionEvaluator.NO_RESULT);
-				Cache cache = context.getCaches().iterator().next();
-				try {
-					return wrapCacheValue(method, cache.get(key, () -> unwrapReturnValue(invokeOperation(invoker))));
-				}
-				catch (Cache.ValueRetrievalException ex) {
-					// The invoker wraps any Throwable in a ThrowableWrapper instance so we
-					// can just make sure that one bubbles up the stack.
-					throw (CacheOperationInvoker.ThrowableWrapper) ex.getCause();
-				}
-			}
-			else {
-				// No caching required, only call the underlying method
-				return invokeOperation(invoker);
-			}
-		}
+   CacheOperationContext context = contexts.get(CacheableOperation.class).iterator().next();
+   if (isConditionPassing(context, CacheOperationExpressionEvaluator.NO_RESULT)) {
+    Object key = generateKey(context, CacheOperationExpressionEvaluator.NO_RESULT);
+    Cache cache = context.getCaches().iterator().next();
+    try {
+     return wrapCacheValue(method, cache.get(key, () -> unwrapReturnValue(invokeOperation(invoker))));
+    }
+    catch (Cache.ValueRetrievalException ex) {
+     // The invoker wraps any Throwable in a ThrowableWrapper instance so we
+     // can just make sure that one bubbles up the stack.
+     throw (CacheOperationInvoker.ThrowableWrapper) ex.getCause();
+    }
+   }
+   else {
+    // No caching required, only call the underlying method
+    return invokeOperation(invoker);
+   }
+  }
 
 ```
 
 进入redis中的缓存获取：`org.springframework.data.redis.cache.RedisCache#get`,这个是redis与数据库封装的类，还有参考类: `org.springframework.cache.support.AbstractValueAdaptingCache#get(java.lang.Object)` 这个是redis的相关操作类
+
 ```java
     public synchronized <T> T get(Object key, Callable<T> valueLoader) {
 
-		ValueWrapper result = get(key);
+  ValueWrapper result = get(key);
 
-		if (result != null) {
-			return (T) result.get();
-		}
+  if (result != null) {
+   return (T) result.get();
+  }
 
-		T value = valueFromLoader(key, valueLoader);
-		put(key, value);
-		return value;
-	}
+  T value = valueFromLoader(key, valueLoader);
+  put(key, value);
+  return value;
+ }
 
 ```
-

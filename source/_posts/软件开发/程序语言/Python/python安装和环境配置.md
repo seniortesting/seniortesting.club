@@ -6,47 +6,57 @@ title: Python Linux安装及其环境配置
 
 
 
-# Python2.7 installaction [更新到2019年9月1日]
+## Python2.7 installaction [更新到2019年9月1日]
 
 参考网站地址: [安装Python2.7](https://tecadmin.net/install-python-2-7-on-ubuntu-and-linuxmint/)
 命令如下:
 
+```shell
+sudo wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz
+sudo tar xzf Python-2.7.16.tgz
+cd Python-2.7.16
+sudo ./configure --enable-optimizations
+sudo make altinstall 
 ```
-$ sudo wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz
-$ sudo tar xzf Python-2.7.16.tgz
-$ cd Python-2.7.16
-$ sudo ./configure --enable-optimizations
-$ sudo make altinstall 
-```
+
 `make altinstall` is used to prevent replacing the default python binary file /usr/bin/python.
 
-# Python3.8 apt安装步骤【更新2020年02月22日】
+## Python3.8 apt安装步骤【更新2020年02月22日】
 
 01. Run the following commands as root or user with sudo access to update the packages list and install the prerequisites:
-```
-$ sudo apt update
-$ sudo apt install software-properties-common
-$ sudo apt install dirmngr
-```
-02. Add the deadsnakes PPA to your system’s sources list,参考仓库：https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa
-```
-$ sudo add-apt-repository ppa:deadsnakes/ppa
-$ sudo apt update
-```
-When prompted press Enter to continue:
-```
-Press [ENTER] to continue or Ctrl-c to cancel adding it.
-```
-03. Once the repository is enabled, install Python 3.8 with:
-```
-$ sudo apt install python3.8
-```
-04. Verify that the installation was successful by typing:
-```
-$ python3.8 --version
+
+```shell
+sudo apt update
+sudo apt install software-properties-common
+sudo apt install dirmngr
 ```
 
-# Python3.8 installation [更新到2019年8月10日]
+02. Add the deadsnakes PPA to your system’s sources list,参考仓库：<https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa>
+
+```shell
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+```
+
+When prompted press Enter to continue:
+
+```shell
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
+```
+
+03. Once the repository is enabled, install Python 3.8 with:
+
+```shell
+sudo apt install python3.8
+```
+
+04. Verify that the installation was successful by typing:
+
+```
+python3.8 --version
+```
+
+## Python3.8 installation [更新到2019年8月10日]
 
 [How to Install Python 3.7 on Debian 9](https://linuxize.com/post/how-to-install-python-3-7-on-debian-9/)
 [Modify python command](https://jcutrer.com/linux/upgrade-python37-ubuntu1810)
@@ -89,12 +99,12 @@ $ update-alternatives --config python
 1. `pip` 安装
 
 ```shell script
-$ wget https://bootstrap.pypa.io/get-pip.py
-$ sudo python3 get-pip.py
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3 get-pip.py
 ```
 
 如果出现错误： Command '('lsb_release', '-a')' returned non-zero
-参考 (https://stackoverflow.com/questions/44967202/pip-is-showing-error-lsb-release-a-returned-non-zero-exit-status-1)，
+参考 (<https://stackoverflow.com/questions/44967202/pip-is-showing-error-lsb-release-a-returned-non-zero-exit-status-1>)，
 使用命令： `sudo nano  /usr/bin/lsb_release`
 edited the first line from #! /usr/bin/python3 to #! /usr/bin/python3.7
 
@@ -106,26 +116,28 @@ $ pip -V
 
 ```
 
-如果出现错误： ImportError: cannot import name 'main' from 'pip'，因为`pip`使用的是python2.7的命令，所以应该参考如下： https://stackoverflow.com/questions/44455001/how-to-change-pip3-command-to-be-pip/44455078
+如果出现错误： ImportError: cannot import name 'main' from 'pip'，因为`pip`使用的是python2.7的命令，所以应该参考如下： <https://stackoverflow.com/questions/44455001/how-to-change-pip3-command-to-be-pip/44455078>
 
 ```
-$ pip3 -V
-$ alias pip=pip3
-$ sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
-$ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip3 -V
+alias pip=pip3
+sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 ```
 
 ## 切换python镜像源
 
-a）Linux下，修改` ~/.pip/pip.conf`(没有就创建一个文件夹及文件。文件夹要加“.”，表示是隐藏文件夹,root用户安装时目录为：`/root/.config/pip/pip.conf`)
+a）Linux下，修改`~/.pip/pip.conf`(没有就创建一个文件夹及文件。文件夹要加“.”，表示是隐藏文件夹,root用户安装时目录为：`/root/.config/pip/pip.conf`)
 内容如下：
+
 ```
 [global]
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 [install]
 trusted-host = https://pypi.tuna.tsinghua.edu.cn
 ```
+
 (b) windows下，直接在user目录中创建一个pip目录，如：`C:\Users\xx\pip`，然后新建文件`pip.ini`，即 `%HOMEPATH%\pip\pip.ini`，在`pip.ini`文件中输入以下内容（以豆瓣镜像为例）：
 
 ```
@@ -134,26 +146,31 @@ index-url = http://pypi.douban.com/simple
 [install]
 trusted-host = pypi.douban.com
 ```
+
 (c) 如果是使用的`pipenv`,则可以在脚本目录下面修改`Pipfile`,修改为对应的镜像地址。
 
 常用镜像地址列表:
-1. https://pypi.tuna.tsinghua.edu.cn/simple
-2. http://pypi.douban.com/simple
-3. 
 
-##  pip install --upgrade升级安装包
+1. <https://pypi.tuna.tsinghua.edu.cn/simple>
+2. <http://pypi.douban.com/simple>
+
+3.
+
+## pip install --upgrade升级安装包
+
 例如需要升级安装scrapy为2.0，如下：
+
 ```shell
-$  pip install --upgrade scrapy
+pip install --upgrade scrapy
 ```
+
 如果需要升级pip包，如下：
+
 ```shell
-$ python -m pip install --upgrade pip
+python -m pip install --upgrade pip
 ```
 
-##  `pipenv`安装及常用命令
-
-
+## `pipenv`安装及常用命令
 
 ## pipenv命令操作
 
@@ -164,8 +181,6 @@ $ python -m pip install --upgrade pip
 新建一个名为“ **WORKON_HOME** ”的环境变量（如果已存在就忽略此步骤），然后将环境变量的值设置为“ **.virtualenvs** ”
 
 以后所有的虚拟环境都会在当前python项目下面创建一个.virtualenvs目录。
-
-
 
 ```
 $ pip install --user pipenv
@@ -187,13 +202,11 @@ $ pipenv graph
 
 ```
 
-  
 ## 安装配置问题
 
 - zipimport.ZipImportError: can't decompress data; zlib not available 解决办法
 
 参考解决方案[zipimport.ZipImportError: can't decompress data; zlib not available 解决办法](https://www.cnblogs.com/zhangym/p/6226435.html)
-
 
 - Microsoft Visual C++ 14.0 is required
 
@@ -202,7 +215,6 @@ Visual Studio 2013 ---> 12
 Visual Studio 2015 ---> 14
 Visual Studio 2017 ---> 15
 
-
 ## requests报错 RequestsDependencyWarning: urllib3 (1.25.10) or chardet (3.0.4) doesn't match a supported version
 
 ```
@@ -210,14 +222,16 @@ pip install --upgrade requests
 
 ```
 
-## THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS FILE. If you have updated the package versions, please update the hashes. Otherwise, examine the package contents carefully; someone may have tampered with them.
+## THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS FILE. If you have updated the package versions, please update the hashes. Otherwise, examine the package contents carefully; someone may have tampered with them
 
-这个问题主要是在使用pipenv命令进行安装twisted出现的: 
+这个问题主要是在使用pipenv命令进行安装twisted出现的:
 
 ```
 pipenv install "C:\Users\Administrator\Downloads\Twisted-20.3.0-cp38-cp38-win32.whl"
 ```
+
 解决方法是首先进入pipenv环境，然后替换使用pip命令进行更新操作：
+
 ```
 > pipenv shell
 > pip install --upgrade "C:\Users\Administrator\Downloads\Twisted-20.3.0-cp38-cp38-win32.whl"
@@ -230,7 +244,6 @@ pipenv install "C:\Users\Administrator\Downloads\Twisted-20.3.0-cp38-cp38-win32.
 Pycharm或者编译器打开项目，过多一层或者过少一层打开目录都会导致导入错误，是因为编译器打开那个目录，就将python的工作目录设置那一层，只有正确的目录结构才能导入正确包。
 
 . 和 ..导入 相对位置是执行文件的当前目录
-
 
 因为python的相对导入需要用到父级包作为相对的参考位置
 而这个位置是通过__name__属性和__package__属性进行决定的，

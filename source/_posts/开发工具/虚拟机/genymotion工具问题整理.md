@@ -40,22 +40,20 @@ computed: {
 
 ### genymotion的虚拟机不能现在在android studio的device列表中
 
-https://stackoverflow.com/questions/36142055/genymotion-device-doesnt-appear-on-device-chooser-android-studio
+<https://stackoverflow.com/questions/36142055/genymotion-device-doesnt-appear-on-device-chooser-android-studio>
 
 * click the run button to compile project
 * device empty list appear
 * start genymotion
 * device will appear in the list
 
-
-### genymotion拖动apk文件出现错误： an error occurred while deploying the file.
+### genymotion拖动apk文件出现错误： an error occurred while deploying the file
 
 > 原来是genymotion对应的adb于Android sdk中的adb版本不兼容的问题，换成genymotion内置的adb是没有问题的，所以升级genymotion到3.0，然后升级对应的android sdk到对应的版本即可。
 
 ### Genymotion 的android 9.0 可以使用 Android 8.1 的 ARM_Translation_Oreo_android8 ，测试可用。没有找到最新的Android 9.0 的arm translation
 
-
-###  无法加载webgl
+### 无法加载webgl
 
 ```
 IconLoader: Could not find icon drawable from resource
@@ -176,8 +174,8 @@ IconLoader: Could not find icon drawable from resource
 2019-05-08 12:02:36.184 449-488/? D/baseband-sms: sender:(N/A)
 2019-05-08 12:02:36.184 449-488/? D/baseband-sms: receiver:122
 ```
-乐固加固后出现问题： https://cloud.tencent.com/developer/ask/197885/answer/308416
 
+乐固加固后出现问题： <https://cloud.tencent.com/developer/ask/197885/answer/308416>
 
 ### cordova run android
 
@@ -196,7 +194,6 @@ in your path, or install Android Studio
 2019-05-06 12:29:49.160 4087-4146/com.yitieyilu.app E/chromium: [ERROR:context_group.cc(137)] ContextResult::kFatalFailure: WebGL1 blacklisted
 ```
 
-
 ## 资源下载
 
 1. All of Genymotion OVAs
@@ -205,22 +202,21 @@ in your path, or install Android Studio
 
 ### 安装genymotion虚拟机
 
-1. 启动genymotion，点击add，等待下载完成，回到目录： 
+1. 启动genymotion，点击add，等待下载完成，回到目录：
 C:\Users\Administrator\AppData\Local\Genymobile\Genymotion\ova，里面是刚刚下载的虚拟机文件。
 
 2. 启动genymotion虚拟机即可.
 
 3. genymotion启动后，对应的`adb.exe`进程也会起来
 
-
-###  ~~使用步骤（不适用直接下载ova的方式)~~
+### ~~使用步骤（不适用直接下载ova的方式)~~
 
 1. 下载上面的地址的ova文件
 2. 仅打开oracle vm virtualBox，暂时不要打开Genymotion客户端。管理—-导入虚拟电脑 ，如下：
 
 ![genymotion1](./img/genymotion-install1.png)
 
-3. 选择导入下载的.ova镜像—-下一步—–导入。等待其导入成功后关闭即可，不要尝试在virtualBox中打开。打开Genymotion客户端，选中点击Start，就可以使用了。 
+3. 选择导入下载的.ova镜像—-下一步—–导入。等待其导入成功后关闭即可，不要尝试在virtualBox中打开。打开Genymotion客户端，选中点击Start，就可以使用了。
 
 ![genymotion1](./img/genymotion-install2.png)
 ![genymotion1](./img/genymotion-install3.png)

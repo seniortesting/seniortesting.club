@@ -9,9 +9,11 @@ title: IDEA maven安装包报错 unable to find valid certification path to requ
 ## IDEA maven安装包报错 unable to find valid certification path to requested target
 
 报错信息:
-```sh
+
+```shell
 Could not transfer artifact org.apache.maven.plugins:maven-install-plugin:pom:2.4 from/to alimaven (https://maven.aliyun.com/repository/central): sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
 ```
+
 解决
 
 添加参数

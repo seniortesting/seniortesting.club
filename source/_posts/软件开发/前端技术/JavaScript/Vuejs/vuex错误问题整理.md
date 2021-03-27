@@ -8,13 +8,12 @@ title: Vuex Do not mutate vuex store state outside mutation handlers
 
 直接引用vuex中的getter属性，然后放在`v-model`的时候，如果有更新会设置vuex的getter属性，而在vuex的**strict mode**下就会报上面的错误。
 
-推荐参考： http://shzhangji.com/blog/2018/04/17/form-handling-in-vuex-strict-mode/
+推荐参考： <http://shzhangji.com/blog/2018/04/17/form-handling-in-vuex-strict-mode/>
 
 两种解决方式：
 一种是了解到v-model是一个语法糖，所以设置了v-model后设置下对应的input和change事件，然后在事件里面调用vuex的action进行更新，而不是组件里面的v-model自动的更新。
 
-一种是使用：[ `vuex-map-fields`]( https://github.com/maoberlehner/vuex-map-fields) 可以实现vuex的双向绑定。
-
+一种是使用：[vuex-map-fields]( https://github.com/maoberlehner/vuex-map-fields) 可以实现vuex的双向绑定。
 
 ## Vue.set 向响应式对象中添加响应式属性，及设置数组元素触发视图更新
 
@@ -38,9 +37,7 @@ title: Vuex Do not mutate vuex store state outside mutation handlers
 
 　　由于Vue会在初始化实例时对属性执行getter/setter转化过程，所以属性必须在data对象上存在才能让Vue转换它，这样才能是响应式的。例如：
 
-
 所以注意两点：
 
 1. 对于数据中某一个数组的修改，需要使用Vue.set，或者$set， 这个数组数据可以是**data属性**或者是**vuex中的state属性**。例如修改数组this.array[1]这种方式是不起作用的。
 2. 对于数据中的某一个对象的属性添加或者删除，
-

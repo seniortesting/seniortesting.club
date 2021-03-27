@@ -9,6 +9,7 @@ title: JDK版本新特性
 1. 删除jre运行库，不在需要配置`JRE_HOME`环境变量
 2. 删除Java EE和CORBA模块，JavaFX已经被移除
 3. 字符串API增加
+
 - `String#repeat` ，例如`"abc".repeat(3)`
 - `String#isBlank`, 例如 `" ".isBlank(); // true`
 - `String#strip`， 例如 `" ".strip().isBlank()`
@@ -23,7 +24,6 @@ title: JDK版本新特性
 
 1. 引入了新的HTTPClient操作接口
 2. `jshell`交互命令引入,类python的代码块交互平台
-
 
 ## JDK 8
 

@@ -9,7 +9,7 @@ title: 最新genymotion3资源下载及其配置
 
 genymotion破解版是一款为用户提供最稳定Android虚拟环境的手机模拟器，我们不仅可以通过Genymotion模拟器在电脑上操作安卓系统进行使用。同时还可以安装各种手机APP和手机游戏进行体验，这样你就可以通过电脑来玩各种手游，非常方便。
 
-注意: **目前只有genymotion2.12.0的可以破解，其他的3.0版本的截至到目前2020年7月25日还是没有公开看到破解版的。就不要谷歌搜索相关的破解文件了。**https://www.ghpym.com/genymotion.html
+注意: **目前只有genymotion2.12.0的可以破解，其他的3.0版本的截至到目前2020年7月25日还是没有公开看到破解版的。就不要谷歌搜索相关的破解文件了。**<https://www.ghpym.com/genymotion.html>
 
 下载附件中的压缩文件，先点击： genymotion-2.12.0.exe进行安装genymotion这个版本的是没有安装virtualbox的，你需要再单独安装virtualbox.安装完成后不要立即打开genymation. 然后复制文件genymotion2.x-patch.exe到genymotion的安装目录，双击该破解文件进行破解。
 
@@ -17,15 +17,15 @@ genymotion破解版是一款为用户提供最稳定Android虚拟环境的手机
 
 ## 安装虚拟设备很难下载
 
-Genymotion ova下载的url地址为：http://dl.genymotion.com/dists/xxx/ova/xxxxxx,可复制下载地址到迅雷中下载，速度会快很多,其中xxx为虚拟设备对应的Android系统版本号,如4.2.2,7.0.0(4.3则xxx为4.3,5.0则xxx为5.0.0,8.0则xxx为8.0)，xxxxxx为ova的文件名，如:
+Genymotion ova下载的url地址为：<http://dl.genymotion.com/dists/xxx/ova/xxxxxx,可复制下载地址到迅雷中下载，速度会快很多,其中xxx为虚拟设备对应的Android系统版本号,如4.2.2,7.0.0(4.3则xxx为4.3,5.0则xxx为5.0.0,8.0则xxx为8.0)，xxxxxx为ova>的文件名，如:
 
 （F:\genymotion）
 
-http://dl.genymotion.com/dists/4.2.2/ova/genymotion_vbox86p_4.2_180130_203606.ova
+<http://dl.genymotion.com/dists/4.2.2/ova/genymotion_vbox86p_4.2_180130_203606.ova>
 
-http://dl.genymotion.com/dists/4.3/ova/genymotion_vbox86p_4.3_180130_212946.ova
+<http://dl.genymotion.com/dists/4.3/ova/genymotion_vbox86p_4.3_180130_212946.ova>
 
-http://dl.genymotion.com/dists/7.0.0/ova/genymotion_vbox86p_7.0_180216_000000.ova
+<http://dl.genymotion.com/dists/7.0.0/ova/genymotion_vbox86p_7.0_180216_000000.ova>
 
 此处提供一个github的资源目录对应的各个ova文件，找到合适的直接下载即可： <https://gist.github.com/runo280/e4be3e04c24b463b55ddf012c5cfbdc4>
 
@@ -41,7 +41,7 @@ http://dl.genymotion.com/dists/7.0.0/ova/genymotion_vbox86p_7.0_180216_000000.ov
 
 或者打开对应的virtualbox，直接选择“新建”-》“引入虚拟机”，选择刚才下载的ova虚拟机文件导入即可。
 
-##  虚拟设备无法上网
+## 虚拟设备无法上网
 
 解决办法:打开VirtualBox,进行如下设置：
 
@@ -49,5 +49,5 @@ http://dl.genymotion.com/dists/7.0.0/ova/genymotion_vbox86p_7.0_180216_000000.ov
 
 ## 不支持x86体系apk
 
-需要下载安装文件： [ Genymotion-ARM-Translation-Tool](https://github.com/m9rco/Genymotion_ARM_Translation/tree/master/package),目前各个版本的android对应不同的安装包。所有的安装包如下：
+需要下载安装文件： [Genymotion-ARM-Translation-Tool](https://github.com/m9rco/Genymotion_ARM_Translation/tree/master/package),目前各个版本的android对应不同的安装包。所有的安装包如下：
 <https://github.com/m9rco/Genymotion_ARM_Translation/tree/master/package>

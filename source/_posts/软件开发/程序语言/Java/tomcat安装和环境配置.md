@@ -3,19 +3,17 @@ title: Tomcat Linux安装及其环境配置
 ---
 
 
-
-
-
-
 ## apr安装配置
 
 ### 1. windows环境配置
 
 如果springboot开启apr模式后报错如下:
-```
+
+```java
 Caused by: org.apache.catalina.LifecycleException: The configured protocol [org.apache.coyote.http11.Http11AprProtocol] requires the APR/native library which is not available
 ```
-则需要在classpath中添加`tcnative-1.dll`文件，该文件存在tomcat的安装包中的`bin`目录下面也可以单独下载`tomcat-native`(http://archive.apache.org/dist/tomcat/tomcat-connectors/native/)包，推荐第一种方式下载tomcat安装包。
+
+则需要在classpath中添加`tcnative-1.dll`文件，该文件存在tomcat的安装包中的`bin`目录下面也可以单独下载`tomcat-native`(<http://archive.apache.org/dist/tomcat/tomcat-connectors/native/)包，推荐第一种方式下载tomcat>安装包。
 
 ```
 $ wget https://mirrors.gigenet.com/apache/tomcat/tomcat-9/v9.0.36/bin/apache-tomcat-9.0.36-windows-x64.zip
@@ -49,7 +47,7 @@ $ tar zxvf tomcat-native.tar.gz
 
 - 2.2 安装APR
 
-```
+```shell
 $ cd apr-1.7.0
 $ ./configure --prefix=/usr/local/apr
 $ make && make install
@@ -126,27 +124,26 @@ $ source /etc/bashrc
 
 ```
 
- ### 可能遇到的apr问题
+### 可能遇到的apr问题
 
 apache.catalina.core.AprLifecycleListener [175] : Failed to initialize the SSLEngine.
 org.apache.tomcat.jni.Error: 70023: This function has not been implemented on this platform
 
 需要安装对应的包： `sudo apt-get install libapr1-dev libssl-dev`, 然后在`tomcat-native-1.2.24-src/native/`中重新编译：
-```
-$ sudo make clean
-$ ./configure 
-$ make && make install
-```
 
-
+```
+sudo make clean
+./configure 
+make && make install
+```
 
 ## JDK 和 tomcat 安装[更新到2019年8月10日]
-
 
 [JDK安装步骤参考](https://www.digitalocean.com/community/tutorials/install-tomcat-9-debian-9)
 
 1. JDK11安装步骤
-```
+
+```shell
 $ 进入Jenkins目录：https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_hotspot_11.0.8_10.tar.gz
 $  tar -zxvf OpenJDK11U-jdk_x64_linux_hotspot_11.0.8_10.tar.gz
 $ nano /etc/profile
@@ -158,25 +155,26 @@ $ java -version
 ```
 
 2. JDK8安装步骤
+
 ```shell
-$  wget  https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
-$  mkdir /opt/jdk
-$  tar -C /opt/jdk  -zxf /home/jdk-8u191-linux-x64.tar.gz
-$  update-alternatives --install /usr/bin/java java /opt/jdk/jdk1.8.0_191/bin/java 1
-$  update-alternatives --install /usr/bin/javac javac /opt/jdk/jdk1.8.0_191/bin/javac 1
-$  java -version
-$  javac 
+wget  https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
+mkdir /opt/jdk
+tar -C /opt/jdk  -zxf /home/jdk-8u191-linux-x64.tar.gz
+update-alternatives --install /usr/bin/java java /opt/jdk/jdk1.8.0_191/bin/java 1
+update-alternatives --install /usr/bin/javac javac /opt/jdk/jdk1.8.0_191/bin/javac 1
+java -version
+javac 
 ```
 
-
 ```
-$  wget http://mirrors.advancedhosters.com/apache/tomcat/tomcat-9/v9.0.14/bin/apache-tomcat-9.0.14.tar.gz
-$  useradd -rs /bin/false tomcat 注意如果部署到nginx最好这个用户是nginx的用户www-data用户，这样创建文件的时候UMask不会错误。
-$  mkdir /opt/tomcat
-$  chown -R www-data:www-data apache-tomcat
+wget http://mirrors.advancedhosters.com/apache/tomcat/tomcat-9/v9.0.14/bin/apache-tomcat-9.0.14.tar.gz
+useradd -rs /bin/false tomcat 注意如果部署到nginx最好这个用户是nginx的用户www-data用户，这样创建文件的时候UMask不会错误。
+mkdir /opt/tomcat
+chown -R www-data:www-data apache-tomcat
 ```
 
 ## tomcat启动脚本
+
 ```
 [Unit]
 Description=Tomcat9
@@ -234,7 +232,8 @@ JAVA_OPTS="$JAVA_OPTS -Xms2512M -Xmx2512M -XX:PermSize=64M -XX:MaxNewSize=128M -
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/apr/lib
 ```
 
-## tomcat的配置，配置BIO/NIO,也就是最大连接数和处理连接数的线程池的大小：
+## tomcat的配置，配置BIO/NIO,也就是最大连接数和处理连接数的线程池的大小
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
@@ -416,10 +415,11 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/apr/lib
 
 ```
 
-https://linuxconfig.org/how-to-install-tomcat-9-on-debian-9-stretch-linux 推荐操作步骤
-https://gist.github.com/jniltinho/a7bd30288342a5d352e6, 这里的tomcat.service中的`CATALINA_OPTS`配置可能导致不能启动tomcat
+<https://linuxconfig.org/how-to-install-tomcat-9-on-debian-9-stretch-linux> 推荐操作步骤
+<https://gist.github.com/jniltinho/a7bd30288342a5d352e6>, 这里的tomcat.service中的`CATALINA_OPTS`配置可能导致不能启动tomcat
 
 tomcat install failed:
+
 ```
  systemctl status tomcat
 ● tomcat.service - Tomcat9
@@ -441,39 +441,40 @@ root@BQA:/usr/local/tomcat9/bin#
 ````
 
 tomcat start,but met 404, 可能文件有问题,重新安装按照上面的操作步骤.
+
 ```
 org.apache.jasper.JasperException: org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.index_jsp
-	org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:572)
-	org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:390)
-	org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
-	org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
-	javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+ org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:572)
+ org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:390)
+ org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+ org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+ org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
 Root Cause
 
 org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.index_jsp
 ```
-###  SEVERE: Could not contact [localhost:8005] (base port [8005] and offset [0])
+
+### SEVERE: Could not contact [localhost:8005] (base port [8005] and offset [0])
 >
 
 ### initial-server-setup-with-debian-9 初始化debian系统
+
 > 建用户和ufw
 
 ### -----------------------------------------------------错误参数------------------------------------------
 
 ### Caused by: org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [HikariDataSource (null)] with key 'dataSource'; nested exception is javax.management.InstanceAlreadyExistsException: com.zaxxer.hikari:name=dataSource,type=HikariDataSource
 
-### Unable to register MBean [HikariDataSource (null)] with key 'dataSource'; nested exception is javax.management.InstanceAlreadyExistsException:
+### Unable to register MBean [HikariDataSource (null)] with key 'dataSource'; nested exception is javax.management.InstanceAlreadyExistsException
 
 spring.jmx.enabled=true
 spring.jmx.default-domain=com.yitieyilu.core
 
-### The web application to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+### The web application to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread
 
 > 将jdbcjar改成provide放在tomcat的lib目录
 
-### tomcat this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+### tomcat this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access
 
 > 重启tomcat，缓存的问题
-
-

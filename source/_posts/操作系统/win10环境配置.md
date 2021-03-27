@@ -8,10 +8,10 @@ title: Windows10机器新环境配置
 ### 装机系统软件
 
 * 激活工具
-* [ Chrome Canary](https://www.google.com/chrome/?extra=canarychannel&standalone=1)
-   1. tampermonkey 
-      - ( 懒人专用，全网VIP视频免费破解去广告、全网音乐直接下载、百度网盘直接下载、知乎视频下载等多合一版。长期更新，放心使用。)
-      - JAV老司机
+* [Chrome Canary](https://www.google.com/chrome/?extra=canarychannel&standalone=1)
+   1. tampermonkey
+      * ( 懒人专用，全网VIP视频免费破解去广告、全网音乐直接下载、百度网盘直接下载、知乎视频下载等多合一版。长期更新，放心使用。)
+      * JAV老司机
    2. Free Download Manager
    3. Octotree
    4. Vue Devtools
@@ -20,9 +20,9 @@ title: Windows10机器新环境配置
    7. 谷歌上网助手
    8. Wappalyzer
    9. Momentum
-   
-* [VPN客户端](https://www.shrew.net/download/vpn/vpn-client-2.2.2-release.exe)   
-* [WPS](https://www.wps.cn/)   
+
+* [VPN客户端](https://www.shrew.net/download/vpn/vpn-client-2.2.2-release.exe)
+* [WPS](https://www.wps.cn/)
 * [OneNote](https://www.microsoft.com/en-us/p/onenote/9wzdncrfhvjl)
 * [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 
@@ -35,7 +35,7 @@ title: Windows10机器新环境配置
 
 * [AdoptOpenJDK 11](https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=hotspot)
 * [Jetbrains IDEA](https://www.jetbrains.com/idea/download/)
-  - 插件
+  * 插件
     1. Alibaba Java Coding Guidelines
     2. Lombok
     3. Maven Helper
@@ -49,13 +49,13 @@ title: Windows10机器新环境配置
 * [HBuilderX](https://dcloud.io/)
 * [VS Code](https://code.visualstudio.com/download)
 
-  - Markdown相关插件
+  * Markdown相关插件
      1.1 Markdown PDF
      1.2 Markdown Preview Enhanced
      1.3 Markdown Shortcuts
      1.4 markdownlint
      1.5 vscode-pdf
-     1.6 PicGo （配置操作: https://code.seniortesting.club/blog/setup/how-setup-picgo-vscode.html )
+     1.6 PicGo （配置操作: <https://code.seniortesting.club/blog/setup/how-setup-picgo-vscode.html> )
      1.7 Visual Studio IntelliCode
      1.8 Python
      1.9 Impornt Cost
@@ -101,12 +101,12 @@ title: Windows10机器新环境配置
 * [RealVNC](https://www.realvnc.com/)
 * [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/)
 * [PhpStudy](https://www.xp.cn/)
-* [有道云笔记](http://m.note.youdao.com/) 
+* [有道云笔记](http://m.note.youdao.com/)
 * [应用宝乐固加固](https://cloud.tencent.com/product/ms)
 
 ### 娱乐工具
 
-* [ m3u8 downloader-youtube-dl.exe](https://github.com/ytdl-org/youtube-dl)
+* [m3u8 downloader-youtube-dl.exe](https://github.com/ytdl-org/youtube-dl)
 * [PotPlayer](https://daumpotplayer.com/download/)
 * [百度网盘](https://pan.baidu.com/download)
 * ~~[PanDownload](https://pandownload.com/)~~
@@ -116,14 +116,9 @@ title: Windows10机器新环境配置
 * [迅雷](https://www.xunlei.com/)
   [Google Earth](https://www.google.com/earth/versions/)
 
-
-
-
-
-最新更新： 推荐直接使用 [PowerShell 7 ](https://github.com/PowerShell/PowerShell/releases)
+最新更新： 推荐直接使用 [PowerShell 7](https://github.com/PowerShell/PowerShell/releases)
 
 ## 下载安装
-
 
 1. 官方提示需要先安装： [Desktop Bridge VC++ v14 Redistributable Package](https://www.microsoft.com/en-us/download/details.aspx?id=53175)
 2. 在[microsoft/terminal](https://github.com/microsoft/terminal)仓库下载对应的terminal文件，打开`powershell`命令行执行命令如下安装:
@@ -137,14 +132,13 @@ title: Windows10机器新环境配置
 WT 好处都有啥？
 根据官方介绍，Windows Terminal 是一个**面向命令行用户的全新、现代化、功能丰富的高性能终端应用程序**。它在实现了社区用户热切期望的许多功能的同时（包括多标签页、富文本、全球化、可配置性、对主题与样式的支持等），依然保持快速与高效，不会消耗大量的内存或电量。
 
-安装完成后可以直接在开始菜单中找到，“Window Terminal Preview”. 
+安装完成后可以直接在开始菜单中找到，“Window Terminal Preview”.
 
 1. 添加右键菜单
 
+2020年0915日最新更新： 参考此脚本： <https://github.com/lextm/windowsterminal-shell>
 
-2020年0915日最新更新： 参考此脚本： https://github.com/lextm/windowsterminal-shell
-
-不过我还是比较习惯传统的右键菜单「在这里打开终端」的方式。WT 目前还没有内置这一功能，想要手动添加也比较麻烦（下文参考了这个 [issue ](https://github.com/microsoft/terminal/issues/1060)中的方法）。
+不过我还是比较习惯传统的右键菜单「在这里打开终端」的方式。WT 目前还没有内置这一功能，想要手动添加也比较麻烦（下文参考了这个 [issue](https://github.com/microsoft/terminal/issues/1060)中的方法）。
 
 以管理员权限打开 PowerShell，运行以下命令：
 
@@ -155,6 +149,7 @@ New-ItemProperty -Path "$basePath\wt" -Force -Name "Icon" -PropertyType ExpandSt
 New-Item -Path "$basePath\wt\command" -Force -Type ExpandString -Value '"%LOCALAPPDATA%\Microsoft\WindowsApps\wt.exe" -p Ubuntu -d "%V"'
 
 ```
+
 如果你足够熟练，也可以自行通过其他方式修改注册表，反正就那么些字段，路径正确就行了。Windows Terminal 的图标可以在 [这里](https://raw.githubusercontent.com/microsoft/terminal/master/res/terminal.ico) 获取 。
 
 > 2020/03/14 更新：Windows Terminal 0.9 版本之后添加了 wt.exe 的命令行参数，可以直接指定启动目录，不需要再修改 profiles.json 中的 `startingDirectory` 字段了。

@@ -8,38 +8,44 @@ title: WOW.js在页面滚动时展现动感的元素动画效果
 
 Github仓库: [https://github.com/matthieua/WOW](https://github.com/matthieua/WOW)
 
-
-
-
-
 ## Vue中使用方法
 
 由于其依赖于animate.css，所以可以不用再安装[animate.css](https://github.com/daneden/animate.css)
+
 - NPM
-```
+
+```shell
 npm install wowjs
 ```
+
 - YARN
-```
+
+```shell
 yarn add wowjs
 ```
 
 1. 引入文件
-```	
+
+``` 
 <link rel="stylesheet" href="css/animate.min.css">
 ```
 
 2. 然后直接在html中使用如下代码：
+
 ```
 <div class="wow slideInLeft"></div>
 <div class="wow slideInRight"></div>
 ```
+
 可以加入 data-wow-duration（动画持续时间）和 data-wow-delay（动画延迟时间）属性，如：
+
 ```
 <div class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s"></div>
 <div class="wow slideInRight" data-wow-offset="10"  data-wow-iteration="10"></div>
 ```
+
 3. JavaScript
+
 ```js
  import {WOW} from 'wowjs';
  mounted() { 
@@ -60,8 +66,8 @@ yarn add wowjs
     }
  }
 ```
-4. 配置
 
+4. 配置
 
 ```js
 var wow = new WOW(

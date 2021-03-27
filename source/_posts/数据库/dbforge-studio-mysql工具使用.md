@@ -21,16 +21,11 @@ dbForge Studio 2020 for MySQL是一款功能强大的数据库管理软件，内
 
 2020年最新版提供下载
 
-百度网盘链接：<https://pan.baidu.com/s/1axNbd_CkrodmNLp2S1FApw >
+百度网盘链接：<https://pan.baidu.com/s/1axNbd_CkrodmNLp2S1FApw>
 提取码：5yis
-
-
-
-
 
 ## 使用方法
 
 1. 解压缩对应的安装包，找到文件: **dbforgemysql_install.exe**,依提示进行软件安装。这个安装包你也可以在官网进行下载： <https://www.devart.com/dbforge/mysql/studio/download.html>
 2. 安装完成后，将Crack文件内**dbforgemysql.exe**破解文件复制到软件安装路径下即可激活软件。
 3. 至此，软件成功注册破解，用户可无限制免费使用软件所有功能了。
-

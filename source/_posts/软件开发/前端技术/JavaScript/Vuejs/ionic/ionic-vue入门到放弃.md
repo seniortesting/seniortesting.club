@@ -15,6 +15,7 @@ title: 4月30日整理
     "@capacitor/ios": "^1.0.0",
 
 ```
+
 2. 配置相应的gradle环境，例如环境变量GRADlE_HOME,GRADLE_USER_HOME，配置idea中的`service directory path`为自定义的gradle路径，配置`capacitor root path/android/app/gradle/wrapper/gradle-wrapper.properties`,设置里面的`distributionUrl=https\://services.gradle.org/distributions/gradle-5.4.1-all.zip` 为自己的设置的目录。
 
 3. 直接编译报错`point to the same directory in the file system.Each module must have a unique path.` ，解决方法: 将项目android文件下的    ***.iml 文件删掉，重新导入编译即可
@@ -24,7 +25,9 @@ title: 4月30日整理
 5. `npx cap sync`是用户安装了新的cordova插件后更新同步新的插件到工程里面。而`npx cap copy`主要就是每次的web工程build后将对应的dist目录复制到对应的assets目录下面。
 
 6. `Android 9.0 WebView无法加载页面报错net：ERR_CLEARTEXT_NOT_PERMITTED`,从Android 9.0（API级别28）开始，默认情况下禁用明文支持。因此http的url均无法在webview中加载。
+
 > 在`AndroidManifest.xml`文件中的`application`标签添加`android:usesCleartextTraffic="true"`
+
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <manifest ...>
@@ -38,9 +41,11 @@ title: 4月30日整理
 </manifest>
 
 ```
+
 7. ionic 切换页面时会添加`ion-page-invisible`,导致页面白屏,参考问题：
 
 8. vue阻止冒泡到父级节点的事件 `@click.stop`：
+
 ```
             <div v-for="(image,index) in currentImages"
                  :key="image.src"  @click="previewImage(image, index)">
@@ -51,13 +56,14 @@ title: 4月30日整理
               </li>
             </div>
 ```
-9. cordova phone call打电话代码: `location.href='tel:13052113519' `或者 `window.open('tel:13052113519')`
+
+9. cordova phone call打电话代码: `location.href='tel:13052113519'`或者 `window.open('tel:13052113519')`
 
 10. 离线存储解决方案: `localForage`
 
 11. `promise`, `async`和`await`的讲解
 
-参考： https://www.cnblogs.com/CandyManPing/p/9384104.html
+参考： <https://www.cnblogs.com/CandyManPing/p/9384104.html>
 
 1. async 告诉程序这是一个异步，awiat 会暂停执行async中的代码，等待await 表达式后面的结果，跳过async 函数，继续执行后面代码
 2. async 函数会返回一个Promise 对象，那么当 async 函数返回一个值时，Promise 的 resolve 方法会负责传递这个值；当 async 函数抛出异常时，Promise 的 reject 方法也会传递这个异常值
@@ -65,11 +71,10 @@ title: 4月30日整理
 
 ### 例子参考
 
-1. https://github.com/nklayman/vue-cli-plugin-capacitor/blob/master/index.js
-2. https://github.com/pietrovieira/Vuejs-Ionic4-Ionic-Capacitor/blob/master/src/App.vue
+1. <https://github.com/nklayman/vue-cli-plugin-capacitor/blob/master/index.js>
+2. <https://github.com/pietrovieira/Vuejs-Ionic4-Ionic-Capacitor/blob/master/src/App.vue>
 3. [sample app using capacitor vuejs and ionicv4 components](https://github.com/aaronksaunders/icon-vue/blob/master/src/components/Login.vue)
 4. [Mobile app built with Vue.js, Ionic 4(beta), and wrapped by Capacitor](https://github.com/Balintataw/restaurant-mobile-app)
-
 
 ### 参考链接
 
@@ -88,6 +93,7 @@ title: 4月30日整理
  "@ionic/vue": "^0.0.4",
 
 ```
+
 2. 引入`@ionic/vue`相关组件：
 
 ```js
@@ -225,7 +231,6 @@ export default router
 
 ```
 
-
 ## 坑/问题
 
 - 在查看`ion-tabs`时发现用到了**命名视图**，这个确实很坑啊，以前都一直都用到的是通过**命名路由**的方式进行导航的.
@@ -233,20 +238,22 @@ export default router
 
 - `<ion-input>`不能使用`v-model`,两种方式解决：
 
-  * 第一种如下的语法糖代码调整：
+  - 第一种如下的语法糖代码调整：
+
   ```
   <ion-input
   :value="selectedOption"
     @ionChange="selectedOption= $event.target.value"
     >
   ```
-  * vuejs官方提出了这个问题没有解决，web component不支持，参考[ionic 官方issue](https://github.com/ionic-team/ionic/issues/15532)
+
+  - vuejs官方提出了这个问题没有解决，web component不支持，参考[ionic 官方issue](https://github.com/ionic-team/ionic/issues/15532)
   和对应的[vuejs官方issue](https://github.com/vuejs/vue/issues/7830)
   对应的需要提到的[问题](https://github.com/vuejs/rfcs/blob/v-model/active-rfcs/0000-v-model-api-change.md#usage-on-custom-elements)
 
 - `type=number`在`vee-validate`中不起作用，使用了`v-validate="{digits: 4}"`,原因是:
   
-  * vee-validate作者提到问题： [github issue](https://github.com/baianat/vee-validate/issues/2043):
+  - vee-validate作者提到问题： [github issue](https://github.com/baianat/vee-validate/issues/2043):
 
   > This is caused by vee-validate trying to validate the field based on their HTML attributes, for `number` fields the decimal rule is automatically added.
      You can turn that behavior off like this:
@@ -259,7 +266,7 @@ The problem is that decimal and integer are conflicting rules by definition, so 
 
   然后看到官方文档提到，有些html5的内置类型和属性，是不需要在添加`v-validate`进行详细的验证的，只需要添加一个`v-validate`就可以了，参考：[官方指南](https://baianat.github.io/vee-validate/guide/inferred-rules.html#inferred-rules-reference):
 
-  ## Inferred Rules Reference
+## Inferred Rules Reference
 
 This is a table of HTML attributes that is inferred as rules.
 
@@ -284,27 +291,23 @@ This is a table of HTML attributes that is inferred as rules.
   所以还是采用作者的提议，因为我们使用的是`ionic web component`, 所以上面的规则还是不适用
 :::
 
-
 - 同一个页面多表单的校验规则: [multiple form](https://baianat.github.io/vee-validate/examples/scopes.html) ，
 
 > For convenience, you may add the data-vv-scope attribute on the form that owns the inputs, you don't have to add the attribute on every input. You can also pass scope property to the validator expression.  不必每个字段都添加一个scope的属性，这个问题在旧版本中还是需要加上scope的，见问题： [
 How to validate two different forms on one page? #1206](https://github.com/baianat/vee-validate/issues/1206)
 
-
-- ionic 中的`color`自定义： https://ionicframework.com/docs/theming/advanced#colors 
-
-
+- ionic 中的`color`自定义： <https://ionicframework.com/docs/theming/advanced#colors>
 
 ## ionic常用css工具集
- 
+
  [参考官方css工具集](https://ionicframework.com/docs/layout/css-utilities)
 
 - 内间距
 
-1. 子元素上下左右间距 padding 
+1. 子元素上下左右间距 padding
 1. 子元素无间距 no-padding
 2. 子元素上下间距 padding-vertical
-3. 子元素左右间距 padding-horizontal 
+3. 子元素左右间距 padding-horizontal
 
 - 外间距
 

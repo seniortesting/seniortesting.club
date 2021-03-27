@@ -5,9 +5,11 @@ title: springboot List param或者http Get请求相同的参数名称覆盖不�
 ## 数组参数问题
 
 我的服务器后台需要接受一个数组形式的参数,我想到的springboot形式的参数代码如下:
-```
+
+```java
 public listData(@RequestParam("pid") List<Long> projectIds)
 ```
+
 所以这里我用了一个List来接受数组形式的参数,但是发现我再用前台发送类似下面的请求的时候,发现相同参数名称(这里是`pid`)会被覆盖,发送到服务器端只有一个参数,如下:
 
 - 发送的GET类型的请求如下: `http://test.com?pid=123&pid=456`
@@ -17,7 +19,7 @@ public listData(@RequestParam("pid") List<Long> projectIds)
 
 ## springboot 如何接受前台axios传过来的array数据,需要为POST方式,GET会覆盖相同的参数名称
 
-默认情况下，axios传过来的array数据格式是: http://test.com/abc?params[]=test&params[]=testw3w3, 需要特殊转换springboot才能解析成对应的`List<String>` 格式的参数
+默认情况下，axios传过来的array数据格式是: <http://test.com/abc?params>[]=test&params[]=testw3w3, 需要特殊转换springboot才能解析成对应的`List<String>` 格式的参数
 
 - axios端传递的方法如下：
 

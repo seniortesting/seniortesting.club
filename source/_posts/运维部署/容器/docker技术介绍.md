@@ -60,7 +60,6 @@ $ sudo curl -L --fail https://github.com/docker/compose/releases/download/1.28.5
 $ sudo chmod +x /usr/local/bin/docker-compose
 $ rm /usr/local/bin/docker-compose # 使用curl安装的
 
-
 # 3. docker swarm初始化
 
 参考文档：<https://www.lidong.xin/devops/S4-Swarm-Aliyun.html>
@@ -72,8 +71,9 @@ $ rm /usr/local/bin/docker-compose # 使用curl安装的
 $ docker swarm init
 在输出的命令上复制执行命令在对应的node上执行加入对应的swarm
 ```
+
 注意上面的输出加入命令中机器需要打开对应的端口
-` docker swarm join --token SWMTKN-1-1xxz8cw5pyolpvy91edt7ranyjsnu2qjbyn3sjsp65fcx-0vkpilpqppe41ncnoapd319l0 172.19.82.347:2377`
+`docker swarm join --token SWMTKN-1-1xxz8cw5pyolpvy91edt7ranyjsnu2qjbyn3sjsp65fcx-0vkpilpqppe41ncnoapd319l0 172.19.82.347:2377`
 
 所以上面的命令需要在manager机器上打开2377端口。
 
@@ -106,12 +106,10 @@ update      #更新服务
 
 ```
 
-
 # 4. docker轻量容器集群管理工具portainer
 
 $ docker pull portainer/portainer-ce
 $ docker run -d -p 9000:9000 -v /opt/portainer:/data -v /var/run/docker.sock:/var/run/docker.sock --name portainer portainer/portainer-ce
-
 
 ### Docker安装方法二
 
@@ -119,25 +117,24 @@ $ docker run -d -p 9000:9000 -v /opt/portainer:/data -v /var/run/docker.sock:/va
 <https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-debian-10>
 
 ```shell
-$ sudo apt update
-$ sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common
-$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
-$ sudo apt update
-$ apt-cache policy docker-ce
-$ sudo apt install docker-ce
-$ sudo systemctl status docker
-$ docker info
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+sudo apt update
+apt-cache policy docker-ce
+sudo apt install docker-ce
+sudo systemctl status docker
+docker info
 ```
 
 通过上面的`docker info`发现对应的`Registry Mirrors`是官方的镜像，所以我们在使用`docker pull`命令下载到本地的时候会比较缓慢，所以我们需要修改对应的镜像。修改命令如下：
 
 ```shell
-$ nano /etc/docker/daemon.json
+nano /etc/docker/daemon.json
 ```
 
 修改为如下：
-
 
 -----------------------------------------**分割线**---------------------------------------------------
 
@@ -153,22 +150,20 @@ $ nano /etc/docker/daemon.json
 
 docker-swarm是解决多主机多个容器调度部署得问题。
 
-
 - 轻量级的Kubernetes，K3S : [k3s.io](https://k3s.io/)
 - 集群管理工具Rancher：
 
 ```shell
-$ docker pull rancher/server
-$ sudo docker run -d --name rancher -v /etc/localtime:/etc/localtime -v /opt/rancher/mysql:/var/lib/mysql --restart=unless-stopped -p 8080:8080 rancher/server
+docker pull rancher/server
+sudo docker run -d --name rancher -v /etc/localtime:/etc/localtime -v /opt/rancher/mysql:/var/lib/mysql --restart=unless-stopped -p 8080:8080 rancher/server
 
-$ docker ps -a
-$ docker exec -it rancher /bin/bash
-$ ps -ef
-$ docker logs -f rancher
+docker ps -a
+docker exec -it rancher /bin/bash
+ps -ef
+docker logs -f rancher
 ```
 
-访问 http://10.245.231.119:8080
-
+访问 <http://10.245.231.119:8080>
 
 ### docker的alpine和slim镜像
 
@@ -194,11 +189,13 @@ FROM debian:buster-slim
 ```shell
 ENV <key>=<value> ...
 ```
+
 ENV 指令还允许另一种语法 ENV <key> <value>，省略了中间的等号。例如：
 
 ```shell
 ENV MY_VAR my-value
 ```
+
 **支持这种替代语法为了向后兼容，但由于上述原因不鼓励使用，可能会在将来的版本中删除**。 所以推荐使用带加号的。
 
 - 2. `ENTRYPOINT`和`CMD`区别
@@ -209,6 +206,7 @@ ENV MY_VAR my-value
 ENTRYPOINT ["executable", "param1", "param2"] (exec 格式, 推荐)
 ENTRYPOINT command param1 param2 (shell 格式)
 ```
+
 注意：Note: The exec form is parsed as a JSON array, which means that you must use double-quotes (“) around words not single-quotes (‘). **exec格式的会作为json格式解析，所以必需是双引号，而不是单引号。否则单引号会报错误：entrypoint file not found**
 
 CMD命令当后面加上一个命令，比如 docker run -it [image] /bin/bash，CMD 会被忽略掉，命令 bash 将被执行：
@@ -227,6 +225,7 @@ COPY对于文件而言可以直接将文件复制到镜像中，代码如下：
 ```shell
 COPY ${JAR_FILE} /usr/local/oas/
 ```
+
 对于目录而言，该命令只复制目录中的内容而不包含目录自身，代码如下：
 
 ```shell
@@ -241,6 +240,7 @@ ADD命令相对于COPY命令，可以解压缩文件并把它们添加到镜像�
 ADD nickdir.tar.gz .
 WORKDIR /usr/local/oas/
 ```
+
 同时ADD还可以从 url 拷贝文件到镜像中，但官方不推荐这样使用，官方建议我们当需要从远程复制文件时，最好使用 curl 或 wget 命令来代替 ADD 命令。原因是，当使用 ADD 命令时，会创建更多的镜像层，当然镜像的 size 也会更大，代码如下：
 
 ```shell
@@ -253,10 +253,7 @@ RUN tar -xJf /usr/src/things/big.tar.xz -C /usr/src/things
 
 其他情况推荐都使用COPY命令。
 
-
-
 ## 1. nginx部署
-
 
 **注意：推荐nginx不用docker部署，直接采用宿主机器安装。以下的安装方式不推荐**
 
@@ -265,18 +262,17 @@ RUN tar -xJf /usr/src/things/big.tar.xz -C /usr/src/things
 执行如下命令：
 
 ```shell
-$ sudo docker pull nginx
+sudo docker pull nginx
 
-$ mkdir -p /opt/html
-$ cd /opt
+mkdir -p /opt/html
+cd /opt
 
-$ sudo docker run --name nginx -d -p 80:80 -v /etc/nginx:/etc/nginx -v $(pwd)/html:/usr/share/nginx/html nginx
+sudo docker run --name nginx -d -p 80:80 -v /etc/nginx:/etc/nginx -v $(pwd)/html:/usr/share/nginx/html nginx
 
-$ sudo docker run --name nginx -d -p 80:80 -v /etc/nginx:/etc/nginx -v $PWD/html:/usr/share/nginx/html nginx
+sudo docker run --name nginx -d -p 80:80 -v /etc/nginx:/etc/nginx -v $PWD/html:/usr/share/nginx/html nginx
 
-$ docker logs nginx
+docker logs nginx
 ```
-
 
 ## 2. jenkins部署
 
@@ -285,9 +281,9 @@ $ docker logs nginx
 命令如下：
 
 ```shell
-$ docker pull jenkins/jenkins:lts
-$ docker images   # 查看对应的下载的jenkins镜像的jenkins版本
-$ docker inspect <jenkins image id>
+docker pull jenkins/jenkins:lts
+docker images   # 查看对应的下载的jenkins镜像的jenkins版本
+docker inspect <jenkins image id>
 ```
 
 ![20210305170845](https://raw.githubusercontent.com/alterhu2020/StorageHub/master/img/20210305170845.png)
@@ -300,8 +296,9 @@ $ chmod 777 /opt/jenkins_home/
 ```
 
 ```shell
-$ sudo docker run -d -p 8888:8080 -p 50000:50000 --privileged=true  -v /opt/jenkins_home:/var/jenkins_home --name jenkins  jenkins/jenkins:lts
+sudo docker run -d -p 8888:8080 -p 50000:50000 --privileged=true  -v /opt/jenkins_home:/var/jenkins_home --name jenkins  jenkins/jenkins:lts
 ```
+
 检查是否jenkins正常启动：
 
 ```shell
@@ -327,7 +324,6 @@ cat /var/jenkins_home/secrets/initialAdminPassword
 
 其他配置和插件安装参考：
 
-
 ## 3. java应用程序部署
 
 此处推荐的几个基础jdk镜像：
@@ -344,13 +340,13 @@ cat /var/jenkins_home/secrets/initialAdminPassword
 # docker pull adoptopenjdk/openjdk15:jdk-15.0.2_7-debianslim-slim
 
 ```
+
 推荐一个博客介绍的几种docker镜像大小的对比，<https://technology.amis.nl/continuous-delivery/containers/the-size-of-docker-images-containing-openjdk-11-0-6/>
 如下图所示：
 
 ![docker](https://raw.githubusercontent.com/alterhu2020/StorageHub/master/img/20210305092831.png)
 
 **如何退出jshell命令？答案：输入`/exit`命令**
-
 
 3.1 配置springboot的一个安装包的`Dockerfile`脚本：
 
@@ -363,7 +359,6 @@ COPY entrypoint.sh /opt/
 ENTRYPOINT ["/opt/entrypoint.sh"]
 ```
 
-
 ## 4. python应用程序部署
 
 此处推荐的基础镜像是：
@@ -374,7 +369,6 @@ $ docker pull python:3.10.0a6-slim
 ```
 
 ## 5. vue应用程序部署
-
 
 ```shell
 FROM node:10
@@ -400,12 +394,9 @@ CMD [ "yarn", "start" ]
 
 ## 6. selenium测试环境部署
 
-
 ## docker启动报错
 
 ```shell
 journalctl -fu docker.service
 
 ```
-
-
