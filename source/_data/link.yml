@@ -14,3 +14,7 @@
       link: https://github.com/jerryc127/hexo-theme-butterfly
       avatar: https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-github-avatar.png
       descr: '🦋 A Hexo Theme: Butterfly'
+    - name: 404
+      link: https://404.life/
+      avatar: https://img.undi.cn/404/2021/01/ec8506e5df38075.ico
+      descr: '404模板网-重新定义404页面'
