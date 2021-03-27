@@ -4,25 +4,24 @@ title: Wordpress Linux命令其环境配置
 
 **更新日期： 2020/02/21**
 
-
-
-
 ## Install wordpress
+
 ```
-$ cd /www/web/blog.seniortesting.club
-$ wget https://wordpress.org/latest.tar.gz
-$ tar xpf latest.tar.gz
-$ cp -r wordpress ../
+cd /www/web/blog.seniortesting.club
+wget https://wordpress.org/latest.tar.gz
+tar xpf latest.tar.gz
+cp -r wordpress ../
 ```
 
 ## Install php
 
 以下方法不再推荐使用， 2020-07-20
-~~$ cd /opt~~   
-~~$ wget https://www.php.net/distributions/php-7.3.10.tar.gz~~
+~~$ cd /opt~~
+~~$ wget <https://www.php.net/distributions/php-7.3.10.tar.gz>~~
 ~~$ tar zxvf php-7.3.10.tar.gz~~
 
 如下为最新安装方法：
+
 ```
 ----------上面采用的php源码安装可以使用下面的几个命令替代-----------------------------
 $ sudo apt update
@@ -59,6 +58,7 @@ location ~ \.php$ {
 }
 
 ```
+
 有时候我们可以看到另外的一种配置，也是可行的，不过有点麻烦，如下代码:
 
 ```
@@ -107,11 +107,10 @@ server {
 }
 ```
 
-
-
 ## 配置启动安装wordpress
 
 完成上面的配置后，需要再修改`wp-config.php`文件配置数据库信息，如下为全部配置信息:
+
 ```
 <?php
 /**
@@ -198,7 +197,7 @@ define( 'WP_DEBUG', false );
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+ define( 'ABSPATH', dirname( __FILE__ ) . '/' );
 }
 
 /** Sets up WordPress vars and included files. */
@@ -206,11 +205,12 @@ require_once( ABSPATH . 'wp-settings.php' );
 
 ```
 
-否则会覆盖已经导入的mysql数据库数据,然后访问页面: http://xxx. 会自动加载配置文件信息跳转到首页。
+否则会覆盖已经导入的mysql数据库数据,然后访问页面: <http://xxx>. 会自动加载配置文件信息跳转到首页。
 
 ## 请求style.css和app.js出现 `block:mixed-content`错误
 
 原因是全站采用了https后引用的相关css和js文件由于采用的是frp导致对应的协议是http的要求，此处可以修改git主题下面的`functions.php`中的`GIT_URL`参数为如下：
+
 ```
 define('GIT_URL', 'https://seniortesting.club/wp-content/themes/git');
 

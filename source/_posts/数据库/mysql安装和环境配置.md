@@ -6,19 +6,19 @@ title: Debian MYSQL8安装及其环境配置
 
 
 
-# 安装步骤如下命令：
+# 安装步骤如下命令
 
 ::: warning mysql安装密码问题
+
 1. 安装的时候注意选择legecal password,否则wordpress不能访问mysql8数据库
 2. 如果是raspberry,则必须安装mariadb
 :::
-
 
 ## 安装命令
 
  **1. mysql8安装，注意配置大小写安装**
 
-``` 
+```
 $ apt-get install lsb-release
 $ wget https://dev.mysql.com/get/mysql-apt-config_0.8.13-1_all.deb
 $ sudo dpkg -i mysql-apt-config*
@@ -35,9 +35,9 @@ $ sudo systemctl start mysql.service
 **2. mariadb安装**
 
 ```
-$ sudo apt update
-$ sudo apt install mariadb-server
-$ sudo systemctl status mariadb
+sudo apt update
+sudo apt install mariadb-server
+sudo systemctl status mariadb
 
 ```
 
@@ -46,12 +46,13 @@ $ sudo systemctl status mariadb
 **1. mysql配置文件**
 
 ```
-$ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
+
 **2. mariadb配置文件**
 
 ```
-$ sudo /etc/mysql/mariadb.conf.d/50-server.cnf
+sudo /etc/mysql/mariadb.conf.d/50-server.cnf
 
 ```
 
@@ -130,7 +131,6 @@ slow_query_log_file = /logs/mysql/slow.log
 long_query_time = 5
 ```
 
-
 ## 配置mysql的用户和密码
 
 在mysql或者mariadb上运行如下命令进行配置数据库，注意禁止: **VALIDATE PASSWORD COMPONENT**:
@@ -191,6 +191,7 @@ WITH GRANT OPTION 这个选项表示该用户可以将自己拥有的权限授�
 ## mysql8数据表大小写敏感（可选,上面第二步已经设置）
 
 查看大小写配置，大小写是否敏感:
+
 ```
 show variables where Variable_name='lower_case_table_names';
 
@@ -202,11 +203,15 @@ show variables where Variable_name='lower_case_table_names';
 Job for mysql.service failed because the control process exited with error code.
 See "systemctl status mysql.service" and "journalctl -xe" for details.
 ```
+
 查看mysql的日志文件: `tail -f -n 100 /var/log/mysql/error.log`,查看MySQL官方文档，有记录：
+
 ```
 lower_case_table_names can only be configured when initializing the server. Changing the lower_case_table_names setting after the server is initialized is prohibited.
 ```
+
 只有在初始化的时候设置 lower_case_table_names=1才有效，比如：
+
 ```
 --initialize --lower-case-table-names=1
 ```
@@ -260,22 +265,24 @@ NULL - 表示io_thread或是sql_thread有任何一个发生故障，也就是该
 
 1.记录删除失败 `Could not execute Delete_rows event on table cvr.sys_user; Can't find record in 'sys_user', Error_code: 1032; handler error HA_ERR_KEY_NOT_FOUND; the event's master log mysql-bin.000005, end_log_pos 46653957`错误
 解决方法：master要删除一条记录，而slave上找不到报错，这种情况主都已经删除了，那么从机可以直接跳过指定数量的错误。
-#将同步指针向下移动一个，如果多次不同步可以重复操作：
 
-```
+# 将同步指针向下移动一个，如果多次不同步可以重复操作
+
+```shell
 stop slave;set global sql_slave_skip_counter=1;SELECT SLEEP(5);start slave;
 ```
 
 If the error is still there, set a bigger value in sql_slave_skip_counter like:
 
-```
+```shell
 mysql> set global sql_slave_skip_counter=1000;
 ```
+
 Again, check the status of the slave.
 
 If you find the skip_sql value is non zero in the slave status then stop the slave again and do:
 
-```
+```shell
 mysql> set global sql_slave_skip_counter=0;
 mysql> start slave;
 ```
@@ -283,6 +290,7 @@ mysql> start slave;
 2. 主键重复`Last_SQL_Error: Could not execute Write_rows event on table hcy.t1; Duplicate entry '2' for key 'PRIMARY', Error_code: 1062; handler error HA_ERR_FOUND_DUPP_KEY; the event's master log mysql-bin.000006, end_log_pos 924`
 
 在slave已经有该记录，又在master上插入了同一条记录。
+
 ```
 Last_SQL_Error: Could not execute Write_rows event on table hcy.t1; Duplicate entry '2' for key 'PRIMARY', Error_code: 1062; handler error HA_ERR_FOUND_DUPP_KEY; the event's master log mysql-bin.000006, end_log_pos 924
 
@@ -291,6 +299,7 @@ Last_SQL_Error: Could not execute Write_rows event on table hcy.t1; Duplicate en
 3. 终极解决所有的主从错误同步问题
 
 直接在`mysqld.cnf`文件中配置如下忽略所有的错误:
+
 ```
 slave-skip-errors=all
 ```
@@ -311,6 +320,7 @@ flush privileges;
 
 reboot
 ```
+
 如果报： `ERROR 1290 (HY000): The MySQL server is running with the --skip-grant-tables option so it cannot execute this statement`,需要执行一下命令: `flush privileges`,然后再重新执行命令就好了。
 
 ```
@@ -325,20 +335,20 @@ reboot
 ## 卸载mysql操作
 
 ```
-$ cd /var/lib/dpkg
-$ sudo mv info info.bak
-$ sudo mkdir info
-$ sudo dpkg --configure -a
-$ sudo apt-get install -f
-$ sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info.bak
-$ sudo rm -rf /var/lib/dpkg/info
-$ sudo mv /var/lib/dpkg/info.bak /var/lib/dpkg/info
-$ sudo apt remove --purge mysql*
+cd /var/lib/dpkg
+sudo mv info info.bak
+sudo mkdir info
+sudo dpkg --configure -a
+sudo apt-get install -f
+sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info.bak
+sudo rm -rf /var/lib/dpkg/info
+sudo mv /var/lib/dpkg/info.bak /var/lib/dpkg/info
+sudo apt remove --purge mysql*
 
-$ sudo apt remove mysql-server
-$ sudo apt purge mysql-server
-$ sudo apt autoremove
-$ sudo find / -name mysql
+sudo apt remove mysql-server
+sudo apt purge mysql-server
+sudo apt autoremove
+sudo find / -name mysql
 
 ```
 
@@ -348,18 +358,19 @@ $ sudo find / -name mysql
  dependency problems - leaving unconfigured
 
  ```
- $ sudo apt --yes autoremove --purge mysql-server
- $ sudo apt --yes autoremove --purge mysql-client
- $ sudo rm /var/lib/mysql/ -R
- $ sudo rm /etc/mysql/ -R
- $ sudo apt-get autoremove mysql* --purge
- $ sudo apt-get remove apparmor
- $ sudo apt-get install mysql-server mysql-common
+ sudo apt --yes autoremove --purge mysql-server
+ sudo apt --yes autoremove --purge mysql-client
+ sudo rm /var/lib/mysql/ -R
+ sudo rm /etc/mysql/ -R
+ sudo apt-get autoremove mysql* --purge
+ sudo apt-get remove apparmor
+ sudo apt-get install mysql-server mysql-common
  ```
 
- ## mysql8备份还原从数据文件， backup, restore
+## mysql8备份还原从数据文件， backup, restore
 
  1. （~~以下的操作没有成功~~）通常mysql的数据库文件目录为: **/var/lib/mysql**
+
  ```
 $ sudo systemctl stop mysql
 # 复制数据盘的mysql的数据库文件夹（例如：cvr)到新的mysql数据库目录： /var/lib/mysql
@@ -379,10 +390,10 @@ $ sudo mysql -u root -p
  2. 采用sql文件进行恢复数据库,注意不同数据库记得切换下
 
  ```
- $ mysql -u root -p cvr < cvr.sql
+ mysql -u root -p cvr < cvr.sql
  ```
 
- ## navicat连接mysql: navicat received invalid response to SSL negotiation: j
+## navicat连接mysql: navicat received invalid response to SSL negotiation: j
 
  最近通过navicat连接mysql遇到一个提示问题： `navicat received invalid response to SSL negotiation: j`,而通过其他的mysql客户端可以正常连接，比如 dbforge for MYSQL。 很奇怪，所以确定是navicat那里配置出了问题。
 
@@ -391,16 +402,15 @@ $ sudo mysql -u root -p
  ![20200718092659-2020-07-18](https://raw.githubusercontent.com/alterhu2020/StorageHub/master/img/20200718092659-2020-07-18.png)
 
  我就很奇怪了，于是删除这个连接，重新新建一个连接。点击“测试连接”，居然可以正常连接访问mysql。所以遇到问题时，千万不要钻牛角尖，换个思路看看，没准柳暗花明。
- 
 
- ## mysql字符集和排序规则
+## mysql字符集和排序规则
 
  navicat中新建数据库中回选择对应的**字符集**和**排序规则**。
 
- - 字符集，这里只要关注两个：utf8和utf8mb4。字符集以_ci（大小写不敏感）、_cs（大小写敏感）或_bin（二元）结束。
- - mysql(字符串)排序规则区别
+- 字符集，这里只要关注两个：utf8和utf8mb4。字符集以_ci（大小写不敏感）、_cs（大小写敏感）或_bin（二元）结束。
+- mysql(字符串)排序规则区别
 
-名称 | 描述 
+名称 | 描述
 ---------|----------
 utf8_bin （utf8mb4_bin） | 将字符串中的每一个字符用二进制数据存储，区分大小写。
 utf8_general_ci（utf8mb4_general_ci） | 不区分大小写，ci为case insensitive的缩写，即大小写不敏感。
@@ -417,7 +427,9 @@ ERROR 1819 (HY000): Your password does not satisfy the current policy requiremen
 ```
 SHOW VARIABLES LIKE 'validate_password%';
 ```
+
 然后会输出类似如下的结果：
+
 ```
 +--------------------------------------+-------+
 | Variable_name                        | Value |
@@ -431,23 +443,21 @@ SHOW VARIABLES LIKE 'validate_password%';
 | validate_password.special_char_count | 1     |
 +--------------------------------------+-------+
 ```
+
 如果需要删除这个校验规则，执行如下命令：
 
 ```
 mysql> uninstall plugin validate_password;
 ```
 
-
 ## Could not open or create the system tablespace. If you tried to add new data files to the system tablespace, and it failed here, you should now edit innodb_data_file_path in my.cnf back to what it was, and remove the new ibdata files InnoDB created in this failed attempt. InnoDB only wrote those files full of zeros, but did not yet use them in any way. But be careful: do not remove old data files which contain your precious data
 
 进入mysql的数据目录,注意备份：
 
 ```
-$ cd  /var/lib/mysql
-$ rm -rf ib_logfile*
-$ rm -rf ibdata1
+cd  /var/lib/mysql
+rm -rf ib_logfile*
+rm -rf ibdata1
 ```
 
-
 ## mysql shell 脚本Using a password on the command line interface can be insecure
-

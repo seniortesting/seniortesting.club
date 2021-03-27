@@ -14,8 +14,6 @@ top_img:
 
 大家都知道，在不同操作系统、不同游览器里面默认显示的字体是不一样的，并且相同字体在不同操作系统里面渲染的效果也不尽相同，那么如何设置字体显示效果会比较好呢？
 
-
-
 ## 首先我们看看各平台的默认字体情况
 
 ### 1、 Window下
@@ -79,6 +77,7 @@ iOS系统的字体和Mac OS系统的字体相同，保证了Mac上的字体效�
 
 font-family: STXihei, "Microsoft YaHei";
 font-family: STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑";
+
 ## 2、声明英文字体
 
 绝大部分中文字体里都包含英文字母和数字，不进行英文字体声明是没有问题的，但是大多数中文字体中的英文和数字的部分都不是特别漂亮，所以建议也对英文字体进行声明。
@@ -170,7 +169,6 @@ font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragin
 ```css
  font-family: PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,Helvetica Neue,Arial,sans-serif;
 ```
-
 
 ## 其他的一些注意点
 

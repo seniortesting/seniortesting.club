@@ -13,10 +13,7 @@ cover:
 
 整理一些常见的高频mysql相关的问题
 
-
-
-
-## 定位查询可以是任意查询SQL 
+## 定位查询可以是任意查询SQL
 
 ```sql
 WITH CTE_TEMP   --公用表表达式（Common Table Expression)
@@ -30,7 +27,7 @@ SELECT * FROM CTE_TEMP   -- CTE后面必须直接跟使用CTE的SQL语句（如s
 
 ```
 
-- 递归查询中查询结果分隔符 
+- 递归查询中查询结果分隔符
 
 [参考递归查询结果分隔符](https://blog.csdn.net/dufemt/article/details/80773394)
 
@@ -45,12 +42,9 @@ select k.id,cast(c.name||'>'||k.name as varchar(100)) as name  from tb k inner j
 )select id,name from cte ;
 ```
 
-
 ## 建表规范参考阿里巴巴手册
 
 1. UNSIGNED属性就是将数字类型无符号化，与C、C++这些程序语言中的unsigned含义相同。例如，INT的类型范围是-2 147 483 648 ～ 2 147 483 647， INT UNSIGNED的范围类型就是0 ～ 4 294 967 295
-
-
 
 ## mysql单索引和联合索引的区别
 
@@ -58,4 +52,4 @@ select k.id,cast(c.name||'>'||k.name as varchar(100)) as name  from tb k inner j
 
 [参考文档](https://blog.csdn.net/Abysscarry/article/details/80792876)
 
-索引如何建立，及其如何使用，参考： https://www.toutiao.com/i6695892976922526212/
+索引如何建立，及其如何使用，参考： <https://www.toutiao.com/i6695892976922526212/>
