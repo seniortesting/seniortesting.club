@@ -4,8 +4,6 @@ title: scrapy logging模块配置
 
 
 
-
-
 ## 配置
 在`settings.py`中配置对应的字段：
 

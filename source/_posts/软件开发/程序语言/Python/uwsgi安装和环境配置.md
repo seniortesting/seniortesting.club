@@ -3,9 +3,6 @@ title: Python Uwsgi Linux安装及其环境配置
 ---
 
 
-
-
-
 ## `uwsgi`Linux安装[更新到2019年8月10日]
 
 [How to install uwsgi](https://uwsgi-docs.readthedocs.io/en/latest/Install.html#installing-from-source)
