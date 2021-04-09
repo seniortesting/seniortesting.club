@@ -5,9 +5,6 @@ keywords: 'api, rest'
 categories: []
 abbrlink: 8670b080
 date: 2021-03-25 23:10:17
-description:
-cover:
-top_img:
 ---
 
 ## 常用的Java Rest解决方案

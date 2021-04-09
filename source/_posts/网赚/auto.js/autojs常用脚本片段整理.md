@@ -1,9 +1,9 @@
 ---
 title: autojs常用脚本片段整理
-tags: []
+tags: [autojs, 脚本]
 keywords: 'autojs,外挂,网赚'
 categories: [autojs,外挂,网赚]
-abbrlink: 7670b080
+abbrlink: z670b080
 date: 2021-03-31 23:30:04
 description:
 cover:

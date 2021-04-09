@@ -3,7 +3,7 @@ title: autojs脚本收集整理
 tags: []
 keywords: 'autojs,auto.js'
 categories: [autojs,外挂,脚本]
-abbrlink: 7670b080
+abbrlink: p670b080
 date: 2021-03-31 22:07:04
 description:
 cover:
@@ -15,8 +15,7 @@ top_img:
 文档和视频教程: <https://easydoc.xyz/doc/25791054/uw2FUUiw/3bEzXb4y>
 
 ## 相关脚本整理
-
-- 
+ 
 - ~~(部分脚本已不可用)刷短视频类脚本:~~ <https://github.com/c0411034/autoVideo>
 - 一些autojs典藏的脚本: <https://github.com/snailuncle/autojsDemo>
 - 蚂蚁森林收能量脚本: <https://github.com/SuperMonster003/Ant-Forest>
