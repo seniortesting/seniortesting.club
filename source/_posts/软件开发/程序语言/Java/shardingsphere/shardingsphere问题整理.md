@@ -24,6 +24,6 @@ The sharding-jdbc version used is 4.1.1
 
 - 解决方案
 
-这是因为`shardingsphere`暂时不支持LOcalDateTime类型
+这是因为`shardingsphere`暂时不支持LocalDateTime类型,截至到目前<2021-04-09> 唯一的办法就是等待**5.0.0**版本修复,对应的这个issue的跟踪链接是:<https://github.com/apache/shardingsphere/issues/5420>
 
 
