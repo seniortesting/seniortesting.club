@@ -1,7 +1,7 @@
 ---
 title: pytest系列(1) - pytest入门介绍
-tags: [pytest]
-keywords: 'pytest'
+tags: [pytest,pytest系列]
+keywords: 'pytest,pytest系列'
 categories: []
 date: 2021-04-13 11:45:57
 description:
