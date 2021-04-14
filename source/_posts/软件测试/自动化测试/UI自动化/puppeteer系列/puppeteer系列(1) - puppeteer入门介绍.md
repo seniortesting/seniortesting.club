@@ -3,7 +3,7 @@ title: puppeteer系列(1) - puppeteer入门介绍
 tags: [puppeteer,e2e testing, ui testing,puppeteer系列]
 keywords: 'puppeteer,e2e testing, ui testing,puppeteer系列'
 categories: []
-date: 2021-03-25 23:11:30
+date: 2021-04-14 23:11:30
 description:
 cover: https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210413135949.jpg
 top_img: https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210413135949.jpg

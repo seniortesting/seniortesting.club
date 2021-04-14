@@ -1,5 +1,10 @@
 ---
 title: Windows环境下appium的server，client端连接配置
+tags: [appium,mobile testing]
+keywords: 'appium,mobile testing'
+categories: []
+date: 2021-04-14 23:11:10
+description:
 ---
 
 ArtiPub (Article Publisher的简称，意为"文章发布者")是一款开源的一文多发平台，可以帮助文章作者将编写好的文章自动发布到掘金、SegmentFault、CSDN、知乎、开源中国等技术媒体平台，传播优质知识，获取最大的曝光度。ArtiPub安装简单，提供了多种安装方式，可以一键安装使用，安装一般只要5分钟。
