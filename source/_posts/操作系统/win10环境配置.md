@@ -66,6 +66,7 @@ title: Windows10机器新环境配置
     1.14 Lorem ipsum
     1.15 CSS Peek
     1.16 IntelliSense for CSS class names in HTML
+    1.17 [Markdown Table](https://marketplace.visualstudio.com/items?itemName=TakumiI.markdowntable)
 
 * [Oracle VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 * [Node](https://nodejs.org/en/download/)
