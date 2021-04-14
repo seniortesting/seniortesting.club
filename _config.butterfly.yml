@@ -472,8 +472,7 @@ google_adsense:
   auto_ads: false
   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
   client: ca-pub-1893384651266286
-  enable_page_level_ads: true
-
+  enable_page_level_ads: false
 # Insert ads manually (手動插入廣告)
 ad:
   # index: <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w" data-ad-client="ca-pub-1893384651266286" data-ad-slot="2627967536"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
@@ -525,7 +524,7 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:
+background: '#d3e6f9'
 
 # Footer Background
 footer_bg: false
@@ -608,8 +607,8 @@ beautify:
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
-  global-font-size:
-  code-font-size:
+  global-font-size: 16px
+  code-font-size: 13px
   font-family: -apple-system,BlinkMacSystemFont,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Segoe UI","PingFang SC","Hiragino Sans GB","Heiti SC", "Microsoft YaHei","WenQuanYi Micro Hei","Helvetica Neue",Helvetica,Arial,sans-serif
   code-font-family: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
 
