@@ -2,7 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://seniortesting.club/posts/2JQ5B1K/</loc>
+    <loc>https://seniortesting.club/posts/29BRCQH/</loc>
+    
+    <lastmod>2021-04-14</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://seniortesting.club/posts/15PNRQ1/</loc>
+    
+    <lastmod>2021-04-14</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://seniortesting.club/posts/2NFBP7M/</loc>
     
     <lastmod>2021-04-14</lastmod>
     
@@ -10,6 +24,13 @@
   
   <url>
     <loc>https://seniortesting.club/posts/7670b080/</loc>
+    
+    <lastmod>2021-04-14</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://seniortesting.club/posts/2JQ5B1K/</loc>
     
     <lastmod>2021-04-14</lastmod>
     
@@ -52,13 +73,6 @@
   
   <url>
     <loc>https://seniortesting.club/posts/3GW2A2Y/</loc>
-    
-    <lastmod>2021-04-13</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://seniortesting.club/posts/9e670b080/</loc>
     
     <lastmod>2021-04-13</lastmod>
     
@@ -1075,6 +1089,34 @@
   </url>
   
   <url>
+    <loc>https://seniortesting.club/tags/puppeteer/</loc>
+    <lastmod>2021-04-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://seniortesting.club/tags/puppeteer%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2021-04-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://seniortesting.club/tags/playwright/</loc>
+    <lastmod>2021-04-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://seniortesting.club/tags/playwright%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2021-04-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://seniortesting.club/tags/junit5/</loc>
     <lastmod>2021-04-14</lastmod>
     <changefreq>daily</changefreq>
@@ -1138,13 +1180,6 @@
   </url>
   
   <url>
-    <loc>https://seniortesting.club/tags/Python/</loc>
-    <lastmod>2021-04-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://seniortesting.club/tags/Selenium/</loc>
     <lastmod>2021-04-14</lastmod>
     <changefreq>daily</changefreq>
@@ -1153,6 +1188,13 @@
   
   <url>
     <loc>https://seniortesting.club/tags/selenium/</loc>
+    <lastmod>2021-04-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://seniortesting.club/tags/Python/</loc>
     <lastmod>2021-04-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1231,14 +1273,14 @@
   </url>
   
   <url>
-    <loc>https://seniortesting.club/categories/%E5%95%86%E4%B8%9A%E8%8B%B1%E8%AF%AD/</loc>
+    <loc>https://seniortesting.club/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2021-04-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://seniortesting.club/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://seniortesting.club/categories/%E5%95%86%E4%B8%9A%E8%8B%B1%E8%AF%AD/</loc>
     <lastmod>2021-04-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1273,13 +1315,6 @@
   </url>
   
   <url>
-    <loc>https://seniortesting.club/categories/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2021-04-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://seniortesting.club/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2021-04-14</lastmod>
     <changefreq>daily</changefreq>
@@ -1287,7 +1322,7 @@
   </url>
   
   <url>
-    <loc>https://seniortesting.club/categories/%E8%84%9A%E6%9C%AC/</loc>
+    <loc>https://seniortesting.club/categories/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2021-04-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1295,6 +1330,13 @@
   
   <url>
     <loc>https://seniortesting.club/categories/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/</loc>
+    <lastmod>2021-04-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://seniortesting.club/categories/%E8%84%9A%E6%9C%AC/</loc>
     <lastmod>2021-04-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1357,13 +1399,6 @@
   </url>
   
   <url>
-    <loc>https://seniortesting.club/categories/%E8%84%9A%E6%9C%AC/%E5%A4%96%E6%8C%82/</loc>
-    <lastmod>2021-04-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://seniortesting.club/categories/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/%E8%BD%AF%E8%80%83/</loc>
     <lastmod>2021-04-14</lastmod>
     <changefreq>daily</changefreq>
@@ -1372,6 +1407,13 @@
   
   <url>
     <loc>https://seniortesting.club/categories/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2021-04-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://seniortesting.club/categories/%E8%84%9A%E6%9C%AC/%E5%A4%96%E6%8C%82/</loc>
     <lastmod>2021-04-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1392,14 +1434,14 @@
   </url>
   
   <url>
-    <loc>https://seniortesting.club/categories/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</loc>
+    <loc>https://seniortesting.club/categories/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E5%AE%B9%E5%99%A8/</loc>
     <lastmod>2021-04-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://seniortesting.club/categories/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E5%AE%B9%E5%99%A8/</loc>
+    <loc>https://seniortesting.club/categories/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2021-04-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1602,14 +1644,14 @@
   </url>
   
   <url>
-    <loc>https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Java/shardingsphere/</loc>
+    <loc>https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Java/mybatis/</loc>
     <lastmod>2021-04-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Java/mybatis/</loc>
+    <loc>https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Java/shardingsphere/</loc>
     <lastmod>2021-04-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1645,6 +1687,20 @@
   
   <url>
     <loc>https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/UI%E8%87%AA%E5%8A%A8%E5%8C%96/cypress%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2021-04-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/UI%E8%87%AA%E5%8A%A8%E5%8C%96/puppeteer%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2021-04-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://seniortesting.club/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/UI%E8%87%AA%E5%8A%A8%E5%8C%96/playwright%E7%B3%BB%E5%88%97/</loc>
     <lastmod>2021-04-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
