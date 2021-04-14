@@ -4,11 +4,11 @@
 
 # Site
 title: 胡言胡语
-subtitle: ''
+subtitle: '非学无以广才,非志无以成学'
 description: 非学无以广才,非志无以成学
-keywords: 软件测试,软测,软件开发,测试开发,高级测试,测试管理,测试面试,高级测试开发,测试技巧,测试管理,测试工具,自动化测试,性能测试,api测试,接口测试,grpc测试,rpc测试,胡言乱语,胡言语,pytest,cypress,selenium,jmeter,karate
-tags: java, python, vue, javascript, selenium, pytest, cypress, karate, junit5, playwright, mocha, appium, puppeteer, jmeter, gatling
-author: 胡家小妹
+keywords: 软件测试,软测,软件开发,测试开发,高级测试,测试管理,测试面试,高级测试开发,测试技巧,测试管理,测试工具,自动化测试,性能测试,api测试,接口测试,grpc测试,rpc测试,胡言乱语,胡言语,pytest,cypress,selenium,jmeter,karate,言小妹
+tags: java, python, vue, javascript, selenium, pytest, cypress, karate, junit5, playwright, mocha, appium, puppeteer, jmeter, gatling,言小妹
+author: 言小妹
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
