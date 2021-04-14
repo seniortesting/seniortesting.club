@@ -9,5 +9,5 @@ public/
 source/_backup/
 .vscode/
 .deploy_git/
-scripts/
 package-lock.json
+.idea/
