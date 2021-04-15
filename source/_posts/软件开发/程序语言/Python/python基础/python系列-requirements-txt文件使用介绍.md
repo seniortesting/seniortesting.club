@@ -3,6 +3,7 @@ title: python系列(1)-requirements.txt文件使用介绍
 tags: [python]
 keywords: 'python,requirements.txt'
 categories: []
+abbrlink: PqA55H5dQg
 date: 2021-04-15 09:52:55
 description:
 cover:

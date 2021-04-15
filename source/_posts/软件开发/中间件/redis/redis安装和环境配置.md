@@ -1,5 +1,12 @@
 ---
 title: Redis Linux安装及其环境配置
+keywords: ''
+categories: []
+abbrlink: GdcsnlipSK
+date: 2021-03-25 23:16:38
+description:
+cover:
+top_img:
 ---
 
 

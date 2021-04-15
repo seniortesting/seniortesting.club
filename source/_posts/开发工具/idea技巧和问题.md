@@ -1,5 +1,13 @@
 ---
 title: IntelliJ IDEA使用技巧和问题整理
+abbrlink: 1a6UIwHOXH
+tags: []
+keywords: ''
+categories: []
+date: 2021-03-25 23:12:53
+description:
+cover: 
+top_img:
 ---
 
 > 体验是很好，唯一的就是很耗内存，所以设置了堆的最大空间为如下,体验上还行，没有出现特别耗内存的情况：

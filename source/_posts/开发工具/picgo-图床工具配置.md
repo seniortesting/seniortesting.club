@@ -3,7 +3,7 @@ title: picgo图床配置
 tags: [图床,picgo]
 categories: []
 comments: true
-abbrlink: c4fe5b8b
+abbrlink: UQICSla0W2
 date: 2021-03-25 09:58:15
 keywords: '图床,picgo'
 description:

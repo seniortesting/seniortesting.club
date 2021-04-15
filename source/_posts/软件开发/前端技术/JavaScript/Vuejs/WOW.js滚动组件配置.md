@@ -1,5 +1,12 @@
 ---
 title: WOW.js在页面滚动时展现动感的元素动画效果
+keywords: ''
+categories: []
+abbrlink: iEccZVJ1oJ
+date: 2021-03-25 23:16:38
+description:
+cover:
+top_img:
 ---
 
 ~~> （已经不再维护，推荐使用aos） 插件描述：WOW.js 是一款帮助你实现滚动页面时触发CSS 动画效果的插件~~

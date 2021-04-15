@@ -1,8 +1,15 @@
 ---
 title: Nginx Linux安装及其环境配置
+categories: []
+abbrlink: 2Ix82hIx7y
+date: 2021-03-25 23:16:38
+description:
+cover:
+top_img:
 ---
 
 参考：[修改nginx的Server名称,修改两个文件:ngx_http_header_filter_module.c和nginx.h](https://serverfault.com/questions/214242/can-i-hide-all-server-os-info/279389#279389)
+
 
 ## docker setup
 

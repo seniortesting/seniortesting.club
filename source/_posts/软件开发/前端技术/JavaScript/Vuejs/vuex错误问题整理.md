@@ -1,5 +1,12 @@
 ---
 title: Vuex Do not mutate vuex store state outside mutation handlers
+keywords: ''
+categories: []
+abbrlink: cmgAEndLE6
+date: 2021-03-25 23:16:38
+description:
+cover:
+top_img:
 ---
 
 

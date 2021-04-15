@@ -1,5 +1,13 @@
 ---
 title: Debian Linux命令其环境配置
+abbrlink: f7ANQz
+tags: []
+keywords: ''
+categories: []
+date: 2021-03-25 23:12:53
+description:
+cover: 
+top_img:
 ---
 
 

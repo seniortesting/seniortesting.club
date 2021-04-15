@@ -1,5 +1,12 @@
 ---
 title: Vue nuxtjs插件类库配置集成
+keywords: ''
+categories: []
+abbrlink: SxV1BqSN9r
+date: 2021-03-25 23:16:52
+description:
+cover:
+top_img:
 ---
 
 

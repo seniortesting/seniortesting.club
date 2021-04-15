@@ -3,7 +3,7 @@ title: autojs的功能介绍
 tags: []
 keywords: 'easyclick,autojs'
 categories: [autojs]
-abbrlink: 5670b080
+abbrlink: VQB3BIrUgj
 date: 2021-03-29 20:25:48
 description:
 cover:

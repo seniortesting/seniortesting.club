@@ -1,5 +1,14 @@
 ---
 title: scrapy2版本新特性
+tags: [leetcode,刷题,算法]
+abbrlink: 9IgiN22Nxj
+tags: []
+keywords: ''
+categories: []
+date: 2021-03-25 23:12:53
+description:
+cover: 
+top_img:
 ---
 
 > 2020年3月3日发布了scrapy2.0.0版本，增加了一些新的特性功能。

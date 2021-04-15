@@ -1,5 +1,12 @@
 ---
 title: Vue 父子组件双向绑定
+keywords: ''
+categories: []
+abbrlink: HOpq0hwce0
+date: 2021-03-25 23:16:38
+description:
+cover:
+top_img:
 ---
 
 

@@ -3,6 +3,7 @@ title: Windows环境下appium的server，client端连接配置
 tags: [appium,mobile testing]
 keywords: 'appium,mobile testing'
 categories: []
+abbrlink: OvVxU2q7eB
 date: 2021-04-14 23:11:10
 description:
 ---

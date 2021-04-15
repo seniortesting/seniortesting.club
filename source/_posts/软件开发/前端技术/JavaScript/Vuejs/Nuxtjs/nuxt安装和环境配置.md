@@ -1,5 +1,13 @@
 ---
 title: Vue nuxtjs安装及其环境配置
+tags: []
+keywords: ''
+categories: []
+abbrlink: 1fMHgAoKSp
+date: 2021-03-25 23:16:52
+description:
+cover:
+top_img:
 ---
 
 
