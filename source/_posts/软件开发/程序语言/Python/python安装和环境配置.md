@@ -2,7 +2,7 @@
 title: Python Linux安装及其环境配置
 categories: []
 abbrlink: VsD26t2JsS
-date: 2021-04-15 09:52:55
+date: 2021-04-05 09:52:55
 description:
 cover:
 top_img:
