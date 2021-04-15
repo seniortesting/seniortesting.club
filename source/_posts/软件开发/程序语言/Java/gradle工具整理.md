@@ -3,7 +3,7 @@ title: gradle工具整理
 tags: []
 keywords: ''
 categories: []
-abbrlink: 7670b080
+abbrlink: kQQ2Y4m9In
 date: 2021-03-26 20:53:09
 description:
 cover:
