@@ -2,7 +2,7 @@
 title: Python Uwsgi Linux安装及其环境配置
 categories: []
 abbrlink: cLeP5dFFRi
-date: 2021-04-15 09:52:55
+date: 2021-04-05 09:52:55
 description:
 cover:
 top_img:
