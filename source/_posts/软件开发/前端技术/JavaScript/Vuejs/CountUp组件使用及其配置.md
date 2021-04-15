@@ -10,9 +10,6 @@ top_img:
 ---
 
 
-
-
-
 ## 简介
 
 > Vue.js component wrap for CountUp.js

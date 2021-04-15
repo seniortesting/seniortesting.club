@@ -10,7 +10,6 @@ top_img:
 ---
 
 
-
 ## 报错： Do not mutate vuex store state outside mutation handlers
 
 直接引用vuex中的getter属性，然后放在`v-model`的时候，如果有更新会设置vuex的getter属性，而在vuex的**strict mode**下就会报上面的错误。
