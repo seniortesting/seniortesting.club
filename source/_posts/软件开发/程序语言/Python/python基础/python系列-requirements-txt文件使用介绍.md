@@ -27,6 +27,8 @@ requirements.txt 文件里面记录了当前程序的所有依赖包及其精确
 
 支持的操作符号如下:
 
+**注意此处的`-e`参数使用的比较多,常用于安装本地的python包**
+
 1. -i, --index-url, 默认是:  https://pypi.org/simple
 
 2. --extra-index-url
@@ -66,7 +68,7 @@ python3 -m pip freeze > requirements.txt
 ```
 
 而对于使用Pycharm或者IDEA工具的小伙伴可以通过更简单的操作使得根据当前项目已经安装的包自动生成对应的`requirements.txt`文件,操作步骤如下：
-![](https://cdn.jsdelivr.net/gh/alterhu2020/CDN%20/img/blog/20210415100512.png)
+![](https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210415100512.png)
 
 在弹出的对话框中可以对生成的requirements.txt文件进行相关的配置：
 ![](https://resources.jetbrains.com/help/img/idea/2021.1/py_sync_requirements.png)
