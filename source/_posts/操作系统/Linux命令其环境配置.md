@@ -1,13 +1,13 @@
 ---
 title: Debian Linux命令其环境配置
 abbrlink: f7ANQz
-tags: []
-keywords: ''
+tags: [linux,linux shell,linux命令]
+keywords: 'linux,linux shell,linux命令'
 categories: []
 date: 2021-03-25 23:12:53
 description:
-cover: 
-top_img:
+cover: https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210417205701.png
+top_img: https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210417205701.png
 ---
 
 
@@ -187,13 +187,19 @@ PasswordAuthentication no
 
 文章来源: [解决Linux buffer/cache内存占用过高的办法](https://blog.csdn.net/ailice001/article/details/80353924)
 
-1. 在Linux系统中，我们经常用free命令来查看系统内存的使用状态。
+1. 在Linux系统中，我们经常用free命令来查看系统内存的使用状态。定时清理内存,清理空闲内存,清理缓存
 2. 如何回收cache？
 
-```
-sudo sh -c "echo 1 > /proc/sys/vm/drop_caches":表示清除pagecache。
-sudo sh -c "echo 2 > /proc/sys/vm/drop_caches":表示清除回收slab分配器中的对象（包括目录项缓存和inode缓存）。slab分配器是内核中管理内存的一种机制，其中很多缓存数据实现都是用的pagecache。
-sudo sh -c "echo 3 > /proc/sys/vm/drop_caches":表示清除pagecache和slab分配器中的缓存对象。
+```shell
+sudo sh -c "echo 1 > /proc/sys/vm/drop_caches"   表示清除pagecache。
+sudo sh -c "echo 2 > /proc/sys/vm/drop_caches"    表示清除回收slab分配器中的对象（包括目录项缓存和inode缓存）。slab分配器是内核中管理内存的一种机制，其中很多缓存数据实现都是用的pagecache。
+sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"   表示清除pagecache和slab分配器中的缓存对象。
+
+# 以下是可以用于定时执行清理内存
+$ crontab -e 
+
+*/15 * * * * /opt/clearMemory.sh > /dev/null
+
 ```
 
 ## 查看当前运行的进程的详细路径
@@ -204,7 +210,7 @@ sudo sh -c "echo 3 > /proc/sys/vm/drop_caches":表示清除pagecache和slab分�
 top -c
 ```
 
-## 通过进程pid查看进程
+## 通过进程pid查看进程对应的路径或者文件,可执行文件
 
 执行命令：
 
@@ -216,24 +222,83 @@ $ ls -ls /proc/1245
 
 ## 查看进程占用排序
 
-```
-ps -aux --sort=-pcpu|head -10
+```shell
+$ ps -aux --sort=-pcpu|head -10
 
 ```
 
 ## 查看定时任务 crontab命令
 
-```
+```shell
 # 查看定时任务
 $ crontab -l  
+
 # 编辑定时任务，删除或者注释定时任务
 $ crontab -e
+
 # 编辑，针对的是root用户
 $ nano /etc/crontab
 # 停止crontab，启动crontab任务
 $ systemctl stop cron
 $ systemctl restart cron
 ```
+
+创建`Crontab`定时任务
+Usually, you should open your personal crontab file using `crontab -e` command, however if you are root user and decide to choose system wide crontab file, you need to edit the crontab file located in `/etc/crontab`.现在创建一个定时脚本每天夜里执行备份操作：
+
+```shell
+# 立即生效
+$ sudo crontab -e
+# 需要执行重启服务才能生效: sudo systemctl restart cron.service ,不推荐。语法不一样，可能导致不执行
+$ sudo nano /etc/crontab
+```
+
+我们知道定时任务可以写到/etc/crontab与crontab -e下面，但你知道两者的区别吗?
+
+语法不同
+
+/etc/crontab
+
+```shell
+# For details see man 4 crontabs, 有五个占位符号, 参考: https://phoenixnap.com/kb/set-up-cron-job-linux
+ 
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 ar- 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name  command to be executed
+``` 
+ 
+ 
+crontab -e
+```shell
+*  *  *  *  *  command
+```
+
+使用范围
+修改`/etc/crontab`这种方法只有root用户能用，这种方法更加方便与直接直接给其他用户设置计划任务，而且还可以指定执行shell等等， `crontab -e`这种所有用户都可以使用，普通用户也只能为自己设置计划任务。然后自动写入/var/spool/cron/usename
+
+所以推荐使用： `sudo crontab -e`
+
+按照提示添加最后一行定时脚本：
+
+```shell
+# Running Cron job Daily
+@daily /opt/backup/scripts/mysql_backup.sh >> /var/log/mysql/mysql-backup.log 2>&1
+# Running Cron job at 2AM Daily
+0 2 * * * /opt/backup/scripts/mysql_backup.sh >> /var/log/mysql/mysql-backup.log 2>&1
+
+# Running Cron job at 12AM & 12PM Daily
+0 12,24 * * * /opt/backup/scripts/mysql_backup.sh >> /var/log/mysql/mysql-backup.log 2>&1
+
+```
+
+- 查看执行情况（crontab执行 日志）
+
+执行结果不论是否成功，都会在 `/var/spool/mail/mail`文件中有`crontab`执行日志的记录,另外可以自己指定日志目录，参考后面的命令参数。
 
 ### `/etc/crontab`文件和`crontab -e`命令区别
 
@@ -251,13 +316,13 @@ tzselect
 
 ## 查看文件夹各个文件大小
 
-```
+```shell
 du -sh *
 ```
 
 ## 查看linux的架构 32-bit or 64-bit
 
-```
+```shell
 # 32位还是64位
 uname -a
 # 下面命令显示CPU架构
@@ -273,7 +338,7 @@ $ uname -m
 
 默认情况下Linux的1024以下端口是只有root用户才有权限占用,我们的tomcat,apache, nginx等等程序如果想要用普通用户来占用80端口的话就会抛出 java.net.BindException: Permission denied的异常。
 
-```
+```shell
 查看指定的端口
 $ sudo lsof -i:port
 
@@ -286,7 +351,7 @@ $ sudo netstat -aptn
 在当前目录创建一个链接名称`python`,这个链接指向的位置是: `/usr/local/bin/python`,命令如下:
 ln -s 源文件 目标目录
 
-```
+```shell
 ln -s /usr/local/bin/python python
 ```
 
@@ -294,9 +359,9 @@ ln -s /usr/local/bin/python python
 
 进入目录`/var/cache/apt/archives`,删除下面的所有.deb文件即可
 
-## 修改用户名
+## 修改登录用户密码
 
-```
+```shell
 sudo passwd
 ```
 
@@ -306,7 +371,7 @@ sudo passwd
 2. 切换到root角色,命令: `sudo -i`
 3. 修改SSH配置文件`/etc/ssh/sshd_config`为如下内容:
 
-```
+```shell
 # Authentication:
 PermitRootLogin yes //默认为no，需要开启root用户访问改为yes
 
@@ -320,7 +385,7 @@ PasswordAuthentication yes //默认为no，改为yes开启密码登陆
 
 在客户端或者服务端进行如下ssh链接,查看ssh登录失败的log:
 
-```
+```shell
 > ssh -vvv alterhu2020@host 
 ```
 
@@ -330,7 +395,7 @@ On the server end, check the logs. `/var/log/auth.log` will give you a pretty go
 
 ## 改变当前用户组
 
-```
+```shell
 sudo usermod -g www-data alterhu2020   (需要重启机器生效)
 groups alterhu2020
 sudo nano /etc/sudoers
@@ -340,7 +405,7 @@ sudo nano /etc/sudoers
 
 采用最新的unzip命令没有参数`-O`，网上提到的使用参数`-O`可以指定编码，所以这个访问不能使用。所以使用`unar`命令:
 
-```
+```shell
 sudo apt-get install unar
 
 unar -e gb18030 gb18030.zip
@@ -350,7 +415,7 @@ unar -e gb18030 gb18030.zip
 
 进行目录`/etc/profile`添加如下配置信息:
 
-```
+```shell
 # node环境变量
 export PATH=/opt/node/node-v12.14.1-linux-armv7l/bin:$PATH
 
@@ -374,11 +439,9 @@ ulimit -v unlimited
 
 ```
 
-以上的配置如果用非root用户双概述可能会出现错误: `-bash: ulimit: max user processes: cannot modify limit:`. 需要修改对应配置文件: `/etc/security/limits.conf`, 在文件末尾增加如下配置信息(* 代表的是任意用户,比如root/pi),命令如下:
+以上的配置如果用非root用户双概述可能会出现错误: `-bash: ulimit: max user processes: cannot modify limit:`. 需要修改对应配置文件: `/etc/security/limits.conf`, 在文件末尾增加如下配置信息(* 代表的是任意用户,比如root/pi),命令如下:`$ sudo nano /etc/security/limits.conf`
 
-`$ sudo nano /etc/security/limits.conf`
-
-```
+```shell
 * soft noproc 1048576
 * hard noproc 1048576
 * soft nofile 1048576
@@ -521,62 +584,7 @@ sudo chmod +x mysql_backup.sh
 sudo ./mysql_backup.sh
 ```
 
-- 创建`Crontab`定时任务
-Usually, you should open your personal crontab file using `crontab -e` command, however if you are root user and decide to choose system wide crontab file, you need to edit the crontab file located in `/etc/crontab`.现在创建一个定时脚本每天夜里执行备份操作：
 
-```shell
-# 立即生效
-$ sudo crontab -e
-# 需要执行重启服务才能生效: sudo systemctl restart cron.service ,不推荐。语法不一样，可能导致不执行
-$ sudo nano /etc/crontab
-```
-
-我们知道定时任务可以写到/etc/crontab与crontab -e下面，但你知道两者的区别吗?
-
-语法不同
-
-/etc/crontab
-
-```sh
-# For details see man 4 crontabs
- 
-# Example of job definition:
-# .---------------- minute (0 - 59)
-# |  .------------- hour (0 ar- 23)
-# |  |  .---------- day of month (1 - 31)
-# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
-# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
-# |  |  |  |  |
-# *  *  *  *  * user-name  command to be executed
-``` 
- 
- 
-crontab -e
-```sh
-*  *  *  *  *  command
-```
-
-使用范围
-修改`/etc/crontab`这种方法只有root用户能用，这种方法更加方便与直接直接给其他用户设置计划任务，而且还可以指定执行shell等等， `crontab -e`这种所有用户都可以使用，普通用户也只能为自己设置计划任务。然后自动写入/var/spool/cron/usename
-
-所以推荐使用： `sudo crontab -e`
-
-按照提示添加最后一行定时脚本：
-
-```shell
-# Running Cron job Daily
-@daily /opt/backup/scripts/mysql_backup.sh >> /var/log/mysql/mysql-backup.log 2>&1
-# Running Cron job at 2AM Daily
-0 2 * * * /opt/backup/scripts/mysql_backup.sh >> /var/log/mysql/mysql-backup.log 2>&1
-
-# Running Cron job at 12AM & 12PM Daily
-0 12,24 * * * /opt/backup/scripts/mysql_backup.sh >> /var/log/mysql/mysql-backup.log 2>&1
-
-```
-
-- 查看执行情况（crontab执行 日志）
-
-执行结果不论是否成功，都会在 `/var/spool/mail/mail`文件中有`crontab`执行日志的记录,另外可以自己指定日志目录，参考后面的命令参数。
 
 ## SSH 或者telent登录linux后screen后台运行脚本
 

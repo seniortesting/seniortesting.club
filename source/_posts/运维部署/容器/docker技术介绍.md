@@ -404,3 +404,36 @@ CMD [ "yarn", "start" ]
 journalctl -fu docker.service
 
 ```
+
+
+## 7. 服务端如何开启docker的tcp通信？
+
+docker默认只提供本地unix，sock文件的连接方式，让docker能够监听tcp端口还需要进行一些配置。
+1.1 首先编辑docker的宿主机文件`nano /lib/systemd/system/docker.service`
+
+```shell
+# #ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+ExecStart=/usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375
+
+```
+保存配置。
+
+1.2 重新加载系统服务配置文件（包含刚刚修改的文件）
+
+```shell
+systemctl daemon-reload
+```
+
+重启docker服务
+
+```shell
+systemctl restart docker
+```
+
+1.3 防火墙添加开放2375端口
+
+1.4 在Windows系统上测试端口是否可以使用:
+
+```shell
+curl http://localhost:2375/version
+```

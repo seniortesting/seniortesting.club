@@ -11,8 +11,7 @@ top_img:
 ---
 
 
-
-整理常用的quart技术问题
+整理一些常用的quartz技术问题
 
 ## `extends QuartzJobBean` 和 `implements Job`  difference
 

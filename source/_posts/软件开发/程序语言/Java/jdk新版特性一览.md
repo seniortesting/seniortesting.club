@@ -9,6 +9,70 @@ cover:
 top_img:
 ---
 
+
+## jdk的docker镜像的选择？
+
+adoptopenjdk 镜像：
+
+- adoptopenjdk/openjdk8
+
+- adoptopenjdk/openjdk9
+
+- adoptopenjdk/openjdk10
+
+之后是 OpenJ9，也是由 adoptopenjdk 为 8/9 版本所提供的，同时包含为 9 发布的每日构建版：
+
+- adoptopenjdk/openjdk8-openj9
+
+- adoptopenjdk/openjdk9-openj9
+
+- adoptopenjdk/openjdk9-openj9:nightly
+
+而以`adoptopenjdk:8-jdk-openj9`开头的则是官方的镜像包，主要是ubuntu和windows的，镜像比较大。不推荐此处。
+
+# adoptopenjdk/openjdk8:slim对比openjdk
+
+众所周知Oracle JDK商业使用开始收费了，然而Oracle在<http://jdk.java.net/放出的官方版OpenJDK>有下面几点问题：
+
+1、没有32位
+
+2、没有安装程序（初学者会遇到困难，比如设置PATH，运行jar等）
+
+3、旧版不更新（即使LTS版本）
+
+4、没有JRE
+
+因此不推荐从<http://jdk.java.net/下载OpenJDK>。
+
+AdoptOpenJDK是OpenJDK的社区维护版，主要维护8、11两个LTS版本以及最新版本。
+
+AdoptOpenJDK官网：<https://adoptopenjdk.net/>
+
+清华大学镜像：<https://mirrors.tuna.tsinghua.edu.cn/AdoptOpenJDK/>
+
+进行Java开发需要下载JDK，msi版本是安装程序，推荐初学者使用安装程序。
+
+64位Windows的JDK8：<https://mirrors.tuna.tsinghua.edu.cn/AdoptOpenJDK/8/jdk/x64/windows/>
+
+32位Windows的JDK8：<https://mirrors.tuna.tsinghua.edu.cn/AdoptOpenJDK/8/jdk/x32/windows/>
+
+64位Windows的JDK11：<https://mirrors.tuna.tsinghua.edu.cn/AdoptOpenJDK/11/jdk/x64/windows/>
+
+32位Windows的JDK11：<https://mirrors.tuna.tsinghua.edu.cn/AdoptOpenJDK/11/jdk/x32/windows/>
+
+64位有hotspot、openj9两种jvm类型，**hotspot是官方的jvm，兼容性最好，因此一般用途推荐使用hotspot**。
+
+OpenJ9 的前身是IBM的 J9 Java 虚拟机，主要服务于IBM企业级软件产品，是一款高性能的JVM。
+在 Web 应用开发中，为了降低内存消耗，你是否尝试过：
+
+去除不必要的组件，减少代码体积
+
+更换 Web 容器，如将 Tomcat 更换为Undertow
+
+优化Docker基础镜像，减少镜像体积
+
+这些效果往往不是很理想。而通过将 HotSpot 更换为 OpenJ9，**内存占用能降低至少 60%**，**而启动时间也能快 40% 以上**，效果立竿见影。
+
 ## JDK 11 新特性
 
 > 重要通知，直接从oracle的官方下载的JDK11不再是免费的，若是你一旦不小心使用Java 11进行了具有商业性的行为，那么你很可能将接到Oracle的致电，并要求你提供大量的资金。
