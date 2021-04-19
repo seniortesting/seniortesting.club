@@ -23,12 +23,32 @@ top_img:
 ## 使用
 
 
-
-可以看到我们的测试脚本中，有两个方法describe和it.
+可以看到我们的测试脚本中，有两个方法describe和it. 这个对应的是mocha的BDD ui模式,其中模式有: BDD, TDD, Exports, QUnit 和 Require-style.
 
 1. **describe方法**
 
-describe块称为"测试套件"（test suite），表示一组相关的测试。它是一个函数，第一个参数是测试套件的名称（"加法函数的测试"），第二个参数是一个实际执行的函数
+describe块称为"测试套件"（test suite），表示一组相关的测试。它是一个函数，第一个参数是测试套件的名称（"加法函数的测试"），第二个参数是一个实际执行的函数.
+
+举例代码如下:
+
+```javascript
+
+describe("root context", function(){
+
+    before(function(){
+        console.log("before: root");
+    });
+
+    beforeEach(function(){
+        console.log("beforeEach: root");
+    });
+
+    it("test 1", function(){
+
+    });
+})
+
+```
 
 2. **it方法**
 
