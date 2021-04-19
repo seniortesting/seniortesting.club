@@ -11,6 +11,9 @@ top_img: https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210419092310.png
 ---
 
 
+## 介绍
+
+python中操作文件或者文件夹的方式，需要使用到的库：`os`和`shututil`
 
 ## 产生一个zip文件，generate a zip file?
 
@@ -61,6 +64,4 @@ def StrOfSize(size):
     if level+1 > len(units):
         level = -1
     return ( '{}.{:>03d} {}'.format(integer, remainder, units[level]) )
-
-
 ```
