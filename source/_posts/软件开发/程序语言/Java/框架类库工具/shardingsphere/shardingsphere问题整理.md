@@ -6,8 +6,8 @@ categories: []
 abbrlink: 5nrCcQpX04
 date: 2021-04-09 09:23:45
 description:
-cover:
-top_img:
+cover: https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210414175757.jpeg
+top_img: https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210414175757.jpeg
 ---
 
 ## java.sql.SQLFeatureNotSupportedException: getObject with type

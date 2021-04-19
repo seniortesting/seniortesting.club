@@ -5,8 +5,8 @@ categories: []
 abbrlink: 94t235nOPVFCy6D
 date: 2021-04-16 20:37:44
 description:
-cover:
-top_img:
+cover: https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210414175757.jpeg
+top_img: https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210414175757.jpeg
 ---
 
 ## 如何自动生成一个spring jpa entity？

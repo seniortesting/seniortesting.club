@@ -6,8 +6,8 @@ categories: []
 abbrlink: PqA55H5dQg
 date: 2021-04-15 09:52:55
 description:
-cover:
-top_img:
+cover: https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210419092310.png
+top_img: https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210419092310.png
 ---
 
 ## requirements.txt介绍
