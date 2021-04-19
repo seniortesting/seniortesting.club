@@ -1,5 +1,5 @@
 ---
-title: python系列(2)-文件操作
+title: python基础系列(2)-文件操作
 tags: [python]
 keywords: 'python,file'
 categories: []

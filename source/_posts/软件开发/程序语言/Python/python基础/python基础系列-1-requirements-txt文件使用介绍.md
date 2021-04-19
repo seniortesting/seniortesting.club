@@ -1,5 +1,5 @@
 ---
-title: python系列(1)-requirements.txt文件使用介绍
+title: python基础系列(1)-requirements.txt文件使用介绍
 tags: [python]
 keywords: 'python,requirements.txt'
 categories: []
