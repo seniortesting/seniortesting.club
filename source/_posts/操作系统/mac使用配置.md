@@ -28,4 +28,19 @@ top_img:
 
 目前没有找到解决方法，直接使用百度网盘暂时。
 
+## Use Touch ID for sudo on Mac
 
+控制台命令行增强功能
+You can use Touch ID instead of input password when you run sudo ...
+
+First of all, ensure you are in the admin group in `'System Preferences - Users and group'`
+
+
+```shell
+# Edit the file in vim
+$ sudo vim /etc/pam.d/sudo
+
+# Add the following as the first line
+$ auth sufficient pam_tid.so
+
+```
