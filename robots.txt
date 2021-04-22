@@ -2,5 +2,7 @@
 User-agent: *
 Allow: /
 
+Disallow: /409/
+
 Sitemap: https://seniortesting.club/sitemap.xml
 Sitemap: https://seniortesting.club/baidusitemap.xml
