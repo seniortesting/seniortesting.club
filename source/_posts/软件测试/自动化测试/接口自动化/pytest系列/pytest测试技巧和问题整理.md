@@ -71,6 +71,17 @@ You can disable the stdout/stderr capture with `-s` and disable the logs capture
 
 You can add `-s -p no:logging` to "**Additional Arguments**" in your Run Configuration or Run Configuration Template for pytest.
 
+This feature was introduced as a drop-in replacement for the `pytest-catchlog` plugin and they conflict with each other. The backward compatibility API with `pytest-capturelog` has been dropped when this feature was introduced, so if for that reason you still need `pytest-catchlog` you can disable the internal feature by adding to your pytest.ini:
+
+```shell
+[pytest]
+    addopts=-p no:logging
+```
+
+此处的`-p`代表的意思是plugin插件。
+
+所以如果没有安装这个插件，可以不用这个参数。
+
 ## 如何产生本地的allure报告？
 
 1. 运行pytest脚本的时候加上对应的参数： `pytest --alluredir=allure-results`

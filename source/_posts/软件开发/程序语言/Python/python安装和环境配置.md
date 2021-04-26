@@ -9,9 +9,6 @@ top_img: https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210419092310.png
 ---
 
 
-
-
-
 ## Python2.7 installaction [更新到2019年9月1日]
 
 参考网站地址: [安装Python2.7](https://tecadmin.net/install-python-2-7-on-ubuntu-and-linuxmint/)
