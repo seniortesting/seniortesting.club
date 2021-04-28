@@ -1,5 +1,5 @@
 ---
-title: python基础系列(3)-装饰器
+title: python基础系列(4)-装饰器
 tags: [python,decorator]
 keywords: 'python,decorator'
 categories: []
