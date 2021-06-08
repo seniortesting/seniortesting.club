@@ -16,8 +16,10 @@ top_img: https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210414175757.jpe
 
 这里总结一下就是：
 • 浅拷贝：对于基本类型的数据进行值传递，对于指向对象的引用本质也是值传递，传递的是对象在堆中的内存地址，这样有个问题就是浅拷贝后的两个引用，都是指向的同一个对象，改变其中一个都会影响到另一个。
+![](https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210530164725.png)
 
 • 深拷贝：对于基本类型的数据进行值传递，对于指向对象的应用，直接new一个对象出来，并复制老对象的内容给新对象，深拷贝后的两个引用指向的是两个不同的对象，但对象的成员属性都相等（equals）。
+!()[https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210530164749.png]
 
 ### 2、Object的clone方法和Cloneable接口
 
@@ -144,6 +146,7 @@ public class Student implements Cloneable{
     @Override
     protected Object clone() {
         try
+        
         {
             Student student = (Student) super.clone();
             student.subject = (Subject) this.subject.clone();

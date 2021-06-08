@@ -59,3 +59,12 @@ select k.id,cast(c.name||'>'||k.name as varchar(100)) as name  from tb k inner j
 [参考文档](https://blog.csdn.net/Abysscarry/article/details/80792876)
 
 索引如何建立，及其如何使用，参考： <https://www.toutiao.com/i6695892976922526212/>
+
+## 不同的sql类型语句简写
+
+DDL: create, alter, drop, rename
+DQL: select
+DML: insert, update, delete, call,Lock table
+DCL: grant,revoke
+
+![](https://cdn.jsdelivr.net/gh/alterhu2020/CDN/img/blog/20210509095342.jpg)
