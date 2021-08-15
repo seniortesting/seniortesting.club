@@ -20,15 +20,25 @@ top_img:
 
 ### 服务端配置
 
-2020/04/15： 推荐采用一键配置脚本，支持多用户[Github仓库multi-v2ray](https://github.com/Jrohy/multi-v2ray)
+2021/06/15： 推荐采用一键配置脚本，支持多用户[Github仓库multi-v2ray](https://github.com/Jrohy/multi-v2ray)
 
-安装步骤：
+## 安装命令
 
 ```
-$ sudo -s
-$ source <(curl -sL https://multi.netlify.com/v2ray.sh) --zh
+source <(curl -sL https://multi.netlify.app/v2ray.sh) --zh
 ```
 
+## 升级命令(保留配置文件更新)
+
+```
+source <(curl -sL https://multi.netlify.app/v2ray.sh) -k
+```
+
+## 卸载命令
+
+```
+source <(curl -sL https://multi.netlify.app/v2ray.sh) --remove
+```
 
 ## 客户端配置
 
@@ -38,14 +48,13 @@ $ source <(curl -sL https://multi.netlify.com/v2ray.sh) --zh
 
 - [V2rayW配置教程](https://www.hijk.pw/v2rayw-config-tutorial/)
 
-
 ## ~~IPsec/L2TP客户端配置，目前采用v2ray~~
 
 **注：** 你也可以使用 [IPsec/L2TP 模式](clients-zh.md) 连接，无需安装额外的软件。
 
-1. 下载并安装免费的 <a href="https://www.shrew.net/download/vpn" target="_blank">Shrew Soft VPN 客户端</a>。   
+1. 下载并安装免费的 <a href="https://www.shrew.net/download/vpn" target="_blank">Shrew Soft VPN 客户端</a>。
    **注：** 该 VPN 客户端支持 Windows 2K/XP/Vista/7/8 系统。
-1. 安装提示操作安装完成即可。   
+1. 安装提示操作安装完成即可。
 1. 单击开始菜单 -> 所有程序 -> ShrewSoft VPN Client -> VPN Access Manager
 1. 单击工具栏中的 **Add (+)** 按钮。
 ![20200309115224.png](https://raw.githubusercontent.com/alterhu2020/StorageHub/master/img/20200309115224.png)

@@ -14,8 +14,23 @@ top_img:
 ## docker setup
 
 ```bash
-# docker pull nginx
-# docker run     -p 80:80     -v /opt/nginx/html:/usr/share/nginx/html     -v  /opt/nginx/config/nginx.conf:/etc/nginx/nginx.conf     -v /opt/nginx/config/conf.d:/etc/nginx/conf.d      -v /opt/nginx/logs:/var/log/nginx     --name nginx     -d nginx
+# get the nginx image
+$ sudo apt install certbot
+$ sudo docker pull nginx
+$ sudo docker images
+# setup the files
+$ sudo mkdir -p /www /var/log/nginx
+$ sudo echo "Hello World" | sudo tee /www/index.html  # add -a for append (>>)
+# run the test instance
+$ sudo docker run --name tmp-nginx-container -d nginx
+$ sudo docker ps -a
+# copy all the nginx docker config files, nginx docker default config file path in: /etc/nginx/conf.d/default.conf
+$ sudo docker cp tmp-nginx-container:/etc/nginx/ /etc/
+# delete the default conf files
+$ sudo rm -rf /etc/nginx/conf.d
+# delete previous image, then rerun the docker instance
+$ sudo docker rm -f tmp-nginx-container
+$ sudo docker run -d -p 80:80 -v /var/log/nginx:/var/log/nginx -v /etc/nginx/nginx.conf:/etc/nginx/nginx.conf --name nginx nginx 
 
 ```
 
